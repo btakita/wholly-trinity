@@ -1,0 +1,32 @@
+# See: https://blog.cloud66.com/running-rails-development-with-a-fake-domain-and-ssl/
+# mkcert my.wholly-trinity.co
+# /etc/hosts
+# 127.0.0.1 my.wholly-trinity.co
+{
+  auto_https disable_redirects
+}
+my.wholly-trinity.co {
+  tls my.wholly-trinity.co.pem my.wholly-trinity.co-key.pem
+  @not_static {
+    not {
+      file {
+        try_files {path}
+      }
+    }
+  }
+  reverse_proxy @not_static localhost:4100
+#  root * ../apps/web/static
+  file_server
+}
+http://my.wholly-trinity.co {
+  @not_static {
+    not {
+      file {
+        try_files {path}
+      }
+    }
+  }
+  reverse_proxy @not_static localhost:4100
+#  root * ../apps/web/static
+  file_server
+}
