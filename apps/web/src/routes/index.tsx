@@ -4,7 +4,7 @@ export default function Home() {
 		<main class="text-center mx-auto text-gray-700 p-4 bg-cover"
 					style="background-image: url(/hero.jpg);"
 		>
-			<img src="/hero.jpg" class="w-full"/>
+			<img src="/hero.jpg" class="mx-auto w-full xl:w-1/2"/>
 			<h1 class="text-4xl">STARGATE Represents Wholly Trinity Egypt</h1>
 			<h2 class="text-2xl">Lunar Eclipse / 11-11 / Portal</h2>
 			<h2 class="text-2xl">Nov 8—11 2022</h2>
