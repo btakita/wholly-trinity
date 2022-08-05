@@ -25,6 +25,7 @@ importers:
       solid-start-cloudflare-pages: beta
       solid-start-netlify: beta
       solid-start-node: beta
+      solid-start-vercel: beta
       tailwindcss: ^3.1.7
       typescript: ^4.7.4
       undici: ^5.8.1
@@ -43,6 +44,7 @@ importers:
       solid-start-cloudflare-pages: link:../../vendor/solid-start/packages/start-cloudflare-pages
       solid-start-netlify: link:../../vendor/solid-start/packages/start-netlify
       solid-start-node: link:../../vendor/solid-start/packages/start-node
+      solid-start-vercel: link:../../vendor/solid-start/packages/start-vercel
       tailwindcss: 3.1.7
       typescript: 4.7.4
       undici: 5.8.1
