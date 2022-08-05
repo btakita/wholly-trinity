@@ -1,3 +1,6 @@
 [submodule "vendor/ctx-core/packages/ui-solid"]
 	path = vendor/ctx-core/packages/ui-solid
 	url = https://github.com/ctx-core/ui-solid.git
+[submodule "vendor/solid-start"]
+	path = vendor/solid-start
+	url = https://github.com/solidjs/solid-start.git
