@@ -1,5 +1,7 @@
 {
 	"name": "@wholly-trinity/root",
+	"scripts": {
+	},
 	"devDependencies": {
 		"@ctx-core/monorepo": "^18.4.6"
 	},
