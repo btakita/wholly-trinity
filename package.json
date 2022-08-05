@@ -7,7 +7,8 @@
 	},
 	"devDependencies": {
 		"@ctx-core/monorepo": "^18.4.6",
-		"pnpm": "^7.8.0"
+		"pnpm": "^7.8.0",
+		"vercel": "^27.3.7"
 	},
 	"pnpm": {
 		"solid-js": "1.4.8"

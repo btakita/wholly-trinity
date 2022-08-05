@@ -17,8 +17,6 @@
     "solid-js": "^1.4.8",
     "solid-meta": "^0.28.1",
     "solid-start": "beta",
-    "solid-start-cloudflare-pages": "beta",
-    "solid-start-netlify": "beta",
     "solid-start-node": "beta",
     "solid-start-vercel": "beta",
     "tailwindcss": "^3.1.7",
