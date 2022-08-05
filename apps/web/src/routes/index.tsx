@@ -19,6 +19,9 @@ export default function Home() {
 					quantum vortex we will have access to time and space in the quantum field so that we may
 					rewrite, reform, and encode future timelines.
 				</P>
+				<video width="320" controls style="float: left;">
+					<source src="/resort.mp4" type="video/mp4"/>
+				</video>
 				<P>
 					This unique 8-day experience will start off on 11/8 in the city of Al Hayah (near Hurghada) at the Arena Resort for
 					three days. This area of Egypt is considered a high end destination. This gathering kicks off
