@@ -1,3 +1,4 @@
+import cloudflare_pages from 'solid-start-cloudflare-pages'
 import netlify from 'solid-start-netlify'
 import solid from 'solid-start/vite'
 import { defineConfig } from 'vite'
@@ -6,7 +7,7 @@ export default defineConfig({
 		...(
 			process.env.NODE_ENV === 'development'
 			? {}
-			: { adapter: netlify({ edge: true }) }
+			: { adapter: cloudflare_pages() }
 		)
 	})],
 })

@@ -5,8 +5,10 @@ importers:
   .:
     specifiers:
       '@ctx-core/monorepo': ^18.4.6
+      pnpm: ^7.8.0
     devDependencies:
       '@ctx-core/monorepo': 18.4.6
+      pnpm: 7.8.0
 
   apps/web:
     specifiers:
@@ -20,6 +22,7 @@ importers:
       solid-js: ^1.4.8
       solid-meta: ^0.28.1
       solid-start: beta
+      solid-start-cloudflare-pages: beta
       solid-start-netlify: beta
       solid-start-node: beta
       tailwindcss: ^3.1.7
@@ -37,6 +40,7 @@ importers:
       solid-js: 1.4.8
       solid-meta: 0.28.1_solid-js@1.4.8
       solid-start: link:../../vendor/solid-start/packages/start
+      solid-start-cloudflare-pages: link:../../vendor/solid-start/packages/start-cloudflare-pages
       solid-start-netlify: link:../../vendor/solid-start/packages/start-netlify
       solid-start-node: link:../../vendor/solid-start/packages/start-node
       tailwindcss: 3.1.7
@@ -6832,7 +6836,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       bl: 5.0.0
-      chalk: 2.4.2
+      chalk: 5.0.1
       cli-cursor: 4.0.0
       cli-spinners: 2.7.0
       is-interactive: 2.0.0
@@ -7127,6 +7131,12 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: 4.1.0
+    dev: true
+
+  /pnpm/7.8.0:
+    resolution: {integrity: sha512-jzb9/gto4nwuVA2itTRk0PJhuaZcA1NBRB298UzXhqKZQMjtHCS+KLzh7RWk5n3g+KnMg5FHr6Mwg1L62dBz1A==}
+    engines: {node: '>=14.6'}
+    hasBin: true
     dev: true
 
   /polka/1.0.0-next.22:
