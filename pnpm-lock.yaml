@@ -167,6 +167,7 @@ importers:
       solid-start-netlify: 0.1.0-alpha.98
       solid-start-node: 0.1.0-alpha.98
       solid-start-static: 0.1.0-alpha.98
+      solid-start-vercel: 0.1.0-alpha.98
       solid-testing-library: ^0.3.0
       terser: ^5.14.2
       undici: ^5.8.1
@@ -217,6 +218,7 @@ importers:
       solid-start-netlify: link:../start-netlify
       solid-start-node: link:../start-node
       solid-start-static: link:../start-static
+      solid-start-vercel: link:../start-vercel
       solid-testing-library: 0.3.0_solid-js@1.4.8
       vite: 3.0.4_terser@5.14.2
       vitest: 0.20.3_jsdom@20.0.0+terser@5.14.2
