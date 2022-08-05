@@ -20,6 +20,7 @@ importers:
       solid-js: ^1.4.8
       solid-meta: ^0.28.1
       solid-start: beta
+      solid-start-netlify: beta
       solid-start-node: beta
       tailwindcss: ^3.1.7
       typescript: ^4.7.4
@@ -36,6 +37,7 @@ importers:
       solid-js: 1.4.8
       solid-meta: 0.28.1_solid-js@1.4.8
       solid-start: link:../../vendor/solid-start/packages/start
+      solid-start-netlify: link:../../vendor/solid-start/packages/start-netlify
       solid-start-node: link:../../vendor/solid-start/packages/start-node
       tailwindcss: 3.1.7
       typescript: 4.7.4
