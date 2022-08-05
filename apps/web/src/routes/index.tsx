@@ -20,7 +20,7 @@ export default function Home() {
 					rewrite, reform, and encode future timelines.
 				</P>
 				<video width="320" controls style="float: left;">
-					<source src="/resort.mp4" type="video/mp4"/>
+					<source src="/resort.1.mp4" type="video/mp4"/>
 				</video>
 				<P>
 					This unique 8-day experience will start off on 11/8 in the city of Al Hayah (near Hurghada) at the Arena Resort for
