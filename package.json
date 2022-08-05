@@ -2,5 +2,8 @@
 	"name": "@wholly-trinity/root",
 	"devDependencies": {
 		"@ctx-core/monorepo": "^18.4.6"
+	},
+	"pnpm": {
+		"solid-js": "1.4.8"
 	}
 }
