@@ -1,9 +1,10 @@
 import { GlobalStyle, Singleton_ } from '@ctx-core/ui-solid'
-import { createEffect, createMemo, createSignal, onCleanup, onMount, type ParentProps, Show } from 'solid-js'
+import { createMemo, createSignal, type JSX, onCleanup, onMount, type ParentProps, Show } from 'solid-js'
 import { Assets } from 'solid-js/web'
 export default function Home() {
 	const [section_top_aa_, section_top_aa__set] = createSignal<[HTMLElement, top_T][]>([])
 	const [Navigation__o_, Navigation__o__set] = createSignal<Navigation__o>()
+	const [video_s_, video_s__set] = createSignal<Set<HTMLVideoElement>>(new Set<HTMLVideoElement>())
 	onMount(()=>{
 		window.addEventListener('scroll', Navigation__refresh)
 		onCleanup(()=>window.removeEventListener('scroll', Navigation__refresh))
@@ -87,13 +88,13 @@ export default function Home() {
 		return (
 			<Section id="intro">
 				<div class="relative z-20 p-12 min-h-screen">
-					<video poster="/hero.jpg"
-								 class="mx-auto w-full xl:w-1/2"
+					<Video poster="/hero.jpg"
+								 class="mx-auto w-full xl:w-1/2 absolute sm:static left-0 top-0"
 								 controls
 								 autoplay={true}
 					>
 						<source src="/wholly-trinity_promo.mp4" type="video/mp4"/>
-					</video>
+					</Video>
 					<h1 class="text-4xl mt-12">STARGATE Represents Wholly Trinity Egypt</h1>
 					<h2 class="text-2xl">Lunar Eclipse / 11-11 / Portal</h2>
 					<h2 class="text-2xl">Nov 8—11 2022</h2>
@@ -231,6 +232,20 @@ export default function Home() {
 				id={$p.id}
 				class="relative"
 			>{$p.children}</section>
+		)
+	}
+	function Video($p:ParentProps<JSX.VideoHTMLAttributes<HTMLVideoElement>>) {
+		return (
+			<video ref={$=>video_s__set(video_s_().add($))}
+						 {...$p}
+						 onPlay={$=>{
+							 for (const video of video_s_()) {
+								 if (video !== $.currentTarget) {
+									 video.pause()
+								 }
+							 }
+						 }}
+			/>
 		)
 	}
 }
