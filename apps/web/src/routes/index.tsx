@@ -1,7 +1,13 @@
 import { GlobalStyle, Singleton_ } from '@ctx-core/ui-solid'
-import { ParentProps, splitProps } from 'solid-js'
+import { type ParentProps, splitProps } from 'solid-js'
 import type { JSX } from 'solid-js/types/jsx'
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { Swiper, SwiperSlide } from 'swiper/solid'
 export default function Home() {
+	SwiperCore.use([Navigation, Pagination, Autoplay])
 	return [
 		<main class="text-center mx-auto text-gray-700 p-4 bg-cover"
 					style="background-image: url(/hero.jpg);"
@@ -30,6 +36,9 @@ export default function Home() {
 					</P>
 				</section>
 				<section class="arena-resort">
+					<Swiper>
+						<SwiperSlide></SwiperSlide>
+					</Swiper>
 					<div class="grid grid-cols-5" style="height: 200px;">
 						<div class="grid grid-cols-2">
 							<Div_bg src="/resort.2.jpg"></Div_bg>
