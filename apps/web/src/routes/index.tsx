@@ -1,8 +1,10 @@
 import { GlobalStyle, Singleton_ } from '@ctx-core/ui-solid'
-import { ParentProps, splitProps } from 'solid-js'
+import { type ParentProps, splitProps } from 'solid-js'
 import type { JSX } from 'solid-js/types/jsx'
+import { Assets } from 'solid-js/web'
 export default function Home() {
 	return [
+		<Head/>,
 		<main class="text-center mx-auto text-gray-700 p-4 bg-cover"
 					style="background-image: url(/hero.jpg);"
 		>
@@ -30,16 +32,7 @@ export default function Home() {
 					</P>
 				</section>
 				<section class="arena-resort">
-					<div class="grid grid-cols-5" style="height: 200px;">
-						<div class="grid grid-cols-2">
-							<Div_bg src="/resort.2.jpg"></Div_bg>
-							<Div_bg src="/resort.3.jpg"></Div_bg>
-						</div>
-						<Div_bg src="/resort.4.jpg"></Div_bg>
-						<Div_bg src="/resort.5.jpg"></Div_bg>
-						<Div_bg src="/resort.6.jpg"></Div_bg>
-						<Div_bg src="/resort.7.jpg"></Div_bg>
-					</div>
+					<Carousel></Carousel>
 					<P>
 						This unique 8-day experience will start off on 11/8 in the city of Al Hayah (near Hurghada) at the Arena Resort for
 						three days. This area of Egypt is considered a high end destination. This gathering kicks off
@@ -112,6 +105,63 @@ export default function Home() {
     </main>,
 		<Style/>
 	]
+	function Head() {
+		return [
+			<Assets>
+				<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js"
+								crossOrigin="anonymous"
+								defer={true}
+				></script>
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css"
+							crossOrigin="anonymous"/>
+			</Assets>
+		]
+	}
+}
+function Carousel() {
+	return (
+		<div class="swiffy-slider slider-item-show1">
+			<ul class="slider-container">
+				<Li>
+					<Img src="/resort.3.jpg" class="mr-10"></Img>
+					<Img src="/resort.2.jpg" class="ml-10"></Img>
+				</Li>
+				<Li>
+					<Img src="/resort.4.jpg"></Img>
+				</Li>
+				<Li>
+					<Img src="/resort.5.jpg"></Img>
+				</Li>
+				<Li>
+					<Img src="/resort.6.jpg"></Img>
+				</Li>
+				<Li>
+					<Img src="/resort.7.jpg"></Img>
+				</Li>
+			</ul>
+			<button type="button" class="slider-nav"></button>
+			<button type="button" class="slider-nav slider-nav-next"></button>
+			<div class="slider-indicators">
+				<button class="active"></button>
+				<button></button>
+				<button></button>
+				<button></button>
+				<button></button>
+			</div>
+		</div>
+	)
+	function Li($p:ParentProps) {
+		return (
+			<li class="flex align-middle justify-center">
+				{$p.children}
+			</li>
+		)
+	}
+	function Img($p:{ src:string, class?:string, style?:string }) {
+		return <img src={$p.src}
+								class={$p.class}
+								style={`max-width: 100%; max-height: 400px; ${$p.style || ''}`}/>
+	}
 }
 function P($p:ParentProps) {
 	return <p class="mt-6">{$p.children}</p>
