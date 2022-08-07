@@ -7,6 +7,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "@ctx-core/html": "^11.0.50",
     "@ctx-core/object": "^22.2.4",
     "@ctx-core/ui-solid": "^2.0.0",
     "@hope-ui/solid": "^0.6.7",
@@ -14,12 +15,13 @@
     "@solidjs/router": "^0.4.2",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.14",
+    "solid-heroicons": "^2.0.3",
     "solid-js": "^1.4.8",
     "solid-meta": "^0.28.1",
     "solid-start": "beta",
     "solid-start-node": "beta",
     "solid-start-vercel": "beta",
-    "tailwindcss": "^3.1.7",
+    "tailwindcss": "^3.1.8",
     "typescript": "^4.7.4",
     "undici": "^5.8.1",
     "vite": "^3.0.4"

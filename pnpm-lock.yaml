@@ -14,6 +14,7 @@ importers:
 
   apps/web:
     specifiers:
+      '@ctx-core/html': ^11.0.50
       '@ctx-core/object': ^22.2.4
       '@ctx-core/ui-solid': ^2.0.0
       '@hope-ui/solid': ^0.6.7
@@ -21,16 +22,18 @@ importers:
       '@solidjs/router': ^0.4.2
       autoprefixer: ^10.4.8
       postcss: ^8.4.14
+      solid-heroicons: ^2.0.3
       solid-js: ^1.4.8
       solid-meta: ^0.28.1
       solid-start: beta
       solid-start-node: beta
       solid-start-vercel: beta
-      tailwindcss: ^3.1.7
+      tailwindcss: ^3.1.8
       typescript: ^4.7.4
       undici: ^5.8.1
       vite: ^3.0.4
     devDependencies:
+      '@ctx-core/html': 11.0.50
       '@ctx-core/object': 22.2.4
       '@ctx-core/ui-solid': link:../../vendor/ctx-core/packages/ui-solid
       '@hope-ui/solid': 0.6.7_solid-js@1.4.8
@@ -38,12 +41,13 @@ importers:
       '@solidjs/router': 0.4.2_solid-js@1.4.8
       autoprefixer: 10.4.8_postcss@8.4.14
       postcss: 8.4.14
+      solid-heroicons: 2.0.3
       solid-js: 1.4.8
       solid-meta: 0.28.1_solid-js@1.4.8
       solid-start: link:../../vendor/solid-start/packages/start
       solid-start-node: link:../../vendor/solid-start/packages/start-node
       solid-start-vercel: link:../../vendor/solid-start/packages/start-vercel
-      tailwindcss: 3.1.7
+      tailwindcss: 3.1.8
       typescript: 4.7.4
       undici: 5.8.1
       vite: 3.0.4
@@ -81,7 +85,7 @@ importers:
 
   vendor/solid-start:
     specifiers:
-      '@rollup/plugin-commonjs': ^22.0.1
+      '@rollup/plugin-commonjs': ^22.0.2
       '@rollup/plugin-json': ^4.1.0
       '@rollup/plugin-node-resolve': ^13.3.0
       coveralls: ^3.1.1
@@ -94,7 +98,7 @@ importers:
     dependencies:
       cross-env: 7.0.3
     devDependencies:
-      '@rollup/plugin-commonjs': 22.0.1_rollup@2.77.2
+      '@rollup/plugin-commonjs': 22.0.2_rollup@2.77.2
       '@rollup/plugin-json': 4.1.0_rollup@2.77.2
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.77.2
       coveralls: 3.1.1
@@ -133,7 +137,7 @@ importers:
   vendor/solid-start/packages/start:
     specifiers:
       '@babel/core': ^7.18.10
-      '@babel/generator': ^7.18.10
+      '@babel/generator': ^7.18.12
       '@babel/plugin-syntax-jsx': ^7.18.6
       '@babel/preset-env': ^7.18.10
       '@babel/preset-typescript': ^7.18.6
@@ -174,11 +178,11 @@ importers:
       vite: ^3.0.4
       vite-plugin-inspect: ^0.6.0
       vite-plugin-solid: ^2.3.0
-      vitest: ^0.20.3
+      vitest: ^0.21.0
       wait-on: ^6.0.1
     dependencies:
       '@babel/core': 7.18.10
-      '@babel/generator': 7.18.10
+      '@babel/generator': 7.18.12
       '@babel/plugin-syntax-jsx': 7.18.6_@babel+core@7.18.10
       '@babel/preset-env': 7.18.10_@babel+core@7.18.10
       '@babel/preset-typescript': 7.18.6_@babel+core@7.18.10
@@ -221,11 +225,11 @@ importers:
       solid-start-vercel: link:../start-vercel
       solid-testing-library: 0.3.0_solid-js@1.4.8
       vite: 3.0.4_terser@5.14.2
-      vitest: 0.20.3_jsdom@20.0.0+terser@5.14.2
+      vitest: 0.21.0_jsdom@20.0.0+terser@5.14.2
 
   vendor/solid-start/packages/start-cloudflare-pages:
     specifiers:
-      '@rollup/plugin-commonjs': ^22.0.1
+      '@rollup/plugin-commonjs': ^22.0.2
       '@rollup/plugin-json': ^4.1.0
       '@rollup/plugin-node-resolve': ^13.3.0
       rollup: ^2.77.2
@@ -233,7 +237,7 @@ importers:
       terser: ^5.14.2
       vite: ^3.0.4
     dependencies:
-      '@rollup/plugin-commonjs': 22.0.1_rollup@2.77.2
+      '@rollup/plugin-commonjs': 22.0.2_rollup@2.77.2
       '@rollup/plugin-json': 4.1.0_rollup@2.77.2
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.77.2
       rollup: 2.77.2
@@ -245,7 +249,7 @@ importers:
   vendor/solid-start/packages/start-cloudflare-workers:
     specifiers:
       '@cloudflare/kv-asset-handler': ^0.2.0
-      '@rollup/plugin-commonjs': ^22.0.1
+      '@rollup/plugin-commonjs': ^22.0.2
       '@rollup/plugin-json': ^4.1.0
       '@rollup/plugin-node-resolve': ^13.3.0
       rollup: ^2.77.2
@@ -254,7 +258,7 @@ importers:
       vite: ^3.0.4
     dependencies:
       '@cloudflare/kv-asset-handler': 0.2.0
-      '@rollup/plugin-commonjs': 22.0.1_rollup@2.77.2
+      '@rollup/plugin-commonjs': 22.0.2_rollup@2.77.2
       '@rollup/plugin-json': 4.1.0_rollup@2.77.2
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.77.2
       rollup: 2.77.2
@@ -265,7 +269,7 @@ importers:
 
   vendor/solid-start/packages/start-deno:
     specifiers:
-      '@rollup/plugin-commonjs': ^22.0.1
+      '@rollup/plugin-commonjs': ^22.0.2
       '@rollup/plugin-json': ^4.1.0
       '@rollup/plugin-node-resolve': ^13.3.0
       rollup: ^2.77.2
@@ -273,7 +277,7 @@ importers:
       terser: ^5.14.2
       vite: ^3.0.4
     dependencies:
-      '@rollup/plugin-commonjs': 22.0.1_rollup@2.77.2
+      '@rollup/plugin-commonjs': 22.0.2_rollup@2.77.2
       '@rollup/plugin-json': 4.1.0_rollup@2.77.2
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.77.2
       rollup: 2.77.2
@@ -287,7 +291,7 @@ importers:
       '@babel/core': ^7.18.10
       '@babel/preset-env': ^7.18.10
       '@rollup/plugin-babel': ^5.3.1
-      '@rollup/plugin-commonjs': ^22.0.1
+      '@rollup/plugin-commonjs': ^22.0.2
       '@rollup/plugin-json': ^4.1.0
       '@rollup/plugin-node-resolve': ^13.3.0
       encoding: ^0.1.13
@@ -300,7 +304,7 @@ importers:
       '@babel/core': 7.18.10
       '@babel/preset-env': 7.18.10_@babel+core@7.18.10
       '@rollup/plugin-babel': 5.3.1_tui6liyexu3zy4m5r2rytc7ixu
-      '@rollup/plugin-commonjs': 22.0.1_rollup@2.77.2
+      '@rollup/plugin-commonjs': 22.0.2_rollup@2.77.2
       '@rollup/plugin-json': 4.1.0_rollup@2.77.2
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.77.2
       encoding: 0.1.13
@@ -313,7 +317,7 @@ importers:
 
   vendor/solid-start/packages/start-node:
     specifiers:
-      '@rollup/plugin-commonjs': ^22.0.1
+      '@rollup/plugin-commonjs': ^22.0.2
       '@rollup/plugin-json': ^4.1.0
       '@rollup/plugin-node-resolve': ^13.3.0
       compression: ^1.7.4
@@ -325,7 +329,7 @@ importers:
       undici: ^5.8.1
       vite: ^3.0.4
     dependencies:
-      '@rollup/plugin-commonjs': 22.0.1_rollup@2.77.2
+      '@rollup/plugin-commonjs': 22.0.2_rollup@2.77.2
       '@rollup/plugin-json': 4.1.0_rollup@2.77.2
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.77.2
       compression: 1.7.4
@@ -357,7 +361,7 @@ importers:
 
   vendor/solid-start/packages/start-vercel:
     specifiers:
-      '@rollup/plugin-commonjs': ^22.0.1
+      '@rollup/plugin-commonjs': ^22.0.2
       '@rollup/plugin-json': ^4.1.0
       '@rollup/plugin-node-resolve': ^13.3.0
       rollup: ^2.77.2
@@ -365,7 +369,7 @@ importers:
       terser: ^5.14.2
       vite: ^3.0.4
     dependencies:
-      '@rollup/plugin-commonjs': 22.0.1_rollup@2.77.2
+      '@rollup/plugin-commonjs': 22.0.2_rollup@2.77.2
       '@rollup/plugin-json': 4.1.0_rollup@2.77.2
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.77.2
       rollup: 2.77.2
@@ -426,6 +430,15 @@ packages:
       '@babel/types': 7.18.10
       '@jridgewell/gen-mapping': 0.3.2
       jsesc: 2.5.2
+
+  /@babel/generator/7.18.12:
+    resolution: {integrity: sha512-dfQ8ebCN98SvyL7IxNMCUtZQSq5R7kxgN+r8qYTGDmmSion1hX2C0zq2yo1bsCDhXixokv1SAWTZUMYbO/V5zg==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.10
+      '@jridgewell/gen-mapping': 0.3.2
+      jsesc: 2.5.2
+    dev: false
 
   /@babel/helper-annotate-as-pure/7.18.6:
     resolution: {integrity: sha512-duORpUiYrEpzKIop6iNbjnwKLAKnJ47csTyRACyEmWj0QdUrm5aqNJGHSSEQSUAvNW0ojX0dOmK9dZduvkfeXA==}
@@ -1596,6 +1609,12 @@ packages:
 
   /@ctx-core/function/20.10.0:
     resolution: {integrity: sha512-lIuIk6dgW7ma64wOY2n5rqINswzK3GXq9urhTkCl4pNbhXYMB6WamANdYUhxV0IrhoBP9QSftz9T4WZkuOEB9g==}
+
+  /@ctx-core/html/11.0.50:
+    resolution: {integrity: sha512-IY2gqmWpIFhYZKZVAjZ6frZo4Bt7mikaZDklKuxX5SuQ1C2U7Q7CEMHwcW2iqjF8KMLaZs3TgWwmpQkFLsaNEQ==}
+    dependencies:
+      '@ctx-core/object': 22.2.4
+    dev: true
 
   /@ctx-core/monorepo/18.4.6:
     resolution: {integrity: sha512-5Y50Gbmqh6fShOYUBqzTu1EGVTneBJNJh86AkFHx4+cf7HtQNb41grNO0/JDXVMNuIOuKChB2uaqFKJHThsllw==}
@@ -2857,8 +2876,8 @@ packages:
       rollup: 2.77.2
     dev: false
 
-  /@rollup/plugin-commonjs/22.0.1_rollup@2.77.2:
-    resolution: {integrity: sha512-dGfEZvdjDHObBiP5IvwTKMVeq/tBZGMBHZFMdIV1ClMM/YoWS34xrHFGfag9SN2ZtMgNZRFruqvxZQEa70O6nQ==}
+  /@rollup/plugin-commonjs/22.0.2_rollup@2.77.2:
+    resolution: {integrity: sha512-//NdP6iIwPbMTcazYsiBMbJW7gfmpHom33u1beiIoHDEM0Q9clvtQB1T0efvMqHeKsGohiHo97BCPCkBXdscwg==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
       rollup: ^2.68.0
@@ -8644,6 +8663,12 @@ packages:
       smart-buffer: 4.2.0
     dev: true
 
+  /solid-heroicons/2.0.3:
+    resolution: {integrity: sha512-sHlEaCaFFD8s/RDWTlmfIC/5dUPOtRB/UqOTpXQLq/BUZ94jWS58CANwONBclxwKFFGu6iasaP5zN4iYqORlVg==}
+    dependencies:
+      solid-js: 1.4.8
+    dev: true
+
   /solid-js/1.4.8:
     resolution: {integrity: sha512-XErZdnnYYXF7OwGSUAPcua2y5/ELB/c53zFCpWiEGqxTNoH1iQghzI8EsHJXk06sNn+Z/TGhb8bPDNNGSgimag==}
 
@@ -8903,8 +8928,8 @@ packages:
     resolution: {integrity: sha512-QD9qKY3StfbZqWOPLp0++pOrAVb/HbUi5xCc8cUo4XjP19808oaMiDzn0leBY5mCespIBM0CIZePzZjgzR83kA==}
     dev: true
 
-  /tailwindcss/3.1.7:
-    resolution: {integrity: sha512-r7mgumZ3k0InfVPpGWcX8X/Ut4xBfv+1O/+C73ar/m01LxGVzWvPxF/w6xIUPEztrCoz7axfx0SMdh8FH8ZvRQ==}
+  /tailwindcss/3.1.8:
+    resolution: {integrity: sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
@@ -9702,8 +9727,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vitest/0.20.3_jsdom@20.0.0+terser@5.14.2:
-    resolution: {integrity: sha512-cXMjTbZxBBUUuIF3PUzEGPLJWtIMeURBDXVxckSHpk7xss4JxkiiWh5cnIlfGyfJne2Ii3QpbiRuFL5dMJtljw==}
+  /vitest/0.21.0_jsdom@20.0.0+terser@5.14.2:
+    resolution: {integrity: sha512-+BQB2swk4wQdw5loOoL8esIYh/1ifAliuwj2HWHNE2F8SAl/jF7/aoCJBoXGSf/Ws19k3pH4NrWeVtcSwM0j2w==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:

@@ -1,10 +1,17 @@
 import { GlobalStyle, Singleton_ } from '@ctx-core/ui-solid'
+import { ParentProps } from 'solid-js'
+import type { JSX } from 'solid-js/types/jsx'
 export default function Home() {
 	return [
 		<main class="text-center mx-auto text-gray-700 p-4 bg-cover"
 					style="background-image: url(/hero.jpg);"
 		>
-			<img src="/hero.jpg" class="mx-auto w-full xl:w-1/2"/>
+			<Video poster="/hero.jpg"
+						 controls class="mx-auto w-full xl:w-1/2"
+						 autoplay={true}
+			>
+				<source src="/wholly-trinity_promo.mp4" type="video/mp4"/>
+			</Video>
 			<h1 class="text-4xl">STARGATE Represents Wholly Trinity Egypt</h1>
 			<h2 class="text-2xl">Lunar Eclipse / 11-11 / Portal</h2>
 			<h2 class="text-2xl">Nov 8—11 2022</h2>
@@ -19,9 +26,6 @@ export default function Home() {
 					quantum vortex we will have access to time and space in the quantum field so that we may
 					rewrite, reform, and encode future timelines.
 				</P>
-				<video width="320" controls style="float: left;">
-					<source src="/resort.1.mp4" type="video/mp4"/>
-				</video>
 				<P>
 					This unique 8-day experience will start off on 11/8 in the city of Al Hayah (near Hurghada) at the Arena Resort for
 					three days. This area of Egypt is considered a high end destination. This gathering kicks off
@@ -86,11 +90,14 @@ export default function Home() {
 		<Style/>
 	]
 }
+function P($p:ParentProps) {
+	return <p class="mt-6">{$p.children}</p>
+}
+function Video($p:ParentProps<JSX.VideoHTMLAttributes<HTMLVideoElement>>) {
+	return <video{...$p}>{$p.children}</video>
+}
 const Style = Singleton_(()=><GlobalStyle>{`
 h1,h2,p {
 	color: white;
 }
 `}</GlobalStyle>)
-function P($p) {
-	return <p class="mt-6">{$p.children}</p>
-}
