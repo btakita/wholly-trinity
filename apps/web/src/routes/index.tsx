@@ -1,17 +1,18 @@
 import { GlobalStyle, Singleton_ } from '@ctx-core/ui-solid'
-import { ParentProps } from 'solid-js'
+import { ParentProps, splitProps } from 'solid-js'
 import type { JSX } from 'solid-js/types/jsx'
 export default function Home() {
 	return [
 		<main class="text-center mx-auto text-gray-700 p-4 bg-cover"
 					style="background-image: url(/hero.jpg);"
 		>
-			<Video poster="/hero.jpg"
-						 controls class="mx-auto w-full xl:w-1/2"
+			<video poster="/hero.jpg"
+						 class="mx-auto w-full xl:w-1/2"
+						 controls
 						 autoplay={true}
 			>
 				<source src="/wholly-trinity_promo.mp4" type="video/mp4"/>
-			</Video>
+			</video>
 			<h1 class="text-4xl">STARGATE Represents Wholly Trinity Egypt</h1>
 			<h2 class="text-2xl">Lunar Eclipse / 11-11 / Portal</h2>
 			<h2 class="text-2xl">Nov 8—11 2022</h2>
@@ -26,6 +27,16 @@ export default function Home() {
 					quantum vortex we will have access to time and space in the quantum field so that we may
 					rewrite, reform, and encode future timelines.
 				</P>
+				<div class="grid grid-cols-5" style="height: 200px;">
+					<div class="grid grid-cols-2">
+						<Div_bg src="/resort.2.jpg"></Div_bg>
+						<Div_bg src="/resort.3.jpg"></Div_bg>
+					</div>
+					<Div_bg src="/resort.4.jpg"></Div_bg>
+					<Div_bg src="/resort.5.jpg"></Div_bg>
+					<Div_bg src="/resort.6.jpg"></Div_bg>
+					<Div_bg src="/resort.7.jpg"></Div_bg>
+				</div>
 				<P>
 					This unique 8-day experience will start off on 11/8 in the city of Al Hayah (near Hurghada) at the Arena Resort for
 					three days. This area of Egypt is considered a high end destination. This gathering kicks off
@@ -33,6 +44,8 @@ export default function Home() {
 					will celebrate the earth, and on day 3 we will celebrate the sun; which are all connected to the
 					pyramids of Giza.
 				</P>
+				<div class="grid grid-cols-3">
+				</div>
 				<P>
 					Experience 3 magical days at Arena Resort which is located on the Red Sea filled with high
 					vibrational workshops, healers, music and celebration! We will not only have access to the
@@ -95,6 +108,15 @@ function P($p:ParentProps) {
 }
 function Video($p:ParentProps<JSX.VideoHTMLAttributes<HTMLVideoElement>>) {
 	return <video{...$p}>{$p.children}</video>
+}
+function Div_bg(_$p:ParentProps<JSX.HTMLAttributes<HTMLDivElement>&{ src:string }>) {
+	const [$p, div_props] = splitProps(_$p, ['class', 'src', 'style'])
+	return (
+		<div class={`bg-contain bg-no-repeat bg-center ${$p.class || ''}`}
+				 style={`background-image: url(${$p.src});${$p.style || ''}`}
+				 {...div_props}
+		></div>
+	)
 }
 const Style = Singleton_(()=><GlobalStyle>{`
 h1,h2,p {
