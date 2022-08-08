@@ -125,7 +125,7 @@ export default function Home() {
 							This unique 8-day experience will start off on 11/8 in the city of Al Hayah (near Hurghada) at the Arena Resort for
 							three days. This area of Egypt is considered a high end destination.
 						</p>
-						<div class="m-auto flex">
+						<div class="m-auto flex flex-wrap">
 							<img src="/resort.4.jpg" class="m-auto" style="max-height: 300px;"/>
 							<img src="/resort.5.jpg" class="m-auto" style="max-height: 300px;"/>
 						</div>
@@ -141,7 +141,7 @@ export default function Home() {
 							Experience 3 magical days at Arena Resort which is located on the Red Sea filled with high vibrational workshops, healers, music and celebration!
 							We will not only have access to the beach but the resort features many large pools that are filled with aquarian age water.
 						</p>
-						<div class="m-auto flex">
+						<div class="m-auto flex flex-wrap">
 							<img src="/resort.7.jpg" class="m-auto" style="max-height: 300px;"/>
 							<img src="/resort.6.jpg" class="m-auto" style="max-height: 300px;"/>
 						</div>
@@ -180,6 +180,11 @@ export default function Home() {
 						 style="background-image: url(/bg.3.jpg);"></div>
 				<div class="relative z-20 p-12 min-h-screen">
 					<h3 class="text-2xl mt-12 mb-6">Luxor</h3>
+					<Video class="mx-auto w-full xl:w-1/2 absolute sm:static left-0 top-0"
+								 controls
+					>
+						<source src="/luxor.1.mp4" type="video/mp4"/>
+					</Video>
 					<p class="mt-12 text-left">
 						Day 5: Sacred Saqqara Complex.
 						While at Saqqara we will first visit the Museum of Imhotep, who is considered the world's earliest recorded polymath, and the father of medicine.  We will next visit The Step Pyramdid of Djoser (designed by Imhotep).  From there we will sojourn into one of ancient Kemet's greatest mysteries, the Seraphim of Saqqara.  This collection of giant ancient tombs, too large to fit through carved rock entrance has been the source for rumors of gods and aliens.  We will finished Saqqara by visiting two more smaller tombs on the complex.  After Saqqara we travel to Luxor which is the most amazing historical city*!* It is
@@ -240,7 +245,7 @@ export default function Home() {
 						 {...$p}
 						 onPlay={$=>{
 							 for (const video of video_s_()) {
-								 if (video !== $.currentTarget) {
+								 if (video !== $.currentTarget && !video.paused) {
 									 video.pause()
 								 }
 							 }
