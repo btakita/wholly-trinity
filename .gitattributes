@@ -5,8 +5,14 @@ apps/web/public/resort.5.jpg filter=lfs diff=lfs merge=lfs -text
 apps/web/public/resort.6.jpg filter=lfs diff=lfs merge=lfs -text
 apps/web/public/resort.7.jpg filter=lfs diff=lfs merge=lfs -text
 apps/web/public/hero.jpg filter=lfs diff=lfs merge=lfs -text
-apps/web/public/resort.1.jpg filter=lfs diff=lfs merge=lfs -text
 apps/web/public/resort.2.jpg filter=lfs diff=lfs merge=lfs -text
 apps/web/public/resort.3.jpg filter=lfs diff=lfs merge=lfs -text
 apps/web/public/resort.4.jpg filter=lfs diff=lfs merge=lfs -text
 apps/web/public/luxor.1.mp4 filter=lfs diff=lfs merge=lfs -text
+apps/web/public/resort.2.mp4 filter=lfs diff=lfs merge=lfs -text
+apps/web/public/bg.2.jpg filter=lfs diff=lfs merge=lfs -text
+apps/web/public/bg.3.jpg filter=lfs diff=lfs merge=lfs -text
+apps/web/public/favicon.ico filter=lfs diff=lfs merge=lfs -text
+apps/web/public/bg.1.jpg filter=lfs diff=lfs merge=lfs -text
+apps/web/public/resort.2.mp4.jpg filter=lfs diff=lfs merge=lfs -text
+apps/web/public/resort.1.mp4.jpg filter=lfs diff=lfs merge=lfs -text

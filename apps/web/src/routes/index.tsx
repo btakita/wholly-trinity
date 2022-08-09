@@ -135,6 +135,12 @@ export default function Home() {
 							which are all connected to the pyramids of Giza.
 						</p>
 					</div>
+					<Video class="mx-auto w-full xl:w-1/2 absolute sm:static left-0 top-0"
+								 poster="/resort.2.mp4.jpg"
+								 controls
+					>
+						<source src="/resort.2.mp4" type="video/mp4"/>
+					</Video>
 					<div class="overflow-hidden mt-12">
 						<img src="/resort.2.jpg" class="mr-12 float-left" style="max-height: 440px;"/>
 						<p class="mb-6 text-left">
