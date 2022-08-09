@@ -88,7 +88,7 @@ export default function Home() {
 		return (
 			<Section id="intro">
 				<div class="relative z-20 p-12 min-h-screen">
-					<Video poster="/hero.jpg"
+					<Video poster="/wholly-trinity_promo.mp4.jpg"
 								 class="mx-auto w-full xl:w-1/2 absolute sm:static left-0 top-0"
 								 controls
 								 autoplay={true}
@@ -187,6 +187,7 @@ export default function Home() {
 				<div class="relative z-20 p-12 min-h-screen">
 					<h3 class="text-2xl mt-12 mb-6">Luxor</h3>
 					<Video class="mx-auto w-full xl:w-1/2 absolute sm:static left-0 top-0"
+								 poster="/luxor.1.mp4.jpg"
 								 controls
 					>
 						<source src="/luxor.1.mp4" type="video/mp4"/>
