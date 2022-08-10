@@ -1,6 +1,7 @@
 import { GlobalStyle, Singleton_ } from '@ctx-core/ui-solid'
 import { createMemo, createSignal, type JSX, onCleanup, onMount, type ParentProps, Show } from 'solid-js'
 import { Assets } from 'solid-js/web'
+const tickets_url = 'https://app.promotix.com/events/details/wholly-Trinity-tickets'
 export default function Home() {
 	const [section_top_aa_, section_top_aa__set] = createSignal<[HTMLElement, top_T][]>([])
 	const [Navigation__o_, Navigation__o__set] = createSignal<Navigation__o>()
@@ -26,6 +27,21 @@ export default function Home() {
     </main>,
 		<Style/>
 	]
+	function Div_tickets($p:ParentProps<{ class?:string }>) {
+		return (
+			<div class={`flex justify-center ${$p.class || ''}`}>
+				<Tickets/>
+			</div>
+		)
+	}
+	function Tickets() {
+		return (
+			<a href={tickets_url}
+				 class="btn"
+				 target="_blank"
+			>Get your Ticket(s)</a>
+		)
+	}
 	function Navigation__refresh() {
 		const section_top_aa = section_top_aa_()
 		let prev__idx = -1, next__idx = -1
@@ -109,6 +125,7 @@ export default function Home() {
 						quantum vortex we will have access to time and space in the quantum field so that we may
 						rewrite, reform, and encode future timelines.
 					</p>
+					<Div_tickets class="mt-6"/>
 				</div>
 			</Section>
 		)
@@ -157,7 +174,7 @@ export default function Home() {
 							There will be delicious Mediterranean and Lebanese dining options with a Lebanese chef that can fit all dietary needs.
 						</p>
 					</div>
-					{/*<Carousel></Carousel>*/}
+					<Div_tickets class="mt-6"/>
 				</div>
 			</Section>
 		)
@@ -177,6 +194,7 @@ export default function Home() {
 						be there to break these illusions by opening up the veil of Isis and receive the downloads. Yay!  While in Cairo we will also visit Old Cairo and the Egyptian Museum.
 					</p>
 				</div>
+				<Div_tickets class="mt-6"/>
 			</Section>
 		)
 	}
@@ -231,6 +249,7 @@ export default function Home() {
 						If you’re reading this you are meant to be here! Different packages are available to those who wish to experience different parts of this magical experience.
 					</p>
 				</div>
+				<Div_tickets class="mt-6"/>
 			</Section>
 		)
 	}
