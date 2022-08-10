@@ -9,8 +9,7 @@
   "devDependencies": {
     "@ctx-core/html": "^11.0.50",
     "@ctx-core/object": "^22.2.6",
-    "@ctx-core/ui-solid": "^2.0.0",
-    "@hope-ui/solid": "^0.6.7",
+    "@ctx-core/ui-solid": "^2.0.1",
     "@solidjs/meta": "^0.28.0",
     "@solidjs/router": "^0.4.2",
     "autoprefixer": "^10.4.8",
@@ -23,8 +22,8 @@
     "solid-start-vercel": "beta",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.7.4",
-    "undici": "^5.8.1",
-    "vite": "^3.0.4"
+    "undici": "^5.8.2",
+    "vite": "^3.0.5"
   },
   "engines": {
     "node": ">=14"
