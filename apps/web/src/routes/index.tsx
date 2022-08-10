@@ -91,6 +91,7 @@ export default function Home() {
 							 class="mx-auto w-full xl:w-1/2 static left-0 top-0"
 							 controls
 							 autoplay={true}
+							 muted={true}
 				>
 					<source src="/wholly-trinity_promo.mp4" type="video/mp4"/>
 				</Video>
