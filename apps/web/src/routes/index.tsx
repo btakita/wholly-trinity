@@ -87,15 +87,15 @@ export default function Home() {
 	function Section_intro() {
 		return (
 			<Section id="intro">
+				<Video poster="/wholly-trinity_promo.mp4.jpg"
+							 class="mx-auto w-full xl:w-1/2 static left-0 top-0"
+							 controls
+							 autoplay={true}
+				>
+					<source src="/wholly-trinity_promo.mp4" type="video/mp4"/>
+				</Video>
 				<div class="relative z-20 p-12 min-h-screen">
-					<Video poster="/wholly-trinity_promo.mp4.jpg"
-								 class="mx-auto w-full xl:w-1/2 absolute sm:static left-0 top-0"
-								 controls
-								 autoplay={true}
-					>
-						<source src="/wholly-trinity_promo.mp4" type="video/mp4"/>
-					</Video>
-					<h1 class="text-4xl mt-12">STARGATE Represents Wholly Trinity Egypt</h1>
+					<h1 class="text-4xl">STARGATE Represents Wholly Trinity Egypt</h1>
 					<h2 class="text-2xl">Lunar Eclipse / 11-11 / Portal</h2>
 					<h2 class="text-2xl">Nov 8—11 2022</h2>
 					<p class="mt-12">
@@ -135,7 +135,7 @@ export default function Home() {
 							which are all connected to the pyramids of Giza.
 						</p>
 					</div>
-					<Video class="mx-auto w-full xl:w-1/2 absolute sm:static left-0 top-0"
+					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
 								 poster="/resort.2.mp4.jpg"
 								 controls
 					>
