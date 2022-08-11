@@ -1,0 +1,11 @@
+luxor.5.mp4 filter=lfs diff=lfs merge=lfs -text
+cairo.1.mp4 filter=lfs diff=lfs merge=lfs -text
+luxor.2.mp4 filter=lfs diff=lfs merge=lfs -text
+luxor.3.mp4 filter=lfs diff=lfs merge=lfs -text
+luxor.4.mp4 filter=lfs diff=lfs merge=lfs -text
+luxor.1.jpg filter=lfs diff=lfs merge=lfs -text
+luxor.2.jpg filter=lfs diff=lfs merge=lfs -text
+luxor.2.mp4.jpg filter=lfs diff=lfs merge=lfs -text
+luxor.3.mp4.jpg filter=lfs diff=lfs merge=lfs -text
+luxor.4.mp4.jpg filter=lfs diff=lfs merge=lfs -text
+luxor.5.mp4.jpg filter=lfs diff=lfs merge=lfs -text
