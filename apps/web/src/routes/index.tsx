@@ -14,7 +14,7 @@ export default function Home() {
 		queueMicrotask(()=>Navigation__refresh())
 	})
 	return [
-		<main class="text-center mx-auto text-gray-700 p-4 bg-cover relative"
+		<main class="text-center mx-auto text-gray-700 sm:p-4 bg-cover relative"
 					style="background-image: url(/hero.jpg);"
 		>
 			<Navigation_arrows/>
@@ -111,7 +111,7 @@ export default function Home() {
 				>
 					<source src="/wholly-trinity_promo.mp4" type="video/mp4"/>
 				</Video>
-				<div class="relative z-20 p-12 min-h-screen">
+				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
 					<h1 class="text-4xl">STARGATE Represents Wholly Trinity Egypt</h1>
 					<h2 class="text-2xl">Lunar Eclipse / 11-11 / Portal</h2>
 					<h2 class="text-2xl">Nov 8—11 2022</h2>
@@ -135,10 +135,11 @@ export default function Home() {
 			<Section id="arena_resort">
 				<div role="presentation" class="absolute z-10 bg-cover h-full w-full opacity-40"
 						 style="background-image: url(/bg.1.jpg);"></div>
-				<div class="relative z-20 p-12 min-h-screen">
+				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
 					<h3 class="text-2xl mb-6">Arena Resort</h3>
 					<div class="overflow-hidden">
-						<img src="/resort.3.jpg" class="ml-12 float-right" style="max-height: 440px;"/>
+						<img src="/resort.3.jpg" class="w-full mb-6 sm:w-auto sm:ml-12 sm:float-right sm:mb-0"
+								 style="max-height: 440px;"/>
 						<p class="mb-6 text-left">
 							This unique 8-day experience will start off on 11/8 in the city of Al Hayah (near Hurghada) at the Arena Resort for
 							three days. This area of Egypt is considered a high end destination.
@@ -147,8 +148,8 @@ export default function Home() {
 							<img src="/resort.4.jpg" class="m-auto" style="max-height: 300px;"/>
 							<img src="/resort.5.jpg" class="m-auto" style="max-height: 300px;"/>
 						</div>
-						<p class="mt-6 text-left">
-							This gathering kicks offsynchronistically on a total lunar eclipse.
+						<p class="mt-6 mb-6 text-left">
+							This gathering kicks off synchronistically on a total lunar eclipse.
 							On day one we will celebrate the moon, on day two we will celebrate the earth, and on day 3 we will celebrate the sun;
 							which are all connected to the pyramids of Giza.
 						</p>
@@ -159,8 +160,8 @@ export default function Home() {
 					>
 						<source src="/resort.2.mp4" type="video/mp4"/>
 					</Video>
-					<div class="overflow-hidden mt-12">
-						<img src="/resort.2.jpg" class="mr-12 float-left" style="max-height: 440px;"/>
+					<div class="overflow-hidden mt-6">
+						<img src="/resort.2.jpg" class="mb-6 sm:mr-12 sm:float-left w-full sm:w-auto" style="max-height: 440px;"/>
 						<p class="mb-6 text-left">
 							Experience 3 magical days at Arena Resort which is located on the Red Sea filled with high vibrational workshops, healers, music and celebration!
 							We will not only have access to the beach but the resort features many large pools that are filled with aquarian age water.
@@ -184,9 +185,9 @@ export default function Home() {
 			<Section id="cairo">
 				<div role="presentation" class="absolute z-10 bg-cover h-full w-full opacity-40"
 						 style="background-image: url(/bg.2.jpg);"></div>
-				<div class="relative z-20 p-12 min-h-screen">
-					<h3 class="text-2xl mt-12 mb-6">Cairo</h3>
-					<p class="mt-12 text-left">
+				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
+					<h3 class="text-2xl mt-6 mb-6">Cairo</h3>
+					<p class="mt-6 mb-6 text-left">
 						Then on 11/11 we are heading to Cairo, Egypt to visit the pyramids of Giza and venture inside
 						the Sphinx where the magic of the halls of Amanti has been found. They are considered the
 						Akashic records, where you can access the past, present and future. It is also called the hall of
@@ -209,31 +210,31 @@ export default function Home() {
 			<Section id="luxor">
 				<div role="presentation" class="absolute z-10 bg-cover h-full w-full opacity-40"
 						 style="background-image: url(/bg.3.jpg);"></div>
-				<div class="relative z-20 p-12 min-h-screen">
-					<h3 class="text-2xl mt-12 mb-6">Luxor</h3>
-					<Video class="mx-auto w-full xl:w-1/2 absolute sm:static left-0 top-0"
+				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
+					<h3 class="text-2xl mb-6">Luxor</h3>
+					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0 mb-6 overflow-hidden"
 								 poster="/luxor.1.mp4.jpg"
 								 controls
 					>
 						<source src="/luxor.1.mp4" type="video/mp4"/>
 					</Video>
-					<p class="mt-12 text-left">
+					<p class="mt-6 text-left overflow-hidden">
 						Day 5: Sacred Saqqara Complex.
 						While at Saqqara we will first visit the Museum of Imhotep, who is considered the world's earliest recorded polymath, and the father of medicine.  We will next visit The Step Pyramdid of Djoser (designed by Imhotep).  From there we will sojourn into one of ancient Kemet's greatest mysteries, the Seraphim of Saqqara.  This collection of giant ancient tombs, too large to fit through carved rock entrance has been the source for rumors of gods and aliens.  We will finished Saqqara by visiting two more smaller tombs on the complex.  After Saqqara we travel to Luxor which is the most amazing historical city*!* It is
 						said that 30% of the Ancient sites on the planet are in Luxor (once known as the city of Thebes, and was also
 						called the city of Waset to the ancients).  This is where the story of Moses traveling down the Nile as a baby took place.
 					</p>
-					<div class="m-auto flex flex-wrap mb-6">
+					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
 						<img src="/luxor.1.jpg" class="m-auto" style="max-height: 300px;"/>
 						<img src="/luxor.2.jpg" class="m-auto" style="max-height: 300px;"/>
 					</div>
-					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
+					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0 overflow-hidden"
 								 poster="/luxor.2.mp4.jpg"
 								 controls
 					>
 						<source src="/luxor.2.mp4" type="video/mp4"/>
 					</Video>
-					<p class="mt-12 text-left">
+					<p class="mt-6 mb-6 text-left">
 						Day 6: While in Luxor we experience the magic of the New Kingdom.
 						Our first stop will be historic Karnak Temple, the largest open aired museum in the world.
 						Karnak was the holiest temple in Kemet.
@@ -246,13 +247,13 @@ export default function Home() {
 						Her gorgeous tempe sits high upon a mountain, with magnificent views of West Luxor.
 						We will close the evening with traditional Egyptian music, horse dancing, and an exhibition of an ancient Egyptian martial art performed as a dance.
 					</p>
-					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
+					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0 overflow-hidden"
 								 poster="/luxor.3.mp4.jpg"
 								 controls
 					>
 						<source src="/luxor.3.mp4" type="video/mp4"/>
 					</Video>
-					<p class="mt-12 text-left">
+					<p class="mt-6 text-left">
 						Day 7: The Valley of the Kings is the site chosen by the ancient rulers to be their final resting place.
 						Rulers like multiple Ramses, Seti, and yes King Tut chose this area for their tombs.
 						Our next stop will be the Valley of the Workers.
@@ -264,30 +265,32 @@ export default function Home() {
 						This temple is said to have the world's oldest restroom.
 						We will finish our excursions for the day, with a brief stop to view the giant statues of Amenhotep III (father of Akenaten, grandfather of Tutankamun), also known as the Collossi of Memnon.
 					</p>
-					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
-								 poster="/luxor.5.mp4.jpg"
-								 controls
-					>
-						<source src="/luxor.5.mp4" type="video/mp4"/>
-					</Video>
-					<p class="mt-12 text-left">
+					<div class="flex flex-row flex-wrap overflow-hidden h-128 mt-6">
+						<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
+									 poster="/luxor.5.mp4.jpg"
+									 controls
+						>
+							<source src="/luxor.5.mp4" type="video/mp4"/>
+						</Video>
+						<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
+									 poster="/luxor.4.mp4.jpg"
+									 controls
+						>
+							<source src="/luxor.4.mp4" type="video/mp4"/>
+						</Video>
+					</div>
+					<p class="mt-6 text-left">
 						Day 8: We leave Luxor to travel about an hour away to the city of Qena.
 						While there we will see two gorgeously preserved temples Dendera Temple Of Het- Heru (Hathor), and Abydos.
 						We will then complete the cycle of our journey by returning to the Hurghada area where we will fly home to integrate our cosmic upgrades.
 						If you’re reading this you are meant to be here! Different packages are available to those who wish to experience different parts of this magical experience.
 					</p>
-					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
-								 poster="/luxor.4.mp4.jpg"
-								 controls
-					>
-						<source src="/luxor.4.mp4" type="video/mp4"/>
-					</Video>
+					<Div_tickets class="mt-6"/>
 				</div>
-				<Div_tickets class="mt-6"/>
 			</Section>
 		)
 	}
-	function Section($p:ParentProps<{ id:string }>) {
+	function Section($p:ParentProps<{ id:string, class?:string }>) {
 		return (
 			<section
 				ref={$=>queueMicrotask(()=>{
@@ -296,7 +299,7 @@ export default function Home() {
 					return section_top_aa__set(section_top_aa)
 				})}
 				id={$p.id}
-				class="relative"
+				class={`relative ${$p.class || ''}`}
 			>{$p.children}</section>
 		)
 	}
