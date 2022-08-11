@@ -193,8 +193,14 @@ export default function Home() {
 						mirrors, which is the great dream of illusion. It is time for all the magical beings that are meant to
 						be there to break these illusions by opening up the veil of Isis and receive the downloads. Yay!  While in Cairo we will also visit Old Cairo and the Egyptian Museum.
 					</p>
+					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
+								 poster="/cairo.1.mp4.jpg"
+								 controls
+					>
+						<source src="/cairo.1.mp4" type="video/mp4"/>
+					</Video>
+					<Div_tickets class="mt-6"/>
 				</div>
-				<Div_tickets class="mt-6"/>
 			</Section>
 		)
 	}
@@ -217,6 +223,16 @@ export default function Home() {
 						said that 30% of the Ancient sites on the planet are in Luxor (once known as the city of Thebes, and was also
 						called the city of Waset to the ancients).  This is where the story of Moses traveling down the Nile as a baby took place.
 					</p>
+					<div class="m-auto flex flex-wrap mb-6">
+						<img src="/luxor.1.jpg" class="m-auto" style="max-height: 300px;"/>
+						<img src="/luxor.2.jpg" class="m-auto" style="max-height: 300px;"/>
+					</div>
+					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
+								 poster="/luxor.2.mp4.jpg"
+								 controls
+					>
+						<source src="/luxor.2.mp4" type="video/mp4"/>
+					</Video>
 					<p class="mt-12 text-left">
 						Day 6: While in Luxor we experience the magic of the New Kingdom.
 						Our first stop will be historic Karnak Temple, the largest open aired museum in the world.
@@ -230,6 +246,12 @@ export default function Home() {
 						Her gorgeous tempe sits high upon a mountain, with magnificent views of West Luxor.
 						We will close the evening with traditional Egyptian music, horse dancing, and an exhibition of an ancient Egyptian martial art performed as a dance.
 					</p>
+					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
+								 poster="/luxor.3.mp4.jpg"
+								 controls
+					>
+						<source src="/luxor.3.mp4" type="video/mp4"/>
+					</Video>
 					<p class="mt-12 text-left">
 						Day 7: The Valley of the Kings is the site chosen by the ancient rulers to be their final resting place.
 						Rulers like multiple Ramses, Seti, and yes King Tut chose this area for their tombs.
@@ -242,12 +264,24 @@ export default function Home() {
 						This temple is said to have the world's oldest restroom.
 						We will finish our excursions for the day, with a brief stop to view the giant statues of Amenhotep III (father of Akenaten, grandfather of Tutankamun), also known as the Collossi of Memnon.
 					</p>
+					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
+								 poster="/luxor.5.mp4.jpg"
+								 controls
+					>
+						<source src="/luxor.5.mp4" type="video/mp4"/>
+					</Video>
 					<p class="mt-12 text-left">
 						Day 8: We leave Luxor to travel about an hour away to the city of Qena.
 						While there we will see two gorgeously preserved temples Dendera Temple Of Het- Heru (Hathor), and Abydos.
 						We will then complete the cycle of our journey by returning to the Hurghada area where we will fly home to integrate our cosmic upgrades.
 						If you’re reading this you are meant to be here! Different packages are available to those who wish to experience different parts of this magical experience.
 					</p>
+					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
+								 poster="/luxor.4.mp4.jpg"
+								 controls
+					>
+						<source src="/luxor.4.mp4" type="video/mp4"/>
+					</Video>
 				</div>
 				<Div_tickets class="mt-6"/>
 			</Section>
