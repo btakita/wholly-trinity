@@ -265,14 +265,14 @@ export default function Home() {
 						This temple is said to have the world's oldest restroom.
 						We will finish our excursions for the day, with a brief stop to view the giant statues of Amenhotep III (father of Akenaten, grandfather of Tutankamun), also known as the Collossi of Memnon.
 					</p>
-					<div class="flex flex-row flex-wrap overflow-hidden h-128 mt-6">
-						<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
+					<div class="flex flex-row flex-wrap overflow-hidden sm:h-96 mt-6">
+						<Video class="mx-auto h-96 xl:w-1/2 sm:static left-0 top-0 "
 									 poster="/luxor.5.mp4.jpg"
 									 controls
 						>
 							<source src="/luxor.5.mp4" type="video/mp4"/>
 						</Video>
-						<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
+						<Video class="mx-auto h-96 xl:w-1/2 sm:static left-0 top-0"
 									 poster="/luxor.4.mp4.jpg"
 									 controls
 						>
