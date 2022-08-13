@@ -23,3 +23,11 @@ bg.1.webp filter=lfs diff=lfs merge=lfs -text
 resort.1.mp4.webp filter=lfs diff=lfs merge=lfs -text
 resort.3.webp filter=lfs diff=lfs merge=lfs -text
 bg.2.webp filter=lfs diff=lfs merge=lfs -text
+resort.3.294x440.webp filter=lfs diff=lfs merge=lfs -text
+resort.4.451x300.webp filter=lfs diff=lfs merge=lfs -text
+resort.5.451x300.webp filter=lfs diff=lfs merge=lfs -text
+resort.6.300x300.webp filter=lfs diff=lfs merge=lfs -text
+resort.7.400x300.webp filter=lfs diff=lfs merge=lfs -text
+luxor.1.400x300.webp filter=lfs diff=lfs merge=lfs -text
+luxor.2.533x300.webp filter=lfs diff=lfs merge=lfs -text
+resort.2.293x440.webp filter=lfs diff=lfs merge=lfs -text
