@@ -120,6 +120,7 @@ export default function Home() {
 		return (
 			<a href={tickets_url}
 				 class="btn"
+				 style="color: #1b0f23;"
 				 target="_blank"
 			>Get your Ticket(s)</a>
 		)
