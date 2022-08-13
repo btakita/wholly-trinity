@@ -7,6 +7,7 @@ const title = 'STARGATE Represents Wholly Trinity Egypt'
 const description = 'We are being called to return to our ancestral and magical land of Egypt! Stargate Events presents Wholly Trinity, a gathering that will unite all our multidimensional selves into oneness, weaving together the past, present and future.'
 const image = 'https://www.stargateevent.com/wholly-trinity_promo.mp4.jpg'
 const url = 'https://www.stargate.com'
+const contact_email = 'trinitystargate@gmail.com'
 export default function Home() {
 	const [section_top_aa_, section_top_aa__set] = createSignal<[HTMLElement, top_T][]>([])
 	const [Navigation__o_, Navigation__o__set] = createSignal<Navigation__o>()
@@ -43,6 +44,7 @@ export default function Home() {
 				<Section_arena_resort/>
 				<Section_cairo/>
 				<Section_luxor/>
+				<Section_contact/>
 			</article>
 			<Footer></Footer>
     </main>,
@@ -392,6 +394,69 @@ export default function Home() {
 			</Section>
 		)
 	}
+	function Section_contact() {
+		let name__input:HTMLInputElement
+		let honey__input:HTMLInputElement
+		let email__input:HTMLInputElement
+		let message__textarea:HTMLTextAreaElement
+		const [contact__show_, contact__show__set] = createSignal(true)
+		return (
+			<div id="contact" class="flex flex-col items-center">
+				<Show when={contact__show_()} fallback={
+					<p class="color: white;">Thank you for getting in touch!</p>
+				}>
+					<h2 class="text-2xl mt-6 mb-4">Get in touch</h2>
+					<form
+						action="https://formsubmit.co/brian.takita@gmail.com"
+						method="post"
+						onSubmit={async $=>{
+							$.preventDefault()
+							await fetch(`https://formsubmit.co/${contact_email}`, {
+								method: 'POST',
+								headers: {
+									Accept: 'application/json',
+									'Content-Type': 'application/json',
+								},
+								body: JSON.stringify({
+									name: name__input.value,
+									honey: honey__input.value,
+									email: email__input.value,
+									message: message__textarea.value,
+								})
+							})
+							contact__show__set(false)
+						}}
+						class="flex flex-col items-center justify-center"
+						style="width: 48rem;"
+					>
+						<input ref={$=>honey__input = $} type="text" name="_honey" style="display:none"/>
+						<div class="flex">
+							<div class="flex w-96 pr-1">
+								<input ref={$=>name__input = $} type="text"
+											 name="name" placeholder="Your Name" required={true}
+											 class="block pt-2 pb-2 pl-6 pr-6 mt-2 w-full"
+								/>
+							</div>
+							<div class="flex w-96 pl-1">
+								<input ref={$=>email__input = $} type="text"
+											 name="email" placeholder="Your Email Address" required={true}
+											 class="block pt-2 pb-2 pl-6 pr-6 mt-2 w-full"
+								/>
+							</div>
+						</div>
+						<textarea ref={$=>message__textarea = $}
+											name="message" placeholder="Your Message" required={true}
+											class="block pt-2 pb-2 pl-6 pr-6 mt-2 w-full h-48"
+						/>
+						<button type="submit"
+										class="block pt-2 pb-2 pl-6 pr-6 mt-2 w-full"
+										style="background-color: #DDD;"
+						>Send</button>
+					</form>
+				</Show>
+			</div>
+		)
+	}
 	function Section($p:ParentProps<{ id:string, class?:string }>) {
 		return (
 			<section
@@ -421,8 +486,8 @@ export default function Home() {
 	}
 	function Footer() {
 		return (
-			<footer class="p-6">
-				<h2 class="mb-6">Previous Events</h2>
+			<footer class="p-6 flex flex-col items-center">
+				<h2 class="text-2xl mb-6">Previous Events</h2>
 				<a href="https://bluestargate.com"
 					 class="block mb-2"
 					 target="_blank"
@@ -435,7 +500,7 @@ export default function Home() {
 					 class="block mb-2"
 					 target="_blank"
 				>Blue Star Gate</a>
-			</footer>
+				</footer>
 		)
 	}
 }
