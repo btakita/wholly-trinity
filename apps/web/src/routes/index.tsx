@@ -219,15 +219,21 @@ export default function Home() {
 					<h3 class="text-2xl mb-6">Arena Resort</h3>
 					<div class="overflow-hidden">
 						<img src="/resort.3.294x440.webp" class="w-full mb-6 sm:w-auto sm:ml-12 sm:float-right sm:mb-0"
-								 width="294px"
-								 height="440px"/>
+								 width="294px" height="440px"
+								 alt="Wholly Trinity Arena Resort Pool"
+						/>
 						<p class="mb-6 text-left">
 							This unique 8-day experience will start off on 11/8 in the city of Al Hayah (near Hurghada) at the Arena Resort for
 							three days. This area of Egypt is considered a high end destination.
 						</p>
 						<div class="m-auto flex flex-wrap">
-							<img src="/resort.4.451x300.webp" class="m-auto" width="451px" height="300px"/>
-							<img src="/resort.5.451x300.webp" class="m-auto" width="451px" height="300px"/>
+							<img src="/resort.4.451x300.webp" class="m-auto"
+									 width="451px" height="300px"
+									 alt="Wholly Trinity Arena Resort Pool Event"/>
+							<img src="/resort.5.451x300.webp" class="m-auto"
+									 width="451px" height="300px"
+									 alt="Wholly Trinity Arena Resort Sign Event"
+							/>
 						</div>
 						<p class="mt-6 mb-6 text-left">
 							This gathering kicks off synchronistically on a total lunar eclipse.
@@ -242,14 +248,23 @@ export default function Home() {
 						<source src="/resort.2.mp4" type="video/mp4"/>
 					</Video>
 					<div class="overflow-hidden mt-6">
-						<img src="/resort.2.293x440.webp" class="mb-6 sm:mr-12 sm:float-left w-full sm:w-auto" width="293" height="440px"/>
+						<img src="/resort.2.293x440.webp" class="mb-6 sm:mr-12 sm:float-left w-full sm:w-auto"
+								 width="293" height="440px"
+								 alt="Wholly Trinity Arena Resort Pool & Beach"
+						/>
 						<p class="mb-6 text-left">
 							Experience 3 magical days at Arena Resort which is located on the Red Sea filled with high vibrational workshops, healers, music and celebration!
 							We will not only have access to the beach but the resort features many large pools that are filled with aquarian age water.
 						</p>
 						<div class="m-auto flex flex-wrap">
-							<img src="/resort.7.400x300.webp" class="m-auto" width="400px" height="300px"/>
-							<img src="/resort.6.300x300.webp" class="m-auto" width="300px" height="300px"/>
+							<img src="/resort.7.400x300.webp" class="m-auto"
+									 width="400px" height="300px"
+									 alt="Wholly Trinity Arena Resort Gold Sky"
+							/>
+							<img src="/resort.6.300x300.webp" class="m-auto"
+									 width="300px" height="300px"
+									 alt="Wholly Trinity Arena Resort Cabana"
+							/>
 						</div>
 						<p class="mt-6 text-left">
 							Choose from different packages that feature newly built condos and villas, and even mansions.
@@ -306,8 +321,14 @@ export default function Home() {
 						called the city of Waset to the ancients).  This is where the story of Moses traveling down the Nile as a baby took place.
 					</p>
 					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
-						<img src="/luxor.1.400x300.webp" class="m-auto" width="400px" height="300px"/>
-						<img src="/luxor.2.533x300.webp" class="m-auto" width="533px" height="300px"/>
+						<img src="/luxor.1.400x300.webp" class="m-auto"
+								 width="400px" height="300px"
+								 alt="Wholly Trinity Luxor 1"
+						/>
+						<img src="/luxor.2.533x300.webp" class="m-auto"
+								 width="533px" height="300px"
+								 alt="Wholly Trinity Luxor 2"
+						/>
 					</div>
 					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0 overflow-hidden"
 								 poster="/luxor.2.mp4.jpg"
