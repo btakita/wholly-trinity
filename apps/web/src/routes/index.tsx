@@ -35,7 +35,7 @@ export default function Home() {
 			<JsonLd/>
 		</Head>,
 		<main class="text-center mx-auto text-gray-700 sm:p-4 bg-cover relative"
-					style="background-image: url(/hero.jpg);"
+					style="background-image: url(/hero.webp);"
 		>
 			<Navigation_arrows/>
 			<article>
@@ -214,19 +214,19 @@ export default function Home() {
 		return (
 			<Section id="arena_resort">
 				<div role="presentation" class="absolute z-10 bg-cover h-full w-full opacity-40"
-						 style="background-image: url(/bg.1.jpg);"></div>
+						 style="background-image: url(/bg.1.webp);"></div>
 				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
 					<h3 class="text-2xl mb-6">Arena Resort</h3>
 					<div class="overflow-hidden">
-						<img src="/resort.3.jpg" class="w-full mb-6 sm:w-auto sm:ml-12 sm:float-right sm:mb-0"
+						<img src="/resort.3.webp" class="w-full mb-6 sm:w-auto sm:ml-12 sm:float-right sm:mb-0"
 								 style="max-height: 440px;"/>
 						<p class="mb-6 text-left">
 							This unique 8-day experience will start off on 11/8 in the city of Al Hayah (near Hurghada) at the Arena Resort for
 							three days. This area of Egypt is considered a high end destination.
 						</p>
 						<div class="m-auto flex flex-wrap">
-							<img src="/resort.4.jpg" class="m-auto" style="max-height: 300px;"/>
-							<img src="/resort.5.jpg" class="m-auto" style="max-height: 300px;"/>
+							<img src="/resort.4.webp" class="m-auto" style="max-height: 300px;"/>
+							<img src="/resort.5.webp" class="m-auto" style="max-height: 300px;"/>
 						</div>
 						<p class="mt-6 mb-6 text-left">
 							This gathering kicks off synchronistically on a total lunar eclipse.
@@ -235,20 +235,20 @@ export default function Home() {
 						</p>
 					</div>
 					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
-								 poster="/resort.2.mp4.jpg"
+								 poster="/resort.2.mp4.webp"
 								 controls
 					>
 						<source src="/resort.2.mp4" type="video/mp4"/>
 					</Video>
 					<div class="overflow-hidden mt-6">
-						<img src="/resort.2.jpg" class="mb-6 sm:mr-12 sm:float-left w-full sm:w-auto" style="max-height: 440px;"/>
+						<img src="/resort.2.webp" class="mb-6 sm:mr-12 sm:float-left w-full sm:w-auto" style="max-height: 440px;"/>
 						<p class="mb-6 text-left">
 							Experience 3 magical days at Arena Resort which is located on the Red Sea filled with high vibrational workshops, healers, music and celebration!
 							We will not only have access to the beach but the resort features many large pools that are filled with aquarian age water.
 						</p>
 						<div class="m-auto flex flex-wrap">
-							<img src="/resort.7.jpg" class="m-auto" style="max-height: 300px;"/>
-							<img src="/resort.6.jpg" class="m-auto" style="max-height: 300px;"/>
+							<img src="/resort.7.webp" class="m-auto" style="max-height: 300px;"/>
+							<img src="/resort.6.webp" class="m-auto" style="max-height: 300px;"/>
 						</div>
 						<p class="mt-6 text-left">
 							Choose from different packages that feature newly built condos and villas, and even mansions.
@@ -264,7 +264,7 @@ export default function Home() {
 		return (
 			<Section id="cairo">
 				<div role="presentation" class="absolute z-10 bg-cover h-full w-full opacity-40"
-						 style="background-image: url(/bg.2.jpg);"></div>
+						 style="background-image: url(/bg.2.webp);"></div>
 				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
 					<h3 class="text-2xl mt-6 mb-6">Cairo</h3>
 					<p class="mt-6 mb-6 text-left">
@@ -289,7 +289,7 @@ export default function Home() {
 		return (
 			<Section id="luxor">
 				<div role="presentation" class="absolute z-10 bg-cover h-full w-full opacity-40"
-						 style="background-image: url(/bg.3.jpg);"></div>
+						 style="background-image: url(/bg.3.webp);"></div>
 				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
 					<h3 class="text-2xl mb-6">Luxor</h3>
 					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0 mb-6 overflow-hidden"
@@ -305,8 +305,8 @@ export default function Home() {
 						called the city of Waset to the ancients).  This is where the story of Moses traveling down the Nile as a baby took place.
 					</p>
 					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
-						<img src="/luxor.1.jpg" class="m-auto" style="max-height: 300px;"/>
-						<img src="/luxor.2.jpg" class="m-auto" style="max-height: 300px;"/>
+						<img src="/luxor.1.webp" class="m-auto" style="max-height: 300px;"/>
+						<img src="/luxor.2.webp" class="m-auto" style="max-height: 300px;"/>
 					</div>
 					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0 overflow-hidden"
 								 poster="/luxor.2.mp4.jpg"
