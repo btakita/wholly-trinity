@@ -3,8 +3,9 @@ import { createMemo, createSignal, type JSX, onCleanup, onMount, type ParentProp
 import { Assets } from 'solid-js/web'
 import { Head, Meta, Title } from 'solid-start'
 const tickets_url = 'https://app.promotix.com/events/details/wholly-Trinity-tickets'
-const title_txt = 'STARGATE Represents Wholly Trinity Egypt'
-const description_txt = 'We are being called to return to our ancestral and magical land of Egypt! Stargate Events presents Wholly Trinity, a gathering that will unite all our multidimensional selves into oneness, weaving together the past, present and future.'
+const title = 'STARGATE Represents Wholly Trinity Egypt'
+const description = 'We are being called to return to our ancestral and magical land of Egypt! Stargate Events presents Wholly Trinity, a gathering that will unite all our multidimensional selves into oneness, weaving together the past, present and future.'
+const image = 'https://www.stargateevent.com/wholly-trinity_promo.mp4.jpg'
 export default function Home() {
 	const [section_top_aa_, section_top_aa__set] = createSignal<[HTMLElement, top_T][]>([])
 	const [Navigation__o_, Navigation__o__set] = createSignal<Navigation__o>()
@@ -16,18 +17,80 @@ export default function Home() {
 		onCleanup(()=>window.removeEventListener('resize', Navigation__refresh))
 		queueMicrotask(()=>Navigation__refresh())
 	})
+	function JsonLd() {
+		// See https://xoocode.com/json-ld-code-examples/event/
+		return <Assets><script $ServerOnly type="application/ld+json" innerHTML={JSON.stringify({
+			'@context': 'http://schema.org',
+			'@type': 'Event',
+			name: title,
+			alternateName: 'Wholly Trinity',
+			url: 'https://stargateevent.com',
+			description,
+			image,
+			location: {
+				'@id': 'https://stargateevent.com#hurghada',
+				'@type': 'Place',
+				name: 'Hurghada, Red Sea Governorate, Egypt',
+				url: 'https://egypt.travel/en/regions/the-red-sea/hurghada-city/',
+				address: 'Hurghada, Red Sea Governorate, Egypt'
+			},
+			organizer: {
+				'@type': 'Organization',
+				name: 'Kabartsy Inc.',
+				url: 'https://kabartsy.com/'
+			},
+			offers: {
+				'@id': 'https://stargateevent.com#wholly-Trinity-tickets',
+				name: 'Wholly Trinity Event & Accommodations',
+				availability: 'In Stock',
+				price: '2750',
+				priceCurrency: 'USD',
+				validFrom: '2022-08-08',
+				url: 'https://app.promotix.com/events/details/wholly-Trinity-tickets'
+			},
+			startDate: '2022-11-08',
+			endDate: '2022-11-15',
+			whollyTrinityCairo: {
+				'@type': 'Event',
+				name: 'Wholly Trinity Cairo',
+				location: {
+					'@id': 'https://stargateevent.com#cairo',
+					'@type': 'Place',
+					name: 'Cairo, Egypt',
+					url: 'https://egypt.travel/en/regions/the-nile/cairo',
+					address: 'Cairo, Egypt'
+				},
+				startDate: '2022-11-11',
+				endDate: '2022-11-11'
+			},
+			whollyTrinityLuxor: {
+				'@type': 'Event',
+				name: 'Wholly Trinity Luxor',
+				location: {
+					'@id': 'https://stargateevent.com#luxor',
+					'@type': 'Place',
+					name: 'Luxor, Egypt',
+					url: 'https://egypt.travel/en/regions/the-nile/luxor',
+					address: 'Luxor, Egypt'
+				},
+				startDate: '2022-11-12',
+				endDate: '2022-11-15'
+			}
+		})}/></Assets>
+	}
 	return [
 		<Head>
-			<Title>{title_txt}</Title>
-			<Meta name="description" content={description_txt}/>
-			<Meta name="twitter:title" content={title_txt}/>
-			<Meta name="twitter:description" content={description_txt}/>
-			<Meta name="twitter:image" content="https://www.stargateevent.com/wholly-trinity_promo.mp4.jpg"/>
+			<Title>{title}</Title>
+			<Meta name="description" content={description}/>
+			<Meta name="twitter:title" content={title}/>
+			<Meta name="twitter:description" content={description}/>
+			<Meta name="twitter:image" content={image}/>
 			<Meta name="twitter:card" content="summary_large_image"/>
-			<Meta property="og:title" content={title_txt}/>
+			<Meta property="og:title" content={title}/>
 			<Meta property="og:type" content="website"/>
-			<Meta property="og:description" content={description_txt}/>
-			<Meta property="og:image" content="https://www.stargateevent.com/wholly-trinity_promo.mp4.jpg"/>
+			<Meta property="og:description" content={description}/>
+			<Meta property="og:image" content={image}/>
+			<JsonLd/>
 		</Head>,
 		<main class="text-center mx-auto text-gray-700 sm:p-4 bg-cover relative"
 					style="background-image: url(/hero.jpg);"
@@ -130,7 +193,7 @@ export default function Home() {
 					<h1 class="text-4xl">STARGATE Represents Wholly Trinity Egypt</h1>
 					<h2 class="text-2xl">Lunar Eclipse / 11-11 / Portal</h2>
 					<h2 class="text-2xl">Nov 8—11 2022</h2>
-					<p class="mt-12">{description_txt}
+					<p class="mt-12">{description}
 					</p>
 					<p class="mt-12">
 						We are the gatekeepers of this galaxy that are here to protect this beautiful planet. Through the
