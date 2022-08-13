@@ -1,7 +1,10 @@
 import { GlobalStyle, Singleton_ } from '@ctx-core/ui-solid'
 import { createMemo, createSignal, type JSX, onCleanup, onMount, type ParentProps, Show } from 'solid-js'
 import { Assets } from 'solid-js/web'
+import { Head, Meta, Title } from 'solid-start'
 const tickets_url = 'https://app.promotix.com/events/details/wholly-Trinity-tickets'
+const title_txt = 'STARGATE Represents Wholly Trinity Egypt'
+const description_txt = 'We are being called to return to our ancestral and magical land of Egypt! Stargate Events presents Wholly Trinity, a gathering that will unite all our multidimensional selves into oneness, weaving together the past, present and future.'
 export default function Home() {
 	const [section_top_aa_, section_top_aa__set] = createSignal<[HTMLElement, top_T][]>([])
 	const [Navigation__o_, Navigation__o__set] = createSignal<Navigation__o>()
@@ -14,6 +17,18 @@ export default function Home() {
 		queueMicrotask(()=>Navigation__refresh())
 	})
 	return [
+		<Head>
+			<Title>{title_txt}</Title>
+			<Meta name="description" content={description_txt}/>
+			<Meta name="twitter:title" content={title_txt}/>
+			<Meta name="twitter:description" content={description_txt}/>
+			<Meta name="twitter:image" content="https://www.stargateevent.com/wholly-trinity_promo.mp4.jpg"/>
+			<Meta name="twitter:card" content="summary_large_image"/>
+			<Meta property="og:title" content={title_txt}/>
+			<Meta property="og:type" content="website"/>
+			<Meta property="og:description" content={description_txt}/>
+			<Meta property="og:image" content="https://www.stargateevent.com/wholly-trinity_promo.mp4.jpg"/>
+		</Head>,
 		<main class="text-center mx-auto text-gray-700 sm:p-4 bg-cover relative"
 					style="background-image: url(/hero.jpg);"
 		>
@@ -115,10 +130,7 @@ export default function Home() {
 					<h1 class="text-4xl">STARGATE Represents Wholly Trinity Egypt</h1>
 					<h2 class="text-2xl">Lunar Eclipse / 11-11 / Portal</h2>
 					<h2 class="text-2xl">Nov 8—11 2022</h2>
-					<p class="mt-12">
-						We are being called to return to our ancestral and magical land of Egypt! Stargate Events
-						presents Wholly Trinity, a gathering that will unite all our multidimensional selves into oneness,
-						weaving together the past, present and future.
+					<p class="mt-12">{description_txt}
 					</p>
 					<p class="mt-12">
 						We are the gatekeepers of this galaxy that are here to protect this beautiful planet. Through the
