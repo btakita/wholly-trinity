@@ -44,6 +44,7 @@ export default function Home() {
 				<Section_cairo/>
 				<Section_luxor/>
 			</article>
+			<Footer></Footer>
     </main>,
 		<Style/>
 	]
@@ -395,10 +396,32 @@ export default function Home() {
 			/>
 		)
 	}
+	function Footer() {
+	  return (
+			<footer class="p-6">
+				<h2 class="mb-6">Previous Events</h2>
+				<a href="https://bluestargate.com"
+					 class="block mb-2"
+					 target="_blank"
+				>White Star Gate</a>
+				<a href="https://web.archive.org/web/20150616145038/http://www.bluestargate.com/"
+					 class="block mb-2"
+					 target="_blank"
+				>Yellow Star Gate</a>
+				<a href="https://web.archive.org/web/20150226085038/http://www.bluestargate.com/"
+					 class="block mb-2"
+					 target="_blank"
+				>Blue Star Gate</a>
+			</footer>
+		)
+	}
 }
 const Style = Singleton_(()=><GlobalStyle>{`
-h1,h2,h3,h4,h5,h6,p {
+h1,h2,h3,h4,h5,h6,p,a {
 	color: white;
+}
+a {
+	text-decoration: underline;
 }
 `}</GlobalStyle>)
 interface Navigation__o {
