@@ -6,6 +6,7 @@ const tickets_url = 'https://app.promotix.com/events/details/wholly-Trinity-tick
 const title = 'STARGATE Represents Wholly Trinity Egypt'
 const description = 'We are being called to return to our ancestral and magical land of Egypt! Stargate Events presents Wholly Trinity, a gathering that will unite all our multidimensional selves into oneness, weaving together the past, present and future.'
 const image = 'https://www.stargateevent.com/wholly-trinity_promo.mp4.jpg'
+const url = 'https://www.stargate.com'
 export default function Home() {
 	const [section_top_aa_, section_top_aa__set] = createSignal<[HTMLElement, top_T][]>([])
 	const [Navigation__o_, Navigation__o__set] = createSignal<Navigation__o>()
@@ -17,6 +18,35 @@ export default function Home() {
 		onCleanup(()=>window.removeEventListener('resize', Navigation__refresh))
 		queueMicrotask(()=>Navigation__refresh())
 	})
+	return [
+		<Head>
+			<Title>{title}</Title>
+			<Meta name="description" content={description}/>
+			<Meta name="twitter:title" content={title}/>
+			<Meta name="twitter:description" content={description}/>
+			<Meta name="twitter:image" content={image}/>
+			<Meta name="twitter:card" content="summary_large_image"/>
+			<Meta name="twitter:url" content={url}/>
+			<Meta property="og:title" content={title}/>
+			<Meta property="og:type" content="website"/>
+			<Meta property="og:description" content={description}/>
+			<Meta property="og:image" content={image}/>
+			<Meta property="og:url" content={url}/>
+			<JsonLd/>
+		</Head>,
+		<main class="text-center mx-auto text-gray-700 sm:p-4 bg-cover relative"
+					style="background-image: url(/hero.jpg);"
+		>
+			<Navigation_arrows/>
+			<article>
+				<Section_intro/>
+				<Section_arena_resort/>
+				<Section_cairo/>
+				<Section_luxor/>
+			</article>
+    </main>,
+		<Style/>
+	]
 	function JsonLd() {
 		// See https://xoocode.com/json-ld-code-examples/event/
 		return <Assets><script $ServerOnly type="application/ld+json" innerHTML={JSON.stringify({
@@ -78,33 +108,6 @@ export default function Home() {
 			}
 		})}/></Assets>
 	}
-	return [
-		<Head>
-			<Title>{title}</Title>
-			<Meta name="description" content={description}/>
-			<Meta name="twitter:title" content={title}/>
-			<Meta name="twitter:description" content={description}/>
-			<Meta name="twitter:image" content={image}/>
-			<Meta name="twitter:card" content="summary_large_image"/>
-			<Meta property="og:title" content={title}/>
-			<Meta property="og:type" content="website"/>
-			<Meta property="og:description" content={description}/>
-			<Meta property="og:image" content={image}/>
-			<JsonLd/>
-		</Head>,
-		<main class="text-center mx-auto text-gray-700 sm:p-4 bg-cover relative"
-					style="background-image: url(/hero.jpg);"
-		>
-			<Navigation_arrows/>
-			<article>
-				<Section_intro/>
-				<Section_arena_resort/>
-				<Section_cairo/>
-				<Section_luxor/>
-			</article>
-    </main>,
-		<Style/>
-	]
 	function Div_tickets($p:ParentProps<{ class?:string }>) {
 		return (
 			<div class={`flex justify-center ${$p.class || ''}`}>
