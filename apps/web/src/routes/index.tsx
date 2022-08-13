@@ -44,7 +44,7 @@ export default function Home() {
 				<Section_arena_resort/>
 				<Section_cairo/>
 				<Section_luxor/>
-				<Section_contact/>
+				{/*<Section_contact/>*/}
 			</article>
 			<Footer></Footer>
     </main>,
