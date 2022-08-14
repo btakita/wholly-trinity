@@ -238,10 +238,10 @@ export default function Home() {
 									 class="m-auto"
 									 width="451px" height="300px"
 									 alt="Wholly Trinity Arena Resort Pool Event"/>
-							<img src="/resort.05.451x300.webp"
+							<img src="/resort.07.400x300.webp"
 									 class="m-auto mt-6 sm:mt-0"
-									 width="451px" height="300px"
-									 alt="Wholly Trinity Arena Resort Sign Event"
+									 width="400px" height="300px"
+									 alt="Wholly Trinity Arena Resort Gold Sky"
 							/>
 						</div>
 						<p class="mt-6 mb-6 text-left">
@@ -257,27 +257,10 @@ export default function Home() {
 						<source src="/resort.02.mp4" type="video/mp4"/>
 					</Video>
 					<div class="overflow-hidden mt-6">
-						<img src="/resort.08.293x440.webp"
-								 class="mb-6 sm:mr-12 sm:float-left w-full sm:w-auto"
-								 width="293" height="440px"
-								 alt="Wholly Trinity Arena Resort Pool & Beach"
-						/>
 						<p class="mb-6 text-left">
 							Experience 3 magical days at Arena Resort which is located on the Red Sea filled with high vibrational workshops, healers, music and celebration!
 							We will not only have access to the beach but the resort features many large pools that are filled with aquarian age water.
 						</p>
-						<div class="m-auto flex flex-wrap">
-							<img src="/resort.07.400x300.webp"
-									 class="m-auto"
-									 width="400px" height="300px"
-									 alt="Wholly Trinity Arena Resort Gold Sky"
-							/>
-							<img src="/resort.06.300x300.webp"
-									 class="m-auto mt-6 sm:mt-0"
-									 width="300px" height="300px"
-									 alt="Wholly Trinity Arena Resort Cabana"
-							/>
-						</div>
 						<p class="mt-6 text-left">
 							Choose from different packages that feature newly built condos and villas, and even mansions.
 							There will be delicious Mediterranean and Lebanese dining options with a Lebanese chef that can fit all dietary needs.
