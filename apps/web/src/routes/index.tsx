@@ -167,7 +167,7 @@ export default function Home() {
 									clip-rule="evenodd"/>
 					</svg>
 				</a>
-			</Show>,
+		</Show>,
 			<Show when={next__id_()}>
 				<a href={next__id_()}
 					 onClick={$=>{
@@ -188,7 +188,7 @@ export default function Home() {
 	function Section_intro() {
 		return (
 			<Section id="intro">
-				<Video poster="/wholly-trinity_promo.mp4.jpg"
+				<Video poster="/wholly-trinity_promo.mp4.1200x670.jpg"
 							 class="mx-auto w-full xl:w-1/2 static left-0 top-0"
 							 controls
 							 autoplay={true}
@@ -208,6 +208,10 @@ export default function Home() {
 						rewrite, reform, and encode future timelines.
 					</p>
 					<Div_tickets class="mt-6"/>
+					<img src="/pyramids.1200x813.webp"
+							 class="m-auto flex flex-wrap mt-6 mb-6"
+							 alt="Wholly Trinity Arena Resort Pool"
+					/>
 				</div>
 			</Section>
 		)
@@ -220,7 +224,8 @@ export default function Home() {
 				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
 					<h3 class="text-2xl mb-6">Arena Resort</h3>
 					<div class="overflow-hidden">
-						<img src="/resort.3.294x440.webp" class="w-full mb-6 sm:w-auto sm:ml-12 sm:float-right sm:mb-0"
+						<img src="/resort.03.294x440.webp"
+								 class="w-full mb-6 sm:w-auto sm:ml-12 sm:float-right sm:mb-0"
 								 width="294px" height="440px"
 								 alt="Wholly Trinity Arena Resort Pool"
 						/>
@@ -229,10 +234,12 @@ export default function Home() {
 							three days. This area of Egypt is considered a high end destination.
 						</p>
 						<div class="m-auto flex flex-wrap">
-							<img src="/resort.4.451x300.webp" class="m-auto"
+							<img src="/resort.04.451x300.webp"
+									 class="m-auto"
 									 width="451px" height="300px"
 									 alt="Wholly Trinity Arena Resort Pool Event"/>
-							<img src="/resort.5.451x300.webp" class="m-auto"
+							<img src="/resort.05.451x300.webp"
+									 class="m-auto mt-6 sm:mt-0"
 									 width="451px" height="300px"
 									 alt="Wholly Trinity Arena Resort Sign Event"
 							/>
@@ -244,13 +251,14 @@ export default function Home() {
 						</p>
 					</div>
 					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
-								 poster="/resort.2.mp4.webp"
+								 poster="/resort.02.mp4.webp"
 								 controls
 					>
-						<source src="/resort.2.mp4" type="video/mp4"/>
+						<source src="/resort.02.mp4" type="video/mp4"/>
 					</Video>
 					<div class="overflow-hidden mt-6">
-						<img src="/resort.2.293x440.webp" class="mb-6 sm:mr-12 sm:float-left w-full sm:w-auto"
+						<img src="/resort.08.293x440.webp"
+								 class="mb-6 sm:mr-12 sm:float-left w-full sm:w-auto"
 								 width="293" height="440px"
 								 alt="Wholly Trinity Arena Resort Pool & Beach"
 						/>
@@ -259,11 +267,13 @@ export default function Home() {
 							We will not only have access to the beach but the resort features many large pools that are filled with aquarian age water.
 						</p>
 						<div class="m-auto flex flex-wrap">
-							<img src="/resort.7.400x300.webp" class="m-auto"
+							<img src="/resort.07.400x300.webp"
+									 class="m-auto"
 									 width="400px" height="300px"
 									 alt="Wholly Trinity Arena Resort Gold Sky"
 							/>
-							<img src="/resort.6.300x300.webp" class="m-auto"
+							<img src="/resort.06.300x300.webp"
+									 class="m-auto mt-6 sm:mt-0"
 									 width="300px" height="300px"
 									 alt="Wholly Trinity Arena Resort Cabana"
 							/>
@@ -281,7 +291,8 @@ export default function Home() {
 	function Section_cairo() {
 		return (
 			<Section id="cairo">
-				<div role="presentation" class="absolute z-10 bg-cover h-full w-full opacity-40"
+				<div role="presentation"
+						 class="absolute z-10 bg-cover h-full w-full opacity-40"
 						 style="background-image: url(/bg.2.webp);"></div>
 				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
 					<h3 class="text-2xl mt-6 mb-6">Cairo</h3>
@@ -293,7 +304,7 @@ export default function Home() {
 						be there to break these illusions by opening up the veil of Isis and receive the downloads. Yay!  While in Cairo we will also visit Old Cairo and the Egyptian Museum.
 					</p>
 					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
-								 poster="/cairo.1.mp4.jpg"
+								 poster="/cairo.1.mp4.1200x675.webp"
 								 controls
 					>
 						<source src="/cairo.1.mp4" type="video/mp4"/>
@@ -306,15 +317,42 @@ export default function Home() {
 	function Section_luxor() {
 		return (
 			<Section id="luxor">
-				<div role="presentation" class="absolute z-10 bg-cover h-full w-full opacity-40"
+				<div role="presentation"
+						 class="absolute z-10 bg-cover h-full w-full opacity-40"
 						 style="background-image: url(/bg.3.webp);"></div>
 				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
 					<h3 class="text-2xl mb-6">Luxor</h3>
-					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0 mb-6 overflow-hidden"
-								 poster="/luxor.1.mp4.jpg"
+					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
+						<img src="/luxor.17.169x300.webp"
+								 class="m-auto mt-6 sm:mt-0"
+								 width="169px"
+								 height="300px"
+								 alt="Wholly Trinity Luxor 2"
+						/>
+						<img src="/luxor.18.169x300.webp"
+								 class="m-auto mt-6 sm:mt-0"
+								 width="169px"
+								 height="300px"
+								 alt="Wholly Trinity Luxor 2"
+						/>
+						<img src="/luxor.15.533x300.webp"
+								 class="m-auto mt-6 sm:mt-0"
+								 width="533px"
+								 height="300px"
+								 alt="Wholly Trinity Luxor 2"
+						/>
+						<img src="/luxor.16.533x300.webp"
+								 class="m-auto mt-6 sm:mt-0"
+								 width="533px"
+								 height="300px"
+								 alt="Wholly Trinity Luxor 2"
+						/>
+					</div>
+					<Video class="mx-auto w-full sm:static mt-6 max-w-7xl"
+								 poster="/luxor.09.mp4.1200x675.jpg"
 								 controls
 					>
-						<source src="/luxor.1.mp4" type="video/mp4"/>
+						<source src="/luxor.09.mp4" type="video/mp4"/>
 					</Video>
 					<p class="mt-6 text-left overflow-hidden">
 						Day 5: Sacred Saqqara Complex.
@@ -322,21 +360,11 @@ export default function Home() {
 						said that 30% of the Ancient sites on the planet are in Luxor (once known as the city of Thebes, and was also
 						called the city of Waset to the ancients).  This is where the story of Moses traveling down the Nile as a baby took place.
 					</p>
-					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
-						<img src="/luxor.1.400x300.webp" class="m-auto"
-								 width="400px" height="300px"
-								 alt="Wholly Trinity Luxor 1"
-						/>
-						<img src="/luxor.2.533x300.webp" class="m-auto"
-								 width="533px" height="300px"
-								 alt="Wholly Trinity Luxor 2"
-						/>
-					</div>
-					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0 overflow-hidden"
-								 poster="/luxor.2.mp4.jpg"
+					<Video class="mx-auto w-full sm:static mt-6 max-w-7xl"
+								 poster="/luxor.10.mp4.1200x675.webp"
 								 controls
 					>
-						<source src="/luxor.2.mp4" type="video/mp4"/>
+						<source src="/luxor.10.mp4" type="video/mp4"/>
 					</Video>
 					<p class="mt-6 mb-6 text-left">
 						Day 6: While in Luxor we experience the magic of the New Kingdom.
@@ -351,11 +379,30 @@ export default function Home() {
 						Her gorgeous tempe sits high upon a mountain, with magnificent views of West Luxor.
 						We will close the evening with traditional Egyptian music, horse dancing, and an exhibition of an ancient Egyptian martial art performed as a dance.
 					</p>
-					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0 overflow-hidden"
-								 poster="/luxor.3.mp4.jpg"
+					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
+						<img src="/luxor.13.533x300.webp"
+								 class="m-auto mt-6 sm:mt-0"
+								 width="533px"
+								 height="300px"
+								 alt="Wholly Trinity Luxor 2"
+						/>
+						<img src="/luxor.14.400x300.webp"
+								 class="m-auto mt-6 sm:mt-0"
+								 height="300px"
+								 width="400px"
+								 alt="Wholly Trinity Luxor 2"
+						/>
+						<img src="/luxor.02.533x300.webp"
+								 class="m-auto mt-6 sm:mt-0"
+								 width="533px" height="300px"
+								 alt="Wholly Trinity Luxor 2"
+						/>
+					</div>
+					<Video class="mx-auto w-full sm:static mt-6 max-w-7xl"
+								 poster="/luxor.12.mp4.1200x675.webp"
 								 controls
 					>
-						<source src="/luxor.3.mp4" type="video/mp4"/>
+						<source src="/luxor.12.mp4" type="video/mp4"/>
 					</Video>
 					<p class="mt-6 text-left">
 						Day 7: The Valley of the Kings is the site chosen by the ancient rulers to be their final resting place.
@@ -369,20 +416,31 @@ export default function Home() {
 						This temple is said to have the world's oldest restroom.
 						We will finish our excursions for the day, with a brief stop to view the giant statues of Amenhotep III (father of Akenaten, grandfather of Tutankamun), also known as the Collossi of Memnon.
 					</p>
-					<div class="flex flex-row flex-wrap overflow-hidden sm:h-96 mt-6">
-						<Video class="mx-auto h-96 xl:w-1/2 sm:static left-0 top-0 "
-									 poster="/luxor.5.mp4.jpg"
-									 controls
-						>
-							<source src="/luxor.5.mp4" type="video/mp4"/>
-						</Video>
-						<Video class="mx-auto h-96 xl:w-1/2 sm:static left-0 top-0"
-									 poster="/luxor.4.mp4.jpg"
-									 controls
-						>
-							<source src="/luxor.4.mp4" type="video/mp4"/>
-						</Video>
+					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
+						<img src="/luxor.01.400x300.webp"
+								 class="m-auto"
+								 width="400px" height="300px"
+								 alt="Wholly Trinity Luxor 1"
+						/>
+						<img src="/luxor.19.533x300.webp"
+								 class="m-auto mt-6 sm:mt-0"
+								 width="533px"
+								 height="300px"
+								 alt="Wholly Trinity Luxor 2"
+						/>
+						<img src="/luxor.20.400x300.webp"
+								 class="m-auto mt-6 sm:mt-0"
+								 width="400px"
+								 height="300px"
+								 alt="Wholly Trinity Luxor 2"
+						/>
 					</div>
+					<Video class="mx-auto w-full sm:static mt-6 max-w-7xl"
+								 poster="/luxor.11.mp4.1200x675.webp"
+								 controls
+					>
+						<source src="/luxor.11.mp4" type="video/mp4"/>
+					</Video>
 					<p class="mt-6 text-left">
 						Day 8: We leave Luxor to travel about an hour away to the city of Qena.
 						While there we will see two gorgeously preserved temples Dendera Temple Of Het- Heru (Hathor), and Abydos.
