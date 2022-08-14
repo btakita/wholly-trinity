@@ -210,7 +210,7 @@ export default function Home() {
 					<Div_tickets class="mt-6"/>
 					<img src="/pyramids.1200x813.webp"
 							 class="m-auto flex flex-wrap mt-6"
-							 alt="Wholly Trinity Arena Resort Pool"
+							 alt="Wholly Trinity Pyramids"
 					/>
 				</div>
 			</Section>
@@ -310,29 +310,29 @@ export default function Home() {
 								 class="m-auto sm:mt-0"
 								 width="169px"
 								 height="300px"
-								 alt="Wholly Trinity Luxor 2"
+								 alt="Wholly Trinity Luxor Karnak 17"
 						/>
 						<img src="/luxor.18.169x300.webp"
 								 class="m-auto mt-6 sm:mt-0"
 								 width="169px"
 								 height="300px"
-								 alt="Wholly Trinity Luxor 2"
+								 alt="Wholly Trinity Luxor Karnak 18"
 						/>
 						<img src="/luxor.15.533x300.webp"
 								 class="m-auto mt-6 sm:mt-0"
 								 width="533px"
 								 height="300px"
-								 alt="Wholly Trinity Luxor 2"
+								 alt="Wholly Trinity Luxor Karnak 15"
 						/>
 						<img src="/luxor.16.533x300.webp"
 								 class="m-auto mt-6 sm:mt-0"
 								 width="533px"
 								 height="300px"
-								 alt="Wholly Trinity Luxor 2"
+								 alt="Wholly Trinity Luxor Karnak 16"
 						/>
 					</div>
 					<Video class="mx-auto w-full sm:static mt-6 max-w-7xl"
-								 poster="/luxor.09.mp4.1200x675.jpg"
+								 poster="/luxor.09.mp4.1200x675.webp"
 								 controls
 					>
 						<source src="/luxor.09.mp4" type="video/mp4"/>
@@ -367,13 +367,13 @@ export default function Home() {
 								 class="m-auto"
 								 width="533px"
 								 height="300px"
-								 alt="Wholly Trinity Luxor 2"
+								 alt="Wholly Trinity Luxor 13"
 						/>
 						<img src="/luxor.14.400x300.webp"
 								 class="m-auto mt-6 sm:mt-0"
 								 height="300px"
 								 width="400px"
-								 alt="Wholly Trinity Luxor 2"
+								 alt="Wholly Trinity Luxor 14"
 						/>
 						<img src="/luxor.02.533x300.webp"
 								 class="m-auto mt-6 sm:mt-0"
@@ -409,13 +409,13 @@ export default function Home() {
 								 class="m-auto mt-6 sm:mt-0"
 								 width="533px"
 								 height="300px"
-								 alt="Wholly Trinity Luxor 2"
+								 alt="Wholly Trinity Luxor 19"
 						/>
 						<img src="/luxor.20.400x300.webp"
 								 class="m-auto mt-6 sm:mt-0"
 								 width="400px"
 								 height="300px"
-								 alt="Wholly Trinity Luxor 2"
+								 alt="Wholly Trinity Luxor 20"
 						/>
 					</div>
 					<Video class="mx-auto w-full sm:static mt-6 max-w-7xl"
