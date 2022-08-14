@@ -209,7 +209,7 @@ export default function Home() {
 					</p>
 					<Div_tickets class="mt-6"/>
 					<img src="/pyramids.1200x813.webp"
-							 class="m-auto flex flex-wrap mt-6 mb-6"
+							 class="m-auto flex flex-wrap mt-6"
 							 alt="Wholly Trinity Arena Resort Pool"
 					/>
 				</div>
@@ -278,7 +278,7 @@ export default function Home() {
 						 class="absolute z-10 bg-cover h-full w-full opacity-40"
 						 style="background-image: url(/bg.2.webp);"></div>
 				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
-					<h3 class="text-2xl mt-6 mb-6">Cairo</h3>
+					<h3 class="text-2xl mb-6">Cairo</h3>
 					<p class="mt-6 mb-6 text-left">
 						Then on 11/11 we are heading to Cairo, Egypt to visit the pyramids of Giza and venture inside
 						the Sphinx where the magic of the halls of Amanti has been found. They are considered the
@@ -307,7 +307,7 @@ export default function Home() {
 					<h3 class="text-2xl mb-6">Luxor</h3>
 					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
 						<img src="/luxor.17.169x300.webp"
-								 class="m-auto mt-6 sm:mt-0"
+								 class="m-auto sm:mt-0"
 								 width="169px"
 								 height="300px"
 								 alt="Wholly Trinity Luxor 2"
@@ -349,7 +349,7 @@ export default function Home() {
 					>
 						<source src="/luxor.10.mp4" type="video/mp4"/>
 					</Video>
-					<p class="mt-6 mb-6 text-left">
+					<p class="mt-6 text-left">
 						Day 6: While in Luxor we experience the magic of the New Kingdom.
 						Our first stop will be historic Karnak Temple, the largest open aired museum in the world.
 						Karnak was the holiest temple in Kemet.
@@ -362,9 +362,9 @@ export default function Home() {
 						Her gorgeous tempe sits high upon a mountain, with magnificent views of West Luxor.
 						We will close the evening with traditional Egyptian music, horse dancing, and an exhibition of an ancient Egyptian martial art performed as a dance.
 					</p>
-					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
+					<div class="m-auto flex flex-wrap mt-6 mb-6">
 						<img src="/luxor.13.533x300.webp"
-								 class="m-auto mt-6 sm:mt-0"
+								 class="m-auto"
 								 width="533px"
 								 height="300px"
 								 alt="Wholly Trinity Luxor 2"
@@ -399,7 +399,7 @@ export default function Home() {
 						This temple is said to have the world's oldest restroom.
 						We will finish our excursions for the day, with a brief stop to view the giant statues of Amenhotep III (father of Akenaten, grandfather of Tutankamun), also known as the Collossi of Memnon.
 					</p>
-					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
+					<div class="m-auto flex flex-wrap mt-6 mb-6">
 						<img src="/luxor.01.400x300.webp"
 								 class="m-auto"
 								 width="400px" height="300px"
