@@ -3,7 +3,7 @@ import { createMemo, createSignal, type JSX, onCleanup, onMount, type ParentProp
 import { Assets } from 'solid-js/web'
 import { Head, Meta, Title } from 'solid-start'
 const tickets_url = 'https://app.promotix.com/events/details/wholly-Trinity-tickets'
-const title = 'STARGATE Represents Wholly Trinity Egypt'
+const title = 'STARGATE Presents Wholly Trinity Egypt'
 const description = 'We are being called to return to our ancestral and magical land of Egypt! Stargate Events presents Wholly Trinity, a gathering that will unite all our multidimensional selves into oneness, weaving together the past, present and future.'
 const image = 'https://www.stargateevent.com/wholly-trinity_promo.mp4.jpg'
 const url = 'https://www.stargate.com'
@@ -197,7 +197,7 @@ export default function Home() {
 					<source src="/wholly-trinity_promo.mp4" type="video/mp4"/>
 				</Video>
 				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
-					<h1 class="text-4xl">STARGATE Represents Wholly Trinity Egypt</h1>
+					<h1 class="text-4xl">STARGATE Presents Wholly Trinity Egypt</h1>
 					<h2 class="text-2xl">Lunar Eclipse / 11-11 / Portal</h2>
 					<h2 class="text-2xl">Nov 8—11 2022</h2>
 					<p class="mt-12">{description}
