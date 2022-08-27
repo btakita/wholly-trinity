@@ -8,7 +8,7 @@ DIR_DEFAULT=~/work/stargate/wholly-trinity/
 DIR="${DIR:-$DIR_DEFAULT}"
 
 cd $DIR
-tmux rename-window wholly-trinity
+tmux-rename-window
 tmux send-keys 'nvm use' C-m
 cd $DIR
 tmux split-window -v $SHELL
