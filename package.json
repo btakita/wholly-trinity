@@ -10,10 +10,10 @@
 		"start": "cd apps/web && PATH=./node_modules/.bin:$PATH solid-start start"
 	},
 	"devDependencies": {
-		"@ctx-core/monorepo": "^18.4.9",
+		"@ctx-core/monorepo": "^18.4.10",
 		"@wholly-trinity/root": "workspace:*",
-		"pnpm": "^7.9.3",
-		"vercel": "^28.1.0"
+		"pnpm": "^7.9.5",
+		"vercel": "^28.2.0"
 	},
 	"pnpm": {
 		"solid-js": "1.4.8"
