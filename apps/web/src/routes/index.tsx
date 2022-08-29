@@ -198,8 +198,8 @@ export default function Home() {
 				</Video>
 				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
 					<h1 class="text-4xl">STARGATE Presents Wholly Trinity Egypt</h1>
-					<h2 class="text-2xl">Lunar Eclipse / 11-11 / Portal</h2>
-					<h2 class="text-2xl">Nov 8—11 2022</h2>
+					<h2 class="text-2xl">Lunar Eclipse | 11/11 | Portal</h2>
+					<h2 class="text-2xl">11/8—11/11 2022</h2>
 					<p class="mt-12">{description}
 					</p>
 					<p class="mt-12">
