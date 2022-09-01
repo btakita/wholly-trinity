@@ -140,6 +140,7 @@ export default function Home() {
 					Best price anywhere.
 					It will go up closer we get.
 				</p>
+				<p class="text-xs underline"><a href="mailto:trinitystargate@gmail.com">Email us for more information</a></p>
 			</div>
 		)
 	}
