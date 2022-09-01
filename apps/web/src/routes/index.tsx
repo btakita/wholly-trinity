@@ -213,7 +213,7 @@ export default function Home() {
 				>
 					<source src="/wholly-trinity_promo.mp4" type="video/mp4"/>
 				</Video>
-				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
+				<div class="relative z-20 pt-6 pb-12 px-4 sm:px-12 min-h-screen">
 					<h1 class="text-4xl">STARGATE Presents Wholly Trinity Egypt</h1>
 					<h2 class="text-2xl">Lunar Eclipse | 11/11 | Portal</h2>
 					<h2 class="text-2xl">11/8—11/11 2022</h2>
@@ -238,7 +238,7 @@ export default function Home() {
 			<Section id="arena_resort">
 				<div role="presentation" class="absolute z-10 bg-cover h-full w-full opacity-40"
 						 style="background-image: url(/bg.1.webp);"></div>
-				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
+				<div class="relative z-20 pt-6 pb-12 px-4 sm:px-12 min-h-screen">
 					<h3 class="text-2xl mb-6">Arena Resort</h3>
 					<div class="overflow-hidden">
 						<img src="/resort.03.294x440.webp"
@@ -294,7 +294,7 @@ export default function Home() {
 				<div role="presentation"
 						 class="absolute z-10 bg-cover h-full w-full opacity-40"
 						 style="background-image: url(/bg.2.webp);"></div>
-				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
+				<div class="relative z-20 pt-6 pb-12 px-4 sm:px-12 min-h-screen">
 					<h3 class="text-2xl mb-6">Cairo</h3>
 					<p class="mt-6 mb-6 text-left">
 						Then on 11/11 we are heading to Cairo, Egypt to visit the pyramids of Giza and venture inside
@@ -320,7 +320,7 @@ export default function Home() {
 				<div role="presentation"
 						 class="absolute z-10 bg-cover h-full w-full opacity-40"
 						 style="background-image: url(/bg.3.webp);"></div>
-				<div class="relative z-20 pt-6 pb-12 pl-4 pr-4 sm:pl-12 sm:pr-12 min-h-screen">
+				<div class="relative z-20 pt-6 pb-12 px-4 sm:px-12 min-h-screen">
 					<h3 class="text-2xl mb-6">Luxor</h3>
 					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
 						<img src="/luxor.17.169x300.webp"
@@ -492,22 +492,22 @@ export default function Home() {
 							<div class="flex w-96 pr-1">
 								<input ref={$=>name__input = $} type="text"
 											 name="_name" placeholder="Your Name" required={true}
-											 class="block pt-2 pb-2 pl-6 pr-6 mt-2 w-full"
+											 class="block py-2 px-6 mt-2 w-full"
 								/>
 							</div>
 							<div class="flex w-96 pl-1">
 								<input ref={$=>email__input = $} type="text"
 											 name="_email" placeholder="Your Email Address" required={true}
-											 class="block pt-2 pb-2 pl-6 pr-6 mt-2 w-full"
+											 class="block py-2 px-6 mt-2 w-full"
 								/>
 							</div>
 						</div>
 						<textarea ref={$=>message__textarea = $}
 											name="_message" placeholder="Your Message" required={true}
-											class="block pt-2 pb-2 pl-6 pr-6 mt-2 w-full h-48"
+											class="block pt-2 pb-2 px-6 mt-2 w-full h-48"
 						/>
 						<button type="submit"
-										class="block pt-2 pb-2 pl-6 pr-6 mt-2 w-full bg-gray-200 hover:bg-gray-300"
+										class="block py-2 px-6 mt-2 w-full bg-gray-200 hover:bg-gray-300"
 						>Send</button>
 					</form>
 				</Show>
