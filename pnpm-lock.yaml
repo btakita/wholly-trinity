@@ -29,9 +29,10 @@ importers:
       '@rollup/plugin-replace': ^4.0.0
       '@solidjs/meta': ^0.28.0
       '@solidjs/router': ^0.4.3
+      '@wholly-trinity/api': workspace:*
       '@wholly-trinity/types': workspace:*
       autoprefixer: ^10.4.8
-      google-spreadsheets: ^2.0.0
+      itty-router: ^2.6.1
       postcss: ^8.4.16
       solid-heroicons: ^3.0.1
       solid-js: ^1.5.3
@@ -43,8 +44,6 @@ importers:
       typescript: ^4.8.2
       undici: ^5.10.0
       vite: ^3.0.9
-    dependencies:
-      google-spreadsheets: 2.0.0
     devDependencies:
       '@ctx-core/html': 11.0.50
       '@ctx-core/object': 22.2.7
@@ -52,8 +51,10 @@ importers:
       '@rollup/plugin-replace': 4.0.0
       '@solidjs/meta': 0.28.0_solid-js@1.5.3
       '@solidjs/router': 0.4.3_solid-js@1.5.3
+      '@wholly-trinity/api': link:../../libs/api
       '@wholly-trinity/types': link:../../libs/types
       autoprefixer: 10.4.8_postcss@8.4.16
+      itty-router: 2.6.1
       postcss: 8.4.16
       solid-heroicons: 3.0.1_solid-js@1.5.3
       solid-js: 1.5.3
@@ -69,10 +70,13 @@ importers:
   libs/api:
     specifiers:
       '@ctx-core/array': ^26.7.7
+      '@ctx-core/object': ^22.2.7
       google-spreadsheet: ^3.3.0
     dependencies:
       '@ctx-core/array': 26.7.7
       google-spreadsheet: 3.3.0
+    devDependencies:
+      '@ctx-core/object': 22.2.7
 
   libs/types:
     specifiers: {}
@@ -4115,20 +4119,10 @@ packages:
     resolution: {integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==}
     dev: true
 
-  /axios/0.18.1:
-    resolution: {integrity: sha512-0BfJq4NSfQXd+SkFdrvFbG7addhYSBA2mQwISr46pD6E5iqkWg02RAs8vyTT/j0RTnoYmeXauBuSv1qKwR179g==}
-    deprecated: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410
-    dependencies:
-      follow-redirects: 1.5.10
-      is-buffer: 2.0.5
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /axios/0.21.4:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
-      follow-redirects: 1.15.1_debug@4.3.4
+      follow-redirects: 1.15.1
     transitivePeerDependencies:
       - debug
     dev: false
@@ -5013,17 +5007,6 @@ packages:
         optional: true
     dependencies:
       ms: 2.0.0
-
-  /debug/3.1.0:
-    resolution: {integrity: sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-    dependencies:
-      ms: 2.0.0
-    dev: false
 
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -6252,6 +6235,16 @@ packages:
     hasBin: true
     dev: true
 
+  /follow-redirects/1.15.1:
+    resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
+
   /follow-redirects/1.15.1_debug@4.3.4:
     resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
     engines: {node: '>=4.0'}
@@ -6262,15 +6255,6 @@ packages:
         optional: true
     dependencies:
       debug: 4.3.4
-
-  /follow-redirects/1.5.10:
-    resolution: {integrity: sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==}
-    engines: {node: '>=4.0'}
-    dependencies:
-      debug: 3.1.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
 
   /foreground-child/2.0.0:
     resolution: {integrity: sha512-dCIq9FpEcyQyXKCkyzmlPTFNgrCzPudOe+mhvJU5zAtlBnGVy2yKxtfsxK2tQBThwq225jcvBjpw1Gr40uzZCA==}
@@ -6689,17 +6673,6 @@ packages:
     transitivePeerDependencies:
       - debug
       - encoding
-      - supports-color
-    dev: false
-
-  /google-spreadsheets/2.0.0:
-    resolution: {integrity: sha512-Ns1RZX7lE4XmZ3McRPgsgQieOCxXiDalT7xus6tg2sMfeGa/fcTr8DBpBBaDLydIaJtGWtz7Nc62NDJfOUsOsA==}
-    engines: {node: '>= 0.10.0'}
-    dependencies:
-      axios: 0.18.1
-      semver: 5.7.1
-      statuses: 1.5.0
-    transitivePeerDependencies:
       - supports-color
     dev: false
 
@@ -7472,6 +7445,10 @@ packages:
     dependencies:
       html-escaper: 2.0.2
       istanbul-lib-report: 3.0.0
+    dev: true
+
+  /itty-router/2.6.1:
+    resolution: {integrity: sha512-l9gxWe5TOLUESYnBn85Jxd6tIZLWdRX5YKkHIBfSgbNQ7UFPNUGuWihRV+LlEbfJJIzgLmhwAbaWRi5yWJm8kg==}
     dev: true
 
   /jest-diff/28.1.1:
@@ -10141,6 +10118,7 @@ packages:
   /semver/5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
     hasBin: true
+    dev: true
 
   /semver/6.1.1:
     resolution: {integrity: sha512-rWYq2e5iYW+fFe/oPPtYJxYgjBm8sC4rmoGdUOgBB7VnwKt6HrL793l2voH1UlsyYZpJ4g0wfjnTEO1s1NP2eQ==}
@@ -11577,7 +11555,7 @@ packages:
       kolorist: 1.5.1
       sirv: 2.0.2
       ufo: 0.8.5
-      vite: 3.0.9_terser@5.15.0
+      vite: 3.0.9
     transitivePeerDependencies:
       - supports-color
 

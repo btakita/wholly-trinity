@@ -7,11 +7,15 @@ import { compact } from '@ctx-core/array'
 /** @typedef {import('@wholly-trinity/types').payload_T} payload_T */
 export async function handler(/** @type {VercelRequest} */req, /** @type {VercelResponse} */res) {
 	const ctx = ctx_()
-	await contact__set__handle(ctx, req)
-	await ping__handle(ctx)
+	const payload = await payload_(ctx)
 	res.send(JSON.stringify(payload))
 }
-async function contact__set__handle(/** @type {Ctx} */ctx, /** @type {VercelRequest} */req) {
+export async function payload_(/** @type {Ctx} */ctx) {
+	await contact__set__handle(ctx, req)
+	await ping__handle(ctx)
+	return payload__(ctx).$
+}
+async function contact__set__handle(/** @type {Ctx} */ctx, /** @type {VercelRequest|Request} */req) {
 	/** @type {payload_T} */
 	const payload = payload__(ctx)
 	/** @type {api__cmd_T} */

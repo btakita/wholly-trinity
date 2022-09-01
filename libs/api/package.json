@@ -6,5 +6,8 @@
 	"dependencies": {
 		"@ctx-core/array": "^26.7.7",
 		"google-spreadsheet": "^3.3.0"
+	},
+	"devDependencies": {
+		"@ctx-core/object": "^22.2.7"
 	}
 }

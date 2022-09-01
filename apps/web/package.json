@@ -13,8 +13,10 @@
 		"@rollup/plugin-replace": "^4.0.0",
 		"@solidjs/meta": "^0.28.0",
 		"@solidjs/router": "^0.4.3",
+		"@wholly-trinity/api": "workspace:*",
 		"@wholly-trinity/types": "workspace:*",
 		"autoprefixer": "^10.4.8",
+		"itty-router": "^2.6.1",
 		"postcss": "^8.4.16",
 		"solid-heroicons": "^3.0.1",
 		"solid-js": "^1.5.3",
@@ -29,8 +31,5 @@
 	},
 	"engines": {
 		"node": ">=14"
-	},
-	"dependencies": {
-		"google-spreadsheets": "^2.0.0"
 	}
 }
