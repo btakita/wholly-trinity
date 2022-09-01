@@ -1,5 +1,5 @@
 import { GlobalStyle, Singleton_ } from '@ctx-core/ui-solid'
-import { createMemo, createSignal, type JSX, onCleanup, onMount, type ParentProps, Show } from 'solid-js'
+import { createMemo, createSignal, type JSX, onCleanup, onMount, type ParentProps, Show, VoidProps } from 'solid-js'
 import { Assets } from 'solid-js/web'
 import { Head, Meta, Title } from 'solid-start'
 const tickets_url = 'https://app.promotix.com/events/details/wholly-Trinity-tickets'
@@ -140,7 +140,7 @@ export default function Home() {
 					Best price anywhere.
 					It will go up closer we get.
 				</p>
-				<p class="text-xs underline"><a href="mailto:trinitystargate@gmail.com">Email us for more information</a></p>
+				<p class="text-xs underline"><EmailUs/></p>
 			</div>
 		)
 	}
@@ -544,6 +544,7 @@ export default function Home() {
 	function Footer() {
 		return (
 			<footer class="p-6 flex flex-col items-center">
+				<EmailUs class="mb-6"/>
 				<h2 class="text-2xl mb-6">Previous Events</h2>
 				<a href="https://bluestargate.com"
 					 class="block mb-2 underline"
@@ -557,8 +558,19 @@ export default function Home() {
 					 class="block mb-2 underline"
 					 target="_blank"
 				>Blue Star Gate</a>
-				<a href="https://iconscout.com/icons/aeroplane" target="_blank">Plane Emoji Icon</a> on <a href="https://iconscout.com">IconScout</a>
+				<IconscoutAttribution/>
 			</footer>
+		)
+	}
+	function EmailUs($p:VoidProps<{ class?:string }>) {
+		return <a class={`underline ${$p.class || ''}`} href="mailto:trinitystargate@gmail.com">Email us for more information</a>
+	}
+	function IconscoutAttribution() {
+	  return (
+			<span class="inline-block text-xs">
+				<a href="https://iconscout.com/icons/aeroplane" target="_blank">Plane Emoji Icon</a>
+				{' '}on{' '}<a href="https://iconscout.com">IconScout</a>
+			</span>
 		)
 	}
 }
