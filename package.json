@@ -16,6 +16,11 @@
 		"vercel": "^28.2.0"
 	},
 	"pnpm": {
-		"solid-js": "1.4.8"
+		"babel-preset-solid": "latest",
+		"chalk": "2.4.2",
+		"solid-js": "latest",
+		"solid-start": "workspace:*",
+		"solid-start-cloudflare-workers": "workspace:*",
+		"solid-start-node": "workspace:*"
 	}
 }

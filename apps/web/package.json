@@ -1,32 +1,32 @@
 {
-  "name": "@wholly-trinity/web",
-  "scripts": {
-    "dev": "solid-start dev -p $WEB_PORT",
-    "build": "solid-start build && echo ls -al public && ls -al public && echo ls -al .vercel/output/static && ls -al .vercel/output/static",
-    "start": "solid-start start"
-  },
-  "type": "module",
-  "devDependencies": {
-    "@ctx-core/html": "^11.0.50",
-    "@ctx-core/object": "^22.2.7",
-    "@ctx-core/ui-solid": "^2.0.11",
-    "@rollup/plugin-replace": "^4.0.0",
-    "@solidjs/meta": "^0.28.0",
-    "@solidjs/router": "^0.4.2",
-    "autoprefixer": "^10.4.8",
-    "postcss": "^8.4.16",
-    "solid-heroicons": "^3.0.1",
-    "solid-js": "^1.5.3",
-    "solid-meta": "^0.28.1",
-    "solid-start": "beta",
-    "solid-start-node": "beta",
-    "solid-start-vercel": "beta",
-    "tailwindcss": "^3.1.8",
-    "typescript": "^4.8.2",
-    "undici": "^5.10.0",
-    "vite": "^3.0.9"
-  },
-  "engines": {
-    "node": ">=14"
-  }
+	"name": "@wholly-trinity/web",
+	"scripts": {
+		"dev": "solid-start dev -p $WEB_PORT",
+		"build": "solid-start build && echo ls -al public && ls -al public && echo ls -al .vercel/output/static && ls -al .vercel/output/static",
+		"start": "solid-start start"
+	},
+	"type": "module",
+	"devDependencies": {
+		"@ctx-core/html": "^11.0.50",
+		"@ctx-core/object": "^22.2.7",
+		"@ctx-core/ui-solid": "^2.0.11",
+		"@rollup/plugin-replace": "^4.0.0",
+		"@solidjs/meta": "^0.28.0",
+		"@solidjs/router": "^0.4.2",
+		"autoprefixer": "^10.4.8",
+		"postcss": "^8.4.16",
+		"solid-heroicons": "^3.0.1",
+		"solid-js": "^1.5.3",
+		"solid-meta": "^0.28.1",
+		"solid-start": "beta",
+		"solid-start-node": "beta",
+		"solid-start-vercel": "beta",
+		"tailwindcss": "^3.1.8",
+		"typescript": "^4.8.2",
+		"undici": "^5.10.0",
+		"vite": "^3.0.9"
+	},
+	"engines": {
+		"node": ">=14"
+	}
 }

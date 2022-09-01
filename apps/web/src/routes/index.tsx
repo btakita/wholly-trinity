@@ -124,7 +124,7 @@ export default function Home() {
 				 class="btn select-none no-underline"
 				 style="color: #1b0f23;"
 				 target="_blank"
-			>Get your Ticket(s)</a>
+			>Get your Ticket(s)<br/>Payment plan available</a>
 		)
 	}
 	function Navigation__refresh() {
