@@ -128,12 +128,14 @@ export default function Home() {
 				>Get your Ticket(s)</a>
 				<p class="text-xs">Payment plan available</p>
 				<p class="text-xs">
-					At the palm beach hotel food is not included the rest of the 4 days in Cairo
-					and Luxor lunch included and all round trips are included.
+					All round trip & shuttle transportation within Egypt are included.
+					At the palm beach hotel & Cairo, food is not included.
 				</p>
 				<p class="text-xs">
-					Flight by Travelteck Mari Segerian<br/>
-					Phone <a href="tel:+18185499669" class="underline">818 549 9669</a>.
+					<img src="/plane.svg" alt="Flight by Travelteck Mari Segerian"
+							 class="inline-block mr-1" style="max-height: 16px;"
+					/>
+					Flight by Travelteck Mari Segerian: <a href="tel:+18185499669" class="underline">818 549 9669</a>.<br/>
 					Flights are around $850 as of now 8/30th.
 					Best price anywhere.
 					It will go up closer we get.
@@ -554,7 +556,8 @@ export default function Home() {
 					 class="block mb-2 underline"
 					 target="_blank"
 				>Blue Star Gate</a>
-				</footer>
+				<a href="https://iconscout.com/icons/aeroplane" target="_blank">Plane Emoji Icon</a> on <a href="https://iconscout.com">IconScout</a>
+			</footer>
 		)
 	}
 }
