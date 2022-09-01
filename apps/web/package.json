@@ -13,6 +13,7 @@
 		"@rollup/plugin-replace": "^4.0.0",
 		"@solidjs/meta": "^0.28.0",
 		"@solidjs/router": "^0.4.3",
+		"@wholly-trinity/types": "workspace:*",
 		"autoprefixer": "^10.4.8",
 		"postcss": "^8.4.16",
 		"solid-heroicons": "^3.0.1",

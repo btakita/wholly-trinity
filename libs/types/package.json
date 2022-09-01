@@ -1,0 +1,4 @@
+{
+	"name": "@wholly-trinity/types",
+	"types": "src/index.d.ts"
+}
