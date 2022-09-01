@@ -120,11 +120,25 @@ export default function Home() {
 	}
 	function Tickets() {
 		return (
-			<a href={tickets_url}
-				 class="btn select-none no-underline"
-				 style="color: #1b0f23;"
-				 target="_blank"
-			>Get your Ticket(s)<br/>Payment plan available</a>
+			<div class="text-center">
+				<a href={tickets_url}
+					 class="btn select-none no-underline inline-block"
+					 style="color: #1b0f23;"
+					 target="_blank"
+				>Get your Ticket(s)</a>
+				<p class="text-xs">Payment plan available</p>
+				<p class="text-xs">
+					At the palm beach hotel food is not included the rest of the 4 days in Cairo
+					and Luxor lunch included and all round trips are included.
+				</p>
+				<p class="text-xs">
+					Flight by Travelteck Mari Segerian<br/>
+					Phone <a href="tel:+18185499669" class="underline">818 549 9669</a>.
+					Flights are around $850 as of now 8/30th.
+					Best price anywhere.
+					It will go up closer we get.
+				</p>
+			</div>
 		)
 	}
 	function Navigation__refresh() {
@@ -529,15 +543,15 @@ export default function Home() {
 			<footer class="p-6 flex flex-col items-center">
 				<h2 class="text-2xl mb-6">Previous Events</h2>
 				<a href="https://bluestargate.com"
-					 class="block mb-2"
+					 class="block mb-2 underline"
 					 target="_blank"
 				>White Star Gate</a>
 				<a href="https://web.archive.org/web/20150616145038/http://www.bluestargate.com/"
-					 class="block mb-2"
+					 class="block mb-2 underline"
 					 target="_blank"
 				>Yellow Star Gate</a>
 				<a href="https://web.archive.org/web/20150226085038/http://www.bluestargate.com/"
-					 class="block mb-2"
+					 class="block mb-2 underline"
 					 target="_blank"
 				>Blue Star Gate</a>
 				</footer>
