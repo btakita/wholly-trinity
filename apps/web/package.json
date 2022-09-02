@@ -2,7 +2,7 @@
 	"name": "@wholly-trinity/web",
 	"scripts": {
 		"dev": "solid-start dev -p $WEB_PORT",
-		"build": "solid-start build && echo ls -al public && ls -al public && echo ls -al .vercel/output/static && ls -al .vercel/output/static",
+		"build": "pushd ../../vendor/solid-router && pnpm run build && popd && solid-start build && echo ls -al public && ls -al public && echo ls -al .vercel/output/static && ls -al .vercel/output/static",
 		"start": "solid-start start"
 	},
 	"type": "module",
