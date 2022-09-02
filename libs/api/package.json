@@ -9,7 +9,8 @@
 		"@ctx-core/object": "^22.2.7",
 		"@ctx-core/uri": "^12.0.52",
 		"@wholly-trinity/validation": "workspace:*",
-		"google-auth-library": "^8.5.1"
+		"google-auth-library": "^8.5.1",
+		"jsonwebtoken": "^8.5.1"
 	},
 	"devDependencies": {
 		"@vercel/node": "^2.5.13"

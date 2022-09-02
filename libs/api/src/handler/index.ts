@@ -26,14 +26,25 @@ async function contact__set__handle(ctx:Ctx, req:VercelRequest|Request):Promise<
 		payload.contact__set = { status: 400, code: 'MISSING_EMAIL_PHONE', message: 'Include email or phone' }
 	}
 	try {
-		const google__credentials:google__credentials_T = JSON.parse(process.env.GOOGLE_CREDENTIALS)
-		const jwt = new JWT({
-			email: google__credentials.client_email,
-			key: google__credentials.private_key,
-			scopes: 'https://www.googleapis.com/auth/spreadsheets',
-			subject: null
-		})
-		const access_token = await jwt.authorize().then($=>$.access_token)
+		const { private_key, client_email, token_uri }:google__credentials_T = JSON.parse(process.env.GOOGLE_CREDENTIALS)
+		const access_token = await fetch(token_uri, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: query_str_({
+				iss: client_email,
+				sub: null,
+				scope: 'https://www.googleapis.com/auth/spreadsheets',
+				keyFile: null,
+				key: private_key,
+			}, '')
+		}).then($=>$.text())
+		// const jwt = new JWT({
+		// 	email: google__credentials.client_email,
+		// 	key: google__credentials.private_key,
+		// 	scopes: 'https://www.googleapis.com/auth/spreadsheets',
+		// 	subject: null
+		// })
+		// const access_token = await jwt.authorize().then($=>$.access_token)
 		const append__payload:append__payload_T = await fetch(`${sheets__url}/values/A1:append${query_str_({
 			responseDateTimeRenderOption: 'SERIAL_NUMBER',
 			includeValuesInResponse: true,

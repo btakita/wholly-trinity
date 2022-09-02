@@ -22,12 +22,56 @@
 		"vercel": "^28.2.2"
 	},
 	"pnpm": {
-		"babel-preset-solid": "latest",
-		"chalk": "2.4.2",
-		"solid-js": "latest",
-		"solid-start": "next",
-		"solid-start-cloudflare-workers": "next",
-		"solid-start-node": "next",
-		"solid-start-vercel": "next"
+		"overrides": {
+			"babel-preset-solid": "latest",
+			"chalk": "2.4.2",
+			"solid-js": "latest",
+			"solid-start": "next",
+			"solid-start-cloudflare-workers": "next",
+			"solid-start-node": "next",
+			"solid-start-vercel": "next",
+			"terser": "latest",
+			"vite": "latest",
+			"vite-plugin-solid": "latest"
+		},
+		"packageExtensions": {
+			"@ctx-core/ui-solid": {
+				"dependencies": {
+					"terser": "latest"
+				}
+			},
+			"solid-start": {
+				"dependencies": {
+					"solid-js": "latest"
+				},
+				"peerDependencies": {
+					"solid-js": "latest"
+				}
+			},
+			"vite": {
+				"dependencies": {
+					"terser": "latest"
+				},
+				"peerDependenciesMeta": {
+					"terser": {
+						"optional": false
+					}
+				}
+			},
+			"vite-plugin-solid": {
+				"dependencies": {
+					"terser": "latest",
+					"vite": "latest"
+				},
+				"dependenciesMeta": {
+					"terser": {
+						"injected": true
+					},
+					"vite": {
+						"injected": true
+					}
+				}
+			}
+		}
 	}
 }
