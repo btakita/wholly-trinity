@@ -4,7 +4,7 @@ import { query_str_ } from '@ctx-core/uri'
 import { VercelRequest, VercelResponse } from '@vercel/node'
 import { google__error__payload_T } from '@wholly-trinity/types'
 import type { api__cmd_T, append__payload_T, google__credentials_T, payload_T } from '@wholly-trinity/types'
-import { google } from 'googleapis'
+import { JWT } from 'google-auth-library'
 const sheets__url = `https://content-sheets.googleapis.com/v4/spreadsheets/${process.env.SHEET_ID}`
 export async function handler(req:VercelRequest, res:VercelResponse):Promise<void> {
 	const ctx = ctx_()
@@ -27,7 +27,7 @@ async function contact__set__handle(ctx:Ctx, req:VercelRequest|Request):Promise<
 	}
 	try {
 		const google__credentials:google__credentials_T = JSON.parse(process.env.GOOGLE_CREDENTIALS)
-		const jwt = new google.auth.JWT({
+		const jwt = new JWT({
 			email: google__credentials.client_email,
 			key: google__credentials.private_key,
 			scopes: 'https://www.googleapis.com/auth/spreadsheets',
