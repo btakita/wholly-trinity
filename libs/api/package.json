@@ -1,11 +1,16 @@
 {
 	"name": "@wholly-trinity/api",
+	"type": "module",
 	"main": "src/index.js",
 	"module": "src/index.js",
 	"types": "src/index.d.ts",
 	"dependencies": {
 		"@ctx-core/array": "^26.7.7",
-		"google-spreadsheet": "^3.3.0"
+		"@ctx-core/uri": "^12.0.52",
+		"@wholly-trinity/validation": "workspace:*",
+		"google-auth-library": "^8.5.1",
+		"google-spreadsheet": "^3.3.0",
+		"googleapis": "^107.0.0"
 	},
 	"devDependencies": {
 		"@ctx-core/object": "^22.2.7"

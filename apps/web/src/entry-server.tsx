@@ -16,12 +16,12 @@ export async function handleRequest(event:FetchEvent&{ ctx:Ctx }) {
 function router_() {
 	return (
 		Router()
-			.post('/api', (request:Request, { ctx }:FetchEvent_w_ctx)=>api__POST(ctx))
+			.post('/api', (request:Request, { ctx }:FetchEvent_w_ctx)=>api__POST(ctx, request))
 			.all('*', (request, { ctx }:FetchEvent_w_ctx, next)=>next())
 	)
 }
-async function api__POST(ctx:Ctx) {
-	const payload = await payload_(ctx)
+async function api__POST(ctx:Ctx, request:Request) {
+	const payload = await payload_(ctx, request)
 	return new Response(JSON.stringify(payload), {
 		status: 200,
 		headers: { 'Content-Type': 'application/json' }
