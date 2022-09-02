@@ -15,11 +15,11 @@
 	},
 	"devDependencies": {
 		"@ctx-core/monorepo": "^18.4.10",
-		"@vercel/node": "^2.5.12",
+		"@vercel/node": "^2.5.13",
 		"@wholly-trinity/root": "workspace:*",
 		"@wholly-trinity/types": "workspace:*",
 		"pnpm": "^7.9.5",
-		"vercel": "^28.2.0"
+		"vercel": "^28.2.2"
 	},
 	"pnpm": {
 		"babel-preset-solid": "latest",
