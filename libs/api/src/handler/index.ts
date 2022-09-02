@@ -1,31 +1,24 @@
 import { compact } from '@ctx-core/array'
-import { be_ } from '@ctx-core/object'
+import { be_, type Ctx, ctx_ } from '@ctx-core/object'
 import { query_str_ } from '@ctx-core/uri'
-import { createRequire } from 'module'
-const require = createRequire(import.meta.url)
-const { google } = require('googleapis')
-const { GoogleSpreadsheet } = require('google-spreadsheet')
-/** @typedef {import('@ctx-core/object').Ctx} Ctx */
-/** @typedef {import('@vercel/node').VercelRequest} VercelRequest */
-/** @typedef {import('@vercel/node').VercelResponse} VercelResponse */
-/** @typedef {import('@wholly-trinity/types')} $T */
-/** @typedef {import('googleapis').sheets_v4} sheets_v4 */
-export async function handler(/** @type {VercelRequest} */req, /** @type {VercelResponse} */res) {
+import { VercelRequest, VercelResponse } from '@vercel/node'
+import { google__error__payload_T } from '@wholly-trinity/types'
+import type { api__cmd_T, append__payload_T, google__credentials_T, payload_T } from '@wholly-trinity/types'
+import { google } from 'googleapis'
+const sheets__url = `https://content-sheets.googleapis.com/v4/spreadsheets/${process.env.SHEET_ID}`
+export async function handler(req:VercelRequest, res:VercelResponse):Promise<void> {
 	const ctx = ctx_()
-	const payload = await payload_(ctx)
+	const payload = await payload_(ctx, req)
 	res.send(JSON.stringify(payload))
 }
-export async function payload_(/** @type {Ctx} */ctx, /** @type {VercelRequest|Request} */req) {
-	payload__(ctx).$ = {}
+export async function payload_(ctx:Ctx, req:VercelRequest|Request):Promise<payload_T> {
 	await contact__set__handle(ctx, req)
 	await ping__handle(ctx)
-	return payload__(ctx).$
+	return payload__(ctx)
 }
-async function contact__set__handle(/** @type {Ctx} */ctx, /** @type {VercelRequest|Request} */req) {
-	/** @type {$T.payload_T} */
-	const payload = payload__(ctx).$
-	const req__payload = req.json ? await req.json() : req.body
-	/** @type {$T.api__cmd_T} */
+async function contact__set__handle(ctx:Ctx, req:VercelRequest|Request):Promise<payload_T> {
+	const payload = payload__(ctx)
+	const req__payload = ((req as Request).json ? await (req as Request).json() : req.body) as api__cmd_T
 	const contact__set = req__payload.contact__set
 	if (!contact__set) return
 	const { email, phone } = contact__set
@@ -33,11 +26,7 @@ async function contact__set__handle(/** @type {Ctx} */ctx, /** @type {VercelRequ
 		payload.contact__set = { status: 400, code: 'MISSING_EMAIL_PHONE', message: 'Include email or phone' }
 	}
 	try {
-		const doc = new GoogleSpreadsheet(process.env.SHEET_ID)
-		const sheets__url = `https://content-sheets.googleapis.com/v4/spreadsheets/${process.env.SHEET_ID}`
-		await doc.useServiceAccountAuth(JSON.parse(process.env.GOOGLE_CREDENTIALS))
-		/** @type {$T.google__credentials_T} */
-		const google__credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS)
+		const google__credentials:google__credentials_T = JSON.parse(process.env.GOOGLE_CREDENTIALS)
 		const jwt = new google.auth.JWT({
 			email: google__credentials.client_email,
 			key: google__credentials.private_key,
@@ -45,8 +34,7 @@ async function contact__set__handle(/** @type {Ctx} */ctx, /** @type {VercelRequ
 			subject: null
 		})
 		const access_token = await jwt.authorize().then($=>$.access_token)
-		/** @type {$T.append__payload_T} */
-		const append__payload = await fetch(`${sheets__url}/values/A1:append${query_str_({
+		const append__payload:append__payload_T = await fetch(`${sheets__url}/values/A1:append${query_str_({
 			responseDateTimeRenderOption: 'SERIAL_NUMBER',
 			includeValuesInResponse: true,
 			insertDataOption: 'INSERT_ROWS',
@@ -62,8 +50,9 @@ async function contact__set__handle(/** @type {Ctx} */ctx, /** @type {VercelRequ
 		}).then($=>$.json())
 		console.debug('debug|1')
 		console.debug(JSON.stringify(append__payload, null, 2))
-		if (append__payload.error) {
-			console.error(append__payload.error)
+		const error__google__error__payload = append__payload as google__error__payload_T
+		if (error__google__error__payload.error) {
+			console.error(error__google__error__payload.error)
 			payload.contact__set = { status: 200, code: 'APPEND_ERROR', message: 'Error writing contact' }
 			return payload
 		}
@@ -80,11 +69,11 @@ async function contact__set__handle(/** @type {Ctx} */ctx, /** @type {VercelRequ
 	}
 	return payload
 }
-async function ping__handle(/** @type {Ctx} */ctx) {
+async function ping__handle(ctx:Ctx) {
 	/** @type {payload_T} */
-	const payload = payload__(ctx).$
+	const payload = payload__(ctx)
 	if (!Object.keys(payload).length) {
 		payload.ping = { status: 200, code: 'OK', message: 'Ping' }
 	}
 }
-const payload__ = be_('payload__', ()=>(/** @type {payload_T} */{}))
+const payload__ = be_<payload_T>('payload__', ()=>({}))
