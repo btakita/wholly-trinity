@@ -25,8 +25,9 @@
 		"babel-preset-solid": "latest",
 		"chalk": "2.4.2",
 		"solid-js": "latest",
-		"solid-start": "workspace:*",
-		"solid-start-cloudflare-workers": "workspace:*",
-		"solid-start-node": "workspace:*"
+		"solid-start": "next",
+		"solid-start-cloudflare-workers": "next",
+		"solid-start-node": "next",
+		"solid-start-vercel": "next"
 	}
 }
