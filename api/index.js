@@ -1,1 +1,2 @@
-export { handler } from '@wholly-trinity/api'
+import { handler } from '@wholly-trinity/api'
+export default handler
