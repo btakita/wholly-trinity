@@ -11,6 +11,7 @@
 		"googleapis": "^107.0.0"
 	},
 	"devDependencies": {
-		"@ctx-core/object": "^22.2.7"
+		"@ctx-core/object": "^22.2.7",
+		"@vercel/node": "^2.5.13"
 	}
 }
