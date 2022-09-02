@@ -2,7 +2,11 @@
 	"name": "@wholly-trinity/web",
 	"scripts": {
 		"dev": "solid-start dev -p $WEB_PORT",
-		"build": "pushd ../../vendor/solid-router && pnpm run build && popd && solid-start build && echo ls -al public && ls -al public && echo ls -al .vercel/output/static && ls -al .vercel/output/static",
+		"build": "npm run build:solid && npm run build:solid-router && npm run build:project && npm run build:deployment",
+		"build:deployment": "echo ls -al public && ls -al public && echo ls -al .vercel/output/static && ls -al .vercel/output/static",
+		"build:project": "solid-start build",
+		"build:solid": "pushd ../../vendor/solid/packages/solid && pnpm run build types link && popd",
+		"build:solid-router": "pushd ../../vendor/solid-router && pnpm run build && popd",
 		"start": "solid-start start"
 	},
 	"type": "module",

@@ -7,3 +7,6 @@
 [submodule "vendor/solid-router"]
 	path = vendor/solid-router
 	url = https://github.com/solidjs/solid-router.git
+[submodule "vendor/solid"]
+	path = vendor/solid
+	url = https://github.com/solidjs/solid.git
