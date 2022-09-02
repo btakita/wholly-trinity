@@ -680,7 +680,7 @@ export default function Home() {
 								<div class="text-red-700">
 									<p>An error occurred:</p>
 									<p>{Modal__contact__set__POST__error_()}</p>
-									<p>Please <a href={mailto}>contact us</a> to book your tickets.</p>
+									<p>Please <a href={mailto} class="underline">contact us</a> to book your tickets.</p>
 								</div>
 							</Show>
 						</form>
