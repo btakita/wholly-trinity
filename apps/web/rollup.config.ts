@@ -9,10 +9,13 @@ export default {
 		file: './.vercel/output/functions/api.func/index.js'
 	},
 	plugins: [replace_({
+		preventAssignment: true,
 		values: {}
 	}), esbuild_(), commonjs_(), node_resolve_(), copy_({
 		targets: [
-			{ src: './src/api/.vc-config.json', dest: './.vercel/output/functions/api.func/.vc-config.json' }
+			{ src: './src/vercel/config.json', dest: './.vercel/output/' },
+			{ src: './src/vercel/functions/config.json', dest: './.vercel/output/functions/' },
+			{ src: './src/vercel/functions/api.func/.vc-config.json', dest: './.vercel/output/functions/api.func/' },
 		]
 	})]
 }

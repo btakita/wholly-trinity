@@ -65,6 +65,7 @@ importers:
       terser: latest
       typescript: ^4.8.2
       undici: ^5.10.0
+      vercel: ^28.2.2
       vite: latest
     devDependencies:
       '@ctx-core/html': 11.0.50
@@ -88,13 +89,14 @@ importers:
       solid-heroicons: 3.0.1
       solid-js: 1.5.4
       solid-meta: 0.28.1
-      solid-start: 0.1.0-alpha.99_solid-js@1.5.4
+      solid-start: 0.1.0-alpha.100_solid-js@1.5.4
       solid-start-node: 0.1.0-alpha.100_solid-js@1.5.4
       solid-start-vercel: 0.1.0-alpha.99_solid-js@1.5.4
       tailwindcss: 3.1.8
       terser: 5.15.0
       typescript: 4.8.2
       undici: 5.10.0
+      vercel: 28.2.2
       vite: 3.0.9
 
   libs/api:
@@ -2066,6 +2068,34 @@ packages:
       ts-morph: 12.0.0
     dev: true
 
+  /@vinxi/rollup-plugin-visualizer/5.7.1:
+    resolution: {integrity: sha512-gIwdH6B2rh7EoWgtL80yMW/0AM6riSXwNccM7rwMONG5CTVYzHYDQgnccrl40iWHrQLYZI0rvM66EQ1TRB8REA==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      nanoid: 3.3.4
+      open: 8.4.0
+      rollup: 2.79.0
+      source-map: 0.7.4
+      yargs: 17.5.1
+    dev: true
+
+  /@vinxi/vite-plugin-inspect/0.6.27:
+    resolution: {integrity: sha512-EI63vk0wGF3XcUYSWsKSeuzisx8lgUnjLSqk9XHnboSnjhbPZKe/cMrcXUbdNi+ZnK/a3L7+w3y/XMYWW4NHRA==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      '@vinxi/rollup-plugin-visualizer': 5.7.1
+      debug: 4.3.4
+      kolorist: 1.5.1
+      pretty-bytes: 6.0.0
+      sirv: 2.0.2
+      ufo: 0.8.5
+      vite: 3.0.9
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /abbrev/1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
     dev: true
@@ -2746,6 +2776,11 @@ packages:
 
   /defer-to-connect/1.1.3:
     resolution: {integrity: sha512-0ISdNousHvZT2EiFlZeZAHBUvSxmKswVCEf8hW7KWgG4a8MVEu/3Vb6uWYozkjylyCxe0JBIiRB1jV45S70WVQ==}
+    dev: true
+
+  /define-lazy-prop/2.0.0:
+    resolution: {integrity: sha512-Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og==}
+    engines: {node: '>=8'}
     dev: true
 
   /define-properties/1.1.4:
@@ -4186,6 +4221,12 @@ packages:
       has-tostringtag: 1.0.0
     dev: true
 
+  /is-docker/2.2.1:
+    resolution: {integrity: sha512-F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==}
+    engines: {node: '>=8'}
+    hasBin: true
+    dev: true
+
   /is-extglob/2.1.1:
     resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
     engines: {node: '>=0.10.0'}
@@ -4317,6 +4358,13 @@ packages:
   /is-what/4.1.7:
     resolution: {integrity: sha512-DBVOQNiPKnGMxRMLIYSwERAS5MVY1B7xYiGnpgctsOFvVDz9f9PFXXxMcTOHuoqYp4NK9qFYQaIC1NRRxLMpBQ==}
     engines: {node: '>=12.13'}
+    dev: true
+
+  /is-wsl/2.2.0:
+    resolution: {integrity: sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww==}
+    engines: {node: '>=8'}
+    dependencies:
+      is-docker: 2.2.1
     dev: true
 
   /is-yarn-global/0.3.0:
@@ -4893,6 +4941,15 @@ packages:
       mimic-fn: 2.1.0
     dev: true
 
+  /open/8.4.0:
+    resolution: {integrity: sha512-XgFPPM+B28FtCCgSb9I+s9szOC1vZRSwgWsRUA5ylIxRTgKozqjOCrVOqGsYABPYK5qnfqClxZTFBa8PKt2v6Q==}
+    engines: {node: '>=12'}
+    dependencies:
+      define-lazy-prop: 2.0.0
+      is-docker: 2.2.1
+      is-wsl: 2.2.0
+    dev: true
+
   /ora/6.1.2:
     resolution: {integrity: sha512-EJQ3NiP5Xo94wJXIzAyOtSb0QEIAUu7m8t6UZ9krbz0vAJqr92JpcK/lEXg91q6B9pEGqrykkd2EQplnifDSBw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -5123,6 +5180,11 @@ packages:
   /pretty-bytes/5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
     engines: {node: '>=6'}
+    dev: true
+
+  /pretty-bytes/6.0.0:
+    resolution: {integrity: sha512-6UqkYefdogmzqAZWzJ7laYeJnaXDy2/J+ZqiiMtS7t7OfpXWTlaeGMwX8U6EFvPV/YWWEKRkS8hKS4k60WHTOg==}
+    engines: {node: ^14.13.1 || >=16.0.0}
     dev: true
 
   /pretty-ms/7.0.1:
@@ -5361,6 +5423,18 @@ packages:
       - supports-color
     dev: true
 
+  /rollup-plugin-visualizer/5.8.0:
+    resolution: {integrity: sha512-pY6j/7qHz5I9rB7d/bQoA5gX+2FbV3MBG055wrsFxDn550bgl0FNViRj6wDHh85PMswv+JVdZjhnMBzz/hdAHA==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      nanoid: 3.3.4
+      open: 8.4.0
+      rollup: 2.79.0
+      source-map: 0.7.4
+      yargs: 17.5.1
+    dev: true
+
   /rollup-pluginutils/2.8.2:
     resolution: {integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==}
     dependencies:
@@ -5573,7 +5647,7 @@ packages:
       polka: 1.0.0-next.22
       rollup: 2.79.0
       sirv: 2.0.2
-      solid-start: 0.1.0-alpha.99_solid-js@1.5.4
+      solid-start: 0.1.0-alpha.100_solid-js@1.5.4
       terser: 5.15.0
       undici: 5.10.0
       vite: 3.0.9
@@ -5589,11 +5663,54 @@ packages:
       '@rollup/plugin-json': 4.1.0
       '@rollup/plugin-node-resolve': 13.3.0
       rollup: 2.79.0
-      solid-start: 0.1.0-alpha.99_solid-js@1.5.4
+      solid-start: 0.1.0-alpha.100_solid-js@1.5.4
       terser: 5.15.0
       vite: 3.0.9
     transitivePeerDependencies:
       - solid-js
+      - supports-color
+    dev: true
+
+  /solid-start/0.1.0-alpha.100_solid-js@1.5.4:
+    resolution: {integrity: sha512-fpemLwD4alL1Kx+4gi5HuMui7VwyAS/jelYu1tqoGuQvsCl9ZodwUxXsXwgZWvPZRDRBBjCXeB+A9nL+ul3Jog==}
+    hasBin: true
+    peerDependencies:
+      solid-js: latest
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/generator': 7.18.13
+      '@babel/plugin-syntax-jsx': 7.18.6
+      '@babel/preset-env': 7.18.10
+      '@babel/preset-typescript': 7.18.6
+      '@babel/template': 7.18.10
+      '@solidjs/meta': 0.28.0
+      '@solidjs/router': 0.4.3
+      '@types/cookie': 0.5.1
+      '@vinxi/vite-plugin-inspect': 0.6.27
+      chokidar: 3.5.3
+      compression: 1.7.4
+      connect: 3.7.0
+      debug: 4.3.4
+      dequal: 2.0.3
+      es-module-lexer: 1.0.3
+      esbuild: 0.14.54
+      fast-glob: 3.2.11
+      get-port: 6.1.2
+      parse-multipart-data: 1.4.0
+      picocolors: 1.0.0
+      rollup: 2.79.0
+      rollup-plugin-visualizer: 5.8.0
+      rollup-route-manifest: 1.0.0
+      sade: 1.8.1
+      sirv: 2.0.2
+      solid-js: 1.5.4
+      terser: 5.15.0
+      undici: 5.10.0
+      vite: 3.0.9
+      vite-plugin-inspect: 0.6.1
+      vite-plugin-solid: 2.3.0
+      wait-on: 6.0.1_debug@4.3.4
+    transitivePeerDependencies:
       - supports-color
     dev: true
 
@@ -6341,6 +6458,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /yargs-parser/21.1.1:
+    resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
+    engines: {node: '>=12'}
+    dev: true
+
   /yargs/16.2.0:
     resolution: {integrity: sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==}
     engines: {node: '>=10'}
@@ -6352,6 +6474,19 @@ packages:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 20.2.9
+    dev: true
+
+  /yargs/17.5.1:
+    resolution: {integrity: sha512-t6YAJcxDkNX7NFYiVtKvWUz8l+PaKTLiL63mJYWR2GnHq2gjEWISzsLp9wg3aY36dY1j+gfIEL3pIF+XlJJfbA==}
+    engines: {node: '>=12'}
+    dependencies:
+      cliui: 7.0.4
+      escalade: 3.1.1
+      get-caller-file: 2.0.5
+      require-directory: 2.1.1
+      string-width: 4.2.3
+      y18n: 5.0.8
+      yargs-parser: 21.1.1
     dev: true
 
   /yn/3.1.1:
