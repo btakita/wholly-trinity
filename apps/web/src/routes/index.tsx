@@ -225,7 +225,7 @@ export default function Home() {
 	function Section_intro() {
 		return (
 			<Section id="intro">
-				<Video poster="/wholly-trinity_promo.mp4.1200x670.jpg"
+				<Video poster={`${ASSET_HOST}/wholly-trinity_promo.mp4.1200x670.jpg`}
 							 class="mx-auto w-full xl:w-1/2 static left-0 top-0"
 							 controls
 							 autoplay={true}
@@ -288,7 +288,7 @@ export default function Home() {
 						</p>
 					</div>
 					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
-								 poster="/resort.02.mp4.webp"
+								 poster={`${ASSET_HOST}/resort.02.mp4.webp`}
 								 controls
 					>
 						<source src={`${ASSET_HOST}/resort.02.mp4`} type="video/mp4"/>
@@ -324,7 +324,7 @@ export default function Home() {
 						be there to break these illusions by opening up the veil of Isis and receive the downloads. Yay!  While in Cairo we will also visit Old Cairo and the Egyptian Museum.
 					</p>
 					<Video class="mx-auto w-full xl:w-1/2 sm:static left-0 top-0"
-								 poster="/cairo.1.mp4.1200x675.webp"
+								 poster={`${ASSET_HOST}/cairo.1.mp4.1200x675.webp`}
 								 controls
 					>
 						<source src={`${ASSET_HOST}/cairo.1.mp4`} type="video/mp4"/>
@@ -369,7 +369,7 @@ export default function Home() {
 						/>
 					</div>
 					<Video class="mx-auto w-full sm:static mt-6 max-w-7xl"
-								 poster="/luxor.09.mp4.1200x675.webp"
+								 poster={`${ASSET_HOST}/luxor.09.mp4.1200x675.webp`}
 								 controls
 					>
 						<source src={`${ASSET_HOST}/luxor.09.mp4`} type="video/mp4"/>
@@ -381,7 +381,7 @@ export default function Home() {
 						called the city of Waset to the ancients).  This is where the story of Moses traveling down the Nile as a baby took place.
 					</p>
 					<Video class="mx-auto w-full sm:static mt-6 max-w-7xl"
-								 poster="/luxor.10.mp4.1200x675.webp"
+								 poster={`${ASSET_HOST}/luxor.10.mp4.1200x675.webp`}
 								 controls
 					>
 						<source src={`${ASSET_HOST}/luxor.10.mp4`} type="video/mp4"/>
@@ -419,7 +419,7 @@ export default function Home() {
 						/>
 					</div>
 					<Video class="mx-auto w-full sm:static mt-6 max-w-7xl"
-								 poster="/luxor.12.mp4.1200x675.webp"
+								 poster={`${ASSET_HOST}/luxor.12.mp4.1200x675.webp`}
 								 controls
 					>
 						<source src={`${ASSET_HOST}/luxor.12.mp4`} type="video/mp4"/>
@@ -456,7 +456,7 @@ export default function Home() {
 						/>
 					</div>
 					<Video class="mx-auto w-full sm:static mt-6 max-w-7xl"
-								 poster="/luxor.11.mp4.1200x675.webp"
+								 poster={`${ASSET_HOST}/luxor.11.mp4.1200x675.webp`}
 								 controls
 					>
 						<source src={`${ASSET_HOST}/luxor.11.mp4`} type="video/mp4"/>
