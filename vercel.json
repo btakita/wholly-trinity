@@ -1,0 +1,13 @@
+{
+	"alias": ["stargateevent.com"],
+	"cleanUrls": true,
+	"github": {
+		"enabled": false
+	},
+	"functions": {
+		"api/**/*.ts": {
+			"memory": 1024,
+			"maxDuration": 10
+		}
+	}
+}
