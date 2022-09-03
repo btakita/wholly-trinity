@@ -22,6 +22,7 @@ const image = 'https://www.stargateevent.com/wholly-trinity_promo.mp4.jpg'
 const url = 'https://www.stargate.com'
 const contact_email = process.env.CONTACT_EMAIL || 'trinitystargate@gmail.com'
 const mailto = 'mailto:trinitystargate@gmail.com'
+const ASSET_HOST = process.env.ASSET_HOST
 export default function Home() {
 	const [section_top_aa_, section_top_aa__set] = createSignal<[HTMLElement, top_T][]>([])
 	const [Navigation__o_, Navigation__o__set] = createSignal<Navigation__o>()
@@ -52,7 +53,7 @@ export default function Home() {
 		</Head>,
 		<Modal__contact__set></Modal__contact__set>,
 		<main class="relative z-0 text-center mx-auto text-gray-700 sm:p-4 bg-cover relative"
-					style="background-image: url(/hero.webp);"
+					style={`background-image: url(${ASSET_HOST}/hero.webp);`}
 		>
 			<Navigation_arrows/>
 			<article class="relative">
@@ -151,7 +152,7 @@ export default function Home() {
 					At the palm beach hotel & Cairo, food is not included.
 				</p>
 				<p class="text-xs">
-					<img src="/plane.svg" alt="Flight by Travelteck Mari Segerian"
+					<img src={`${ASSET_HOST}/plane.svg`} alt="Flight by Travelteck Mari Segerian"
 							 class="inline-block mr-1" style="max-height: 16px;"
 					/>
 					Flight by Travelteck Mari Segerian: <a href="tel:+18185499669" class="underline">818 549 9669</a>.<br/>
@@ -230,7 +231,7 @@ export default function Home() {
 							 autoplay={true}
 							 muted={true}
 				>
-					<source src="/wholly-trinity_promo.mp4" type="video/mp4"/>
+					<source src={`${ASSET_HOST}/wholly-trinity_promo.mp4`} type="video/mp4"/>
 				</Video>
 				<div class="relative z-20 pt-6 pb-12 px-4 sm:px-12 min-h-screen">
 					<h1 class="text-4xl">STARGATE Presents Wholly Trinity Egypt</h1>
@@ -244,7 +245,7 @@ export default function Home() {
 						rewrite, reform, and encode future timelines.
 					</p>
 					<Div_tickets class="mt-6"/>
-					<img src="/pyramids.1200x813.webp"
+					<img src={`${ASSET_HOST}/pyramids.1200x813.webp`}
 							 class="m-auto flex flex-wrap mt-6"
 							 alt="Wholly Trinity Pyramids"
 					/>
@@ -256,11 +257,11 @@ export default function Home() {
 		return (
 			<Section id="arena_resort">
 				<div role="presentation" class="absolute z-10 bg-cover h-full w-full opacity-40"
-						 style="background-image: url(/bg.1.webp);"></div>
+						 style={`background-image: url(${ASSET_HOST}/bg.1.webp);`}></div>
 				<div class="relative z-20 pt-6 pb-12 px-4 sm:px-12 min-h-screen">
 					<h3 class="text-2xl mb-6">Arena Resort</h3>
 					<div class="overflow-hidden">
-						<img src="/resort.03.294x440.webp"
+						<img src={`${ASSET_HOST}/resort.03.294x440.webp`}
 								 class="w-full mb-6 sm:w-auto sm:ml-12 sm:float-right sm:mb-0"
 								 width="294px" height="440px"
 								 alt="Wholly Trinity Arena Resort Pool"
@@ -270,11 +271,11 @@ export default function Home() {
 							three days. This area of Egypt is considered a high end destination.
 						</p>
 						<div class="m-auto flex flex-wrap">
-							<img src="/resort.04.451x300.webp"
+							<img src={`${ASSET_HOST}/resort.04.451x300.webp`}
 									 class="m-auto"
 									 width="451px" height="300px"
 									 alt="Wholly Trinity Arena Resort Pool Event"/>
-							<img src="/resort.07.400x300.webp"
+							<img src={`${ASSET_HOST}/resort.07.400x300.webp`}
 									 class="m-auto mt-6 sm:mt-0"
 									 width="400px" height="300px"
 									 alt="Wholly Trinity Arena Resort Gold Sky"
@@ -290,7 +291,7 @@ export default function Home() {
 								 poster="/resort.02.mp4.webp"
 								 controls
 					>
-						<source src="/resort.02.mp4" type="video/mp4"/>
+						<source src={`${ASSET_HOST}/resort.02.mp4`} type="video/mp4"/>
 					</Video>
 					<div class="overflow-hidden mt-6">
 						<p class="mb-6 text-left">
@@ -312,7 +313,7 @@ export default function Home() {
 			<Section id="cairo">
 				<div role="presentation"
 						 class="absolute z-10 bg-cover h-full w-full opacity-40"
-						 style="background-image: url(/bg.2.webp);"></div>
+						 style={`background-image: url(${ASSET_HOST}/bg.2.webp);`}></div>
 				<div class="relative z-20 pt-6 pb-12 px-4 sm:px-12 min-h-screen">
 					<h3 class="text-2xl mb-6">Cairo</h3>
 					<p class="mt-6 mb-6 text-left">
@@ -326,7 +327,7 @@ export default function Home() {
 								 poster="/cairo.1.mp4.1200x675.webp"
 								 controls
 					>
-						<source src="/cairo.1.mp4" type="video/mp4"/>
+						<source src={`${ASSET_HOST}/cairo.1.mp4`} type="video/mp4"/>
 					</Video>
 					<Div_tickets class="mt-6"/>
 				</div>
@@ -338,29 +339,29 @@ export default function Home() {
 			<Section id="luxor">
 				<div role="presentation"
 						 class="absolute z-10 bg-cover h-full w-full opacity-40"
-						 style="background-image: url(/bg.3.webp);"></div>
+						 style={`background-image: url(${ASSET_HOST}/bg.3.webp);`}></div>
 				<div class="relative z-20 pt-6 pb-12 px-4 sm:px-12 min-h-screen">
 					<h3 class="text-2xl mb-6">Luxor</h3>
 					<div class="m-auto flex flex-wrap mt-6 sm:mt-0 mb-6">
-						<img src="/luxor.17.169x300.webp"
+						<img src={`${ASSET_HOST}/luxor.17.169x300.webp`}
 								 class="m-auto sm:mt-0"
 								 width="169px"
 								 height="300px"
 								 alt="Wholly Trinity Luxor Karnak 17"
 						/>
-						<img src="/luxor.18.169x300.webp"
+						<img src={`${ASSET_HOST}/luxor.18.169x300.webp`}
 								 class="m-auto mt-6 sm:mt-0"
 								 width="169px"
 								 height="300px"
 								 alt="Wholly Trinity Luxor Karnak 18"
 						/>
-						<img src="/luxor.15.533x300.webp"
+						<img src={`${ASSET_HOST}/luxor.15.533x300.webp`}
 								 class="m-auto mt-6 sm:mt-0"
 								 width="533px"
 								 height="300px"
 								 alt="Wholly Trinity Luxor Karnak 15"
 						/>
-						<img src="/luxor.16.533x300.webp"
+						<img src={`${ASSET_HOST}/luxor.16.533x300.webp`}
 								 class="m-auto mt-6 sm:mt-0"
 								 width="533px"
 								 height="300px"
@@ -371,7 +372,7 @@ export default function Home() {
 								 poster="/luxor.09.mp4.1200x675.webp"
 								 controls
 					>
-						<source src="/luxor.09.mp4" type="video/mp4"/>
+						<source src={`${ASSET_HOST}/luxor.09.mp4`} type="video/mp4"/>
 					</Video>
 					<p class="mt-6 text-left overflow-hidden">
 						Day 5: Sacred Saqqara Complex.
@@ -383,7 +384,7 @@ export default function Home() {
 								 poster="/luxor.10.mp4.1200x675.webp"
 								 controls
 					>
-						<source src="/luxor.10.mp4" type="video/mp4"/>
+						<source src={`${ASSET_HOST}/luxor.10.mp4`} type="video/mp4"/>
 					</Video>
 					<p class="mt-6 text-left">
 						Day 6: While in Luxor we experience the magic of the New Kingdom.
@@ -399,19 +400,19 @@ export default function Home() {
 						We will close the evening with traditional Egyptian music, horse dancing, and an exhibition of an ancient Egyptian martial art performed as a dance.
 					</p>
 					<div class="m-auto flex flex-wrap mt-6 mb-6">
-						<img src="/luxor.13.533x300.webp"
+						<img src={`${ASSET_HOST}/luxor.13.533x300.webp`}
 								 class="m-auto"
 								 width="533px"
 								 height="300px"
 								 alt="Wholly Trinity Luxor 13"
 						/>
-						<img src="/luxor.14.400x300.webp"
+						<img src={`${ASSET_HOST}/luxor.14.400x300.webp`}
 								 class="m-auto mt-6 sm:mt-0"
 								 height="300px"
 								 width="400px"
 								 alt="Wholly Trinity Luxor 14"
 						/>
-						<img src="/luxor.02.533x300.webp"
+						<img src={`${ASSET_HOST}/luxor.02.533x300.webp`}
 								 class="m-auto mt-6 sm:mt-0"
 								 width="533px" height="300px"
 								 alt="Wholly Trinity Luxor 2"
@@ -421,7 +422,7 @@ export default function Home() {
 								 poster="/luxor.12.mp4.1200x675.webp"
 								 controls
 					>
-						<source src="/luxor.12.mp4" type="video/mp4"/>
+						<source src={`${ASSET_HOST}/luxor.12.mp4`} type="video/mp4"/>
 					</Video>
 					<p class="mt-6 text-left">
 						Day 7: The Valley of the Kings is the site chosen by the ancient rulers to be their final resting place.
@@ -436,18 +437,18 @@ export default function Home() {
 						We will finish our excursions for the day, with a brief stop to view the giant statues of Amenhotep III (father of Akenaten, grandfather of Tutankamun), also known as the Collossi of Memnon.
 					</p>
 					<div class="m-auto flex flex-wrap mt-6 mb-6">
-						<img src="/luxor.01.400x300.webp"
+						<img src={`${ASSET_HOST}/luxor.01.400x300.webp`}
 								 class="m-auto"
 								 width="400px" height="300px"
 								 alt="Wholly Trinity Luxor 1"
 						/>
-						<img src="/luxor.19.533x300.webp"
+						<img src={`${ASSET_HOST}/luxor.19.533x300.webp`}
 								 class="m-auto mt-6 sm:mt-0"
 								 width="533px"
 								 height="300px"
 								 alt="Wholly Trinity Luxor 19"
 						/>
-						<img src="/luxor.20.400x300.webp"
+						<img src={`${ASSET_HOST}/luxor.20.400x300.webp`}
 								 class="m-auto mt-6 sm:mt-0"
 								 width="400px"
 								 height="300px"
@@ -458,7 +459,7 @@ export default function Home() {
 								 poster="/luxor.11.mp4.1200x675.webp"
 								 controls
 					>
-						<source src="/luxor.11.mp4" type="video/mp4"/>
+						<source src={`${ASSET_HOST}/luxor.11.mp4`} type="video/mp4"/>
 					</Video>
 					<p class="mt-6 text-left">
 						Day 8: We leave Luxor to travel about an hour away to the city of Qena.

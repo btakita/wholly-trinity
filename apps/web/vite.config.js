@@ -7,6 +7,7 @@ export default defineConfig({
 		replace_plugin_({
 			preventAssignment: true,
 			'process.env.CONTACT_EMAIL': JSON.stringify(process.env.CONTACT_EMAIL),
+			'process.env.ASSET_HOST': JSON.stringify(process.env.ASSET_HOST)
 		}),
 		solid_start_({
 		...(
