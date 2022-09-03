@@ -1,4 +1,4 @@
-import { GlobalStyle, Singleton_ } from '@ctx-core/ui-solid'
+import { GlobalStyle } from '@ctx-core/ui-solid'
 import { payload_T } from '@wholly-trinity/types'
 import { ValidationErrors } from '@wholly-trinity/ui'
 import { email_error_a_, phone_error_a_ } from '@wholly-trinity/validation'
@@ -15,6 +15,7 @@ import {
 } from 'solid-js'
 import { Assets } from 'solid-js/web'
 import { Head, Meta, Title } from 'solid-start'
+import { Singleton_ } from '~/components/index.js'
 const tickets_url = 'https://app.promotix.com/events/details/wholly-Trinity-tickets'
 const title = 'STARGATE Presents Wholly Trinity Egypt'
 const description = 'We are being called to return to our ancestral and magical land of Egypt! Stargate Events presents Wholly Trinity, a gathering that will unite all our multidimensional selves into oneness, weaving together the past, present and future.'
@@ -225,14 +226,18 @@ export default function Home() {
 	function Section_intro() {
 		return (
 			<Section id="intro">
-				<Video poster={`${ASSET_HOST}/wholly-trinity_promo.mp4.1200x670.jpg`}
-							 class="mx-auto w-full xl:w-1/2 static left-0 top-0"
-							 controls
-							 autoplay={true}
-							 muted={true}
-				>
-					<source src={`${ASSET_HOST}/wholly-trinity_promo.mp4`} type="video/mp4"/>
-				</Video>
+				<div class="max-w-full xl:max-w-1/2 min-w-full xl:min-w-1/2 w-full xl:w-1/2 aspect-video static left-0 top-0">
+					<Video poster={`${ASSET_HOST}/wholly-trinity_promo.mp4.1200x670.jpg`}
+								 class="w-full aspect-video"
+								 controls
+								 autoplay={true}
+								 muted={true}
+					>
+						<source src={`${ASSET_HOST}/wholly-trinity_promo.mp4`} type="video/mp4"/>
+						Loading…
+					</Video>
+					{' '}
+				</div>
 				<div class="relative z-20 pt-6 pb-12 px-4 sm:px-12 min-h-screen">
 					<h1 class="text-4xl">STARGATE Presents Wholly Trinity Egypt</h1>
 					<h2 class="text-2xl">Lunar Eclipse | 11/11 | Portal</h2>
@@ -558,7 +563,10 @@ export default function Home() {
 								 }
 							 }
 						 }}
-			/>
+			>
+				{$p.children}
+				Loading…
+			</video>
 		)
 	}
 	function Footer() {
