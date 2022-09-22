@@ -3,6 +3,6 @@
 	"type": "module",
 	"types": "src/index.d.ts",
 	"devDependencies": {
-		"googleapis": "^107.0.0"
+		"googleapis": "^108.0.0"
 	}
 }

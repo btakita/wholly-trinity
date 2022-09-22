@@ -1,3 +1,0 @@
-[submodule "vendor/ctx-core/packages/ui-solid"]
-	path = vendor/ctx-core/packages/ui-solid
-	url = https://github.com/ctx-core/ui-solid.git

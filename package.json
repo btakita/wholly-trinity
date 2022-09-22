@@ -15,12 +15,12 @@
 		"@wholly-trinity/api": "workspace:*"
 	},
 	"devDependencies": {
-		"@ctx-core/monorepo": "^18.4.10",
-		"@vercel/node": "^2.5.13",
+		"@ctx-core/monorepo": "^18.4.15",
+		"@vercel/node": "^2.5.17",
 		"@wholly-trinity/root": "workspace:*",
 		"@wholly-trinity/types": "workspace:*",
-		"pnpm": "^7.9.5",
-		"vercel": "^28.2.2"
+		"pnpm": "^7.12.1",
+		"vercel": "^28.4.1"
 	},
 	"pnpm": {
 		"overrides": {
