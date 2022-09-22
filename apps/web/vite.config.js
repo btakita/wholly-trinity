@@ -10,10 +10,18 @@ export default defineConfig({
 			'process.env.ASSET_HOST': JSON.stringify(process.env.ASSET_HOST)
 		}),
 		solid_start_({
-		...(
-			process.env.DEPLOY
-			? { adapter: vercel() }
-			: {}
-		)
-	})],
+			...(
+				process.env.DEPLOY
+				? { adapter: vercel() }
+				: {}
+			)
+		})],
+	resolve: {
+		extensions: ['.js', '.mjs', '.jsx', '.ts', '.tsx']
+	},
+	server: {
+		hmr: {
+			overlay: false
+		}
+	}
 })

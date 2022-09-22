@@ -61,10 +61,14 @@ importers:
       '@wholly-trinity/api': workspace:*
       '@wholly-trinity/root': workspace:*
       '@wholly-trinity/types': workspace:*
+      '@wholly-trinity/ui': workspace:*
+      '@wholly-trinity/validation': workspace:*
       pnpm: ^7.12.1
       vercel: ^28.4.1
     dependencies:
       '@wholly-trinity/api': link:libs/api
+      '@wholly-trinity/ui': link:libs/ui
+      '@wholly-trinity/validation': link:libs/validation
     devDependencies:
       '@ctx-core/monorepo': 18.4.16
       '@vercel/node': 2.5.17
