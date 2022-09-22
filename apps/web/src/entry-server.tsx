@@ -8,17 +8,18 @@ export default createHandler(()=>handleRequest)
 export async function handleRequest(event:FetchEvent&{ ctx:Ctx }) {
 	const ctx = ctx_()
 	event.ctx = ctx
-	return await router_().handle(event.request, event, ()=>
-		renderAsync(
+	return await router_().handle(event.request, event as any, renderAsync_ as any)
+	function renderAsync_() {
+	  return renderAsync(
 			$=><Context_ctx.Provider value={ctx}><StartServer event={$}/></Context_ctx.Provider>
-		)()(event))
+		)()(event)
+	}
 }
 function router_() {
 	return (
 		Router()
 			.post('/api', (request:Request, { ctx }:FetchEvent_w_ctx)=>api__POST(ctx, request))
-			.all('*', (request, { ctx }:FetchEvent_w_ctx, next)=>next())
-	)
+			.all('*', (request, { ctx }:FetchEvent_w_ctx, next)=>next()))
 }
 async function api__POST(ctx:Ctx, request:Request) {
 	const payload = await payload_(ctx, request)
