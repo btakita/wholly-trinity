@@ -56,7 +56,7 @@ importers:
 
   .:
     specifiers:
-      '@ctx-core/monorepo': ^18.4.15
+      '@ctx-core/monorepo': ^18.4.16
       '@vercel/node': ^2.5.17
       '@wholly-trinity/api': workspace:*
       '@wholly-trinity/root': workspace:*
@@ -66,7 +66,7 @@ importers:
     dependencies:
       '@wholly-trinity/api': link:libs/api
     devDependencies:
-      '@ctx-core/monorepo': 18.4.15
+      '@ctx-core/monorepo': 18.4.16
       '@vercel/node': 2.5.17
       '@wholly-trinity/root': 'link:'
       '@wholly-trinity/types': link:libs/types
@@ -1400,8 +1400,8 @@ packages:
       '@ctx-core/object': 22.2.8
     dev: true
 
-  /@ctx-core/monorepo/18.4.15:
-    resolution: {integrity: sha512-ugeTlEkpUmXayJ+EfQkVfYEWzCBJKW5s4CcX6a+aNa3Gbmwgr4wWVoY1tziR3SyAMQYhXFKZUjIl6zO40KNQLw==}
+  /@ctx-core/monorepo/18.4.16:
+    resolution: {integrity: sha512-chjjcJpsYofaDjo2vXOyLDuw5J6WA1BlPVOZ7RuhBKKytEdy3lvF3sC2W84goVLNEp4oOGb/PZyxGp+BLOqjEA==}
     hasBin: true
     dependencies:
       '@ctx-core/array': 26.7.8
