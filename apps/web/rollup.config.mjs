@@ -19,7 +19,6 @@ export default {
 		esbuild_(compilerOptions),
 		commonjs_(),
 		node_resolve_({ browser: true }),
-		copyFiles(`${dir}/src/vercel`, `${dir}/.vercel/output`),
 	]
 }
 function copyFiles(from, to, overwrite = false) {

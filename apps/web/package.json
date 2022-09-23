@@ -2,7 +2,8 @@
 	"name": "@wholly-trinity/web",
 	"scripts": {
 		"dev": "solid-start dev -p $WEB_PORT",
-		"build": "pnpm run build:static && pnpm run build:functions",
+		"build": "pnpm run build:static && pnpm run build:functions && pnpm run build:copy_vercel_config",
+		"build:copy_vercel_config": "(cd src/vercel > /dev/null && find . -type f) | sed 's/^\\.\\///' | awk '{print \"cp ./src/vercel/\"$1\" .vercel/output/\"$1}' | sh",
 		"build:deployment": "echo ls -al public && ls -al public && echo ls -al .vercel/output/static && ls -al .vercel/output/static",
 		"build:functions": "rollup -c",
 		"build:project": "solid-start build",
