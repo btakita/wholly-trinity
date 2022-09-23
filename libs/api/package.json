@@ -12,6 +12,12 @@
 		"jsonwebtoken": "^8.5.1"
 	},
 	"devDependencies": {
-		"@vercel/node": "^2.5.18"
+		"@ctx-core/btoa": "^8.0.59",
+		"@ctx-core/date": "^13.2.0",
+		"@ctx-core/time": "^9.0.37",
+		"@types/jws": "^3.2.4",
+		"@types/node-forge": "^1.0.5",
+		"@vercel/node": "^2.5.18",
+		"jws": "^4.0.0"
 	}
 }

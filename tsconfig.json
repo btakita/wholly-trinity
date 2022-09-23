@@ -5,7 +5,7 @@
     "jsx": "preserve",
 		"allowJs": true,
 		"lib": ["dom", "ESNext"],
-		"module": "esnext",
+		"module": "ES2022",
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"rootDir": "src",

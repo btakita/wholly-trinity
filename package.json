@@ -18,10 +18,13 @@
 	},
 	"devDependencies": {
 		"@ctx-core/monorepo": "^18.4.16",
+		"@ctx-core/object": "^22.2.8",
 		"@vercel/node": "^2.5.18",
 		"@wholly-trinity/root": "workspace:*",
 		"@wholly-trinity/types": "workspace:*",
+		"@wholly-trinity/web": "workspace:*",
 		"pnpm": "^7.12.2",
+		"tsx": "^3.9.0",
 		"vercel": "^28.4.2"
 	},
 	"pnpm": {
