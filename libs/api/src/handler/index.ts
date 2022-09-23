@@ -9,9 +9,9 @@ import type {
 	google__error__payload_T,
 	payload_T
 } from '@wholly-trinity/types'
-import jws from 'jws'
 import { createRequire } from 'module'
 const require = createRequire(import.meta.url)
+const jws = require('jws')
 const sheets__url = `https://content-sheets.googleapis.com/v4/spreadsheets/${process.env.SHEET_ID}`
 export async function handler(req:VercelRequest, res:VercelResponse):Promise<void> {
 	const ctx = ctx_()
