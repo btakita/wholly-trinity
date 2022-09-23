@@ -6,9 +6,9 @@
 		"tmux-rename-window": "./bin/tmux-rename-window.sh"
 	},
 	"scripts": {
-		"deploy": "vercel deploy --prod",
+		"deploy": "vercel deploy --prebuilt --prod",
 		"dev": "cd apps/web && PATH=./node_modules/.bin:$PATH solid-start dev -p $WEB_PORT",
-		"build": "cd apps/web && PATH=./node_modules/.bin:$PATH solid-start build",
+		"build": "(cd apps/web && PATH=./node_modules/.bin:$PATH pnpm run build) && rm -rf .vercel && mv apps/web/.vercel .",
 		"start": "cd apps/web && PATH=./node_modules/.bin:$PATH solid-start start"
 	},
 	"dependencies": {

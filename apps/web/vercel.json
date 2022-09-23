@@ -5,11 +5,11 @@
 		"enabled": true
 	},
 	"functions": {
-		"api/**/*.ts": {
+		"api/**/*.js": {
 			"memory": 1024,
 			"maxDuration": 10
 		},
-		"render/**/*.ts": {
+		"render/**/*.js": {
 			"memory": 1024,
 			"maxDuration": 10
 		}
