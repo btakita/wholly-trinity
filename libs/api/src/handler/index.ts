@@ -9,9 +9,7 @@ import type {
 	google__error__payload_T,
 	payload_T
 } from '@wholly-trinity/types'
-import { createRequire } from 'module'
-const require = createRequire(import.meta.url)
-const jws = require('jws')
+import { importPKCS8, SignJWT } from 'jose'
 const sheets__url = `https://content-sheets.googleapis.com/v4/spreadsheets/${process.env.SHEET_ID}`
 export async function handler(req:VercelRequest, res:VercelResponse):Promise<void> {
 	const ctx = ctx_()
@@ -72,18 +70,17 @@ export async function contact__set__handle(ctx:Ctx, req__payload:api__cmd_T):Pro
 		let scope = 'https://www.googleapis.com/auth/spreadsheets'
 		const aud = 'https://www.googleapis.com/oauth2/v4/token'
 		const iat = Math.floor(new Date().getTime() / 1000)
-		const assertion = jws.sign({
-			header: { alg: 'RS256' },
-			payload: {
-				iss: client_email,
-				scope,
-				aud,
-				exp: iat + 3600,
-				iat,
-				sub: null
-			},
-			secret: private_key
+		const keylike = await importPKCS8(private_key, 'RS256')
+		const assertion = await new SignJWT({
+			iss: client_email,
+			scope,
+			aud,
+			exp: iat + 3600,
+			iat,
+			sub: null
 		})
+			.setProtectedHeader({ alg: 'RS256' })
+			.sign(keylike)
 		const payload = await fetch(token_uri, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

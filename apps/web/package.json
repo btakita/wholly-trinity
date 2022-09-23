@@ -9,7 +9,7 @@
 		"build:solid": "pushd ../../vendor/solid/packages/solid && pnpm run build types link && popd",
 		"build:solid-router": "pushd ../../vendor/solid-router && pnpm run build && popd",
 		"build:static": "npm run build:project && npm run build:deployment",
-		"deploy": "vercel deploy --prebuilt",
+		"deploy": "vercel deploy --prebuilt --prod",
 		"start": "solid-start start"
 	},
 	"type": "module",

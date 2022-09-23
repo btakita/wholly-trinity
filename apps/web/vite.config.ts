@@ -1,7 +1,7 @@
+import replace_plugin_ from '@rollup/plugin-replace'
 import vercel from 'solid-start-vercel'
 import solid_start_ from 'solid-start/vite'
 import { defineConfig } from 'vite'
-import replace_plugin_ from '@rollup/plugin-replace'
 export default defineConfig({
 	plugins: [
 		replace_plugin_({
@@ -17,7 +17,10 @@ export default defineConfig({
 			)
 		})],
 	resolve: {
-		extensions: ['.js', '.mjs', '.jsx', '.ts', '.tsx']
+		extensions: ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
+		alias: {
+			'jwa': 'jwa-purejs'
+		}
 	},
 	server: {
 		hmr: {
