@@ -8,7 +8,6 @@
 		"@ctx-core/array": "^26.7.8",
 		"@ctx-core/object": "^22.2.8",
 		"@ctx-core/uri": "^12.0.52",
-		"@wholly-trinity/validation": "workspace:*",
 		"google-auth-library": "^8.5.2",
 		"jsonwebtoken": "^8.5.1"
 	},

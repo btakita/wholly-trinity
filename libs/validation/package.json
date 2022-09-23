@@ -1,8 +1,0 @@
-{
-	"name": "@wholly-trinity/validation",
-  "version": "1.0.0",
-	"type": "module",
-	"main": "./src/index.js",
-	"module": "./src/index.js",
-	"types": "./src/index.d.ts"
-}

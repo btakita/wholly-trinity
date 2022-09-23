@@ -13,8 +13,8 @@
 	},
 	"dependencies": {
 		"@wholly-trinity/api": "workspace:*",
-		"@wholly-trinity/ui": "workspace:*",
-		"@wholly-trinity/validation": "workspace:*"
+		"@wholly-trinity/domain": "workspace:*",
+		"@wholly-trinity/ui": "workspace:*"
 	},
 	"devDependencies": {
 		"@ctx-core/monorepo": "^18.4.16",

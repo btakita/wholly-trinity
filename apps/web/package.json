@@ -16,6 +16,7 @@
 	"devDependencies": {
 		"@ctx-core/html": "^11.0.50",
 		"@ctx-core/object": "^22.2.8",
+		"@ctx-core/solid-nanostores": "^1.0.1",
 		"@ctx-core/ui-solid": "2.1.7",
 		"@rollup/plugin-commonjs": "^22.0.2",
 		"@rollup/plugin-node-resolve": "^14.1.0",
@@ -23,9 +24,9 @@
 		"@solidjs/meta": "^0.28.0",
 		"@solidjs/router": "^0.4.3",
 		"@wholly-trinity/api": "workspace:*",
+		"@wholly-trinity/domain": "workspace:^1.0.0",
 		"@wholly-trinity/types": "workspace:*",
 		"@wholly-trinity/ui": "workspace:*",
-		"@wholly-trinity/validation": "workspace:*",
 		"autoprefixer": "^10.4.12",
 		"itty-router": "^2.6.3",
 		"postcss": "^8.4.16",

@@ -1,7 +1,8 @@
-import { GlobalStyle } from '@ctx-core/ui-solid'
-import { payload_T } from '@wholly-trinity/types'
+import { useMemo } from '@ctx-core/solid-nanostores'
+import { GlobalStyle, use_Context_ctx } from '@ctx-core/ui-solid'
+import { email_error_a_, Modal__contact__set__showing__, phone_error_a_ } from '@wholly-trinity/domain'
+import type { payload_T } from '@wholly-trinity/types'
 import { ValidationErrors } from '@wholly-trinity/ui'
-import { email_error_a_, phone_error_a_ } from '@wholly-trinity/validation'
 import {
 	createEffect,
 	createMemo,
@@ -11,7 +12,7 @@ import {
 	onMount,
 	type ParentProps,
 	Show,
-	VoidProps
+	type VoidProps
 } from 'solid-js'
 import { Assets } from 'solid-js/web'
 import { Head, Meta, Title } from 'solid-start'
@@ -25,10 +26,11 @@ const contact_email = process.env.CONTACT_EMAIL || 'trinitystargate@gmail.com'
 const mailto = 'mailto:trinitystargate@gmail.com'
 const ASSET_HOST = process.env.ASSET_HOST
 export default function Home() {
+	const ctx = use_Context_ctx()
 	const [section_top_aa_, section_top_aa__set] = createSignal<[HTMLElement, top_T][]>([])
 	const [Navigation__o_, Navigation__o__set] = createSignal<Navigation__o>()
 	const [video_s_, video_s__set] = createSignal<Set<HTMLVideoElement>>(new Set<HTMLVideoElement>())
-	const [Modal__contact__set__show_, Modal__contact__set__show__set] = createSignal<boolean>(false)
+	const Modal__contact__set__showing_ = useMemo(Modal__contact__set__showing__(ctx))
 	onMount(()=>{
 		window.addEventListener('scroll', Navigation__refresh)
 		onCleanup(()=>window.removeEventListener('scroll', Navigation__refresh))
@@ -144,7 +146,7 @@ export default function Home() {
 					 style="color: #1b0f23;"
 					 onClick={$=>{
 						 $.preventDefault()
-						 Modal__contact__set__show__set(true)
+						 Modal__contact__set__showing__(ctx).$ = true
 					 }}
 				>Get your Ticket(s)</a>
 				<p class="text-xs">Payment plan available</p>
@@ -606,14 +608,14 @@ export default function Home() {
 		const [Modal__contact__set__POST__busy_, Modal__contact__set__POST__busy__set] =
 			createSignal(false)
 		createEffect(()=>{
-			if (Modal__contact__set__show_()) {
+			if (Modal__contact__set__showing_()) {
 				email__el.focus()
 			}
 		})
 		return (
-			<Show when={Modal__contact__set__show_()}>
+			<Show when={Modal__contact__set__showing_()}>
 				<div
-					class="z-30 py-12 bg-gray-700 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0"
+					class="z-30 py-12 bg-gray-700 transition duration-150 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0"
 					id="modal"
 				>
 					<div role="alert" class="z-30 container mx-auto w-11/12 md:w-2/3 max-w-lg">
@@ -675,7 +677,7 @@ export default function Home() {
 							<button
 								class="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600"
 								aria-label="close modal" role="button"
-								onClick={()=>Modal__contact__set__show__set(false)}
+								onClick={()=>Modal__contact__set__showing__(ctx).$ = false}
 							>
 								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="20"
 										 height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none"
@@ -715,7 +717,7 @@ export default function Home() {
 				const { contact__set } = payload
 				if (contact__set.status === 200) {
 					window.open(tickets_url, '_blank')
-					Modal__contact__set__show__set(false)
+					Modal__contact__set__showing__(ctx).$ = false
 				} else {
 					Modal__contact__set__POST__error__set(contact__set.message)
 				}
@@ -736,6 +738,7 @@ export default function Home() {
 		)
 	}
 }
+// Language=css
 const Style = Singleton_(()=><GlobalStyle>{`
 h1,h2,h3,h4,h5,h6,p,a {
 	color: white;

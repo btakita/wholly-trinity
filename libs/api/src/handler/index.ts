@@ -27,6 +27,7 @@ async function contact__set__handle(ctx:Ctx, req:VercelRequest|Request):Promise<
 	}
 	try {
 		const { private_key, client_email, token_uri }:google__credentials_T = JSON.parse(process.env.GOOGLE_CREDENTIALS)
+		console.debug('contact__set__handle|debug|1')
 		const access_token = await fetch(token_uri, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -38,6 +39,7 @@ async function contact__set__handle(ctx:Ctx, req:VercelRequest|Request):Promise<
 				key: private_key,
 			}, '')
 		}).then($=>$.text())
+		console.debug('contact__set__handle|debug|2', { access_token })
 		// const jwt = new JWT({
 		// 	email: google__credentials.client_email,
 		// 	key: google__credentials.private_key,
