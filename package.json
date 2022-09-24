@@ -8,7 +8,7 @@
 	"scripts": {
 		"deploy": "vercel deploy --prebuilt --prod",
 		"dev": "cd apps/web && PATH=./node_modules/.bin:$PATH solid-start dev -p $WEB_PORT",
-		"build": "(cd apps/web && PATH=./node_modules/.bin:$PATH pnpm run build) && rm -rf .vercel && mv apps/web/.vercel .",
+		"build": "vercel build --prod",
 		"start": "cd apps/web && PATH=./node_modules/.bin:$PATH solid-start start"
 	},
 	"dependencies": {

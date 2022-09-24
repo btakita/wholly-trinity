@@ -1,17 +1,8 @@
 {
 	"alias": ["stargateevent.com"],
 	"cleanUrls": true,
+	"framework": "solidstart",
 	"github": {
 		"enabled": true
-	},
-	"functions": {
-		"api/**/*.js": {
-			"memory": 1024,
-			"maxDuration": 10
-		},
-		"render/**/*.js": {
-			"memory": 1024,
-			"maxDuration": 10
-		}
 	}
 }

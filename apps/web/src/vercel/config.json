@@ -5,10 +5,6 @@
       "handle": "filesystem"
     },
     {
-      "src": "/api",
-      "middlewarePath": "api"
-    },
-    {
       "src": "/.*",
       "middlewarePath": "render"
     }

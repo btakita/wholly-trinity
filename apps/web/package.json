@@ -2,15 +2,13 @@
 	"name": "@wholly-trinity/web",
 	"scripts": {
 		"dev": "solid-start dev -p $WEB_PORT",
-		"build": "pnpm run build:static && pnpm run build:functions && pnpm run build:copy_vercel_config && pnpm run build:find",
+		"build": "pnpm run build:static",
 		"build:copy_vercel_config": "(cd src/vercel > /dev/null && find . -type f) | sed 's/^\\.\\///' | awk '{print \"cp ./src/vercel/\"$1\" .vercel/output/\"$1}' | sh",
-		"build:deployment": "echo ls -al public && ls -al public && echo ls -al .vercel/output/static && ls -al .vercel/output/static",
 		"build:find": "find .vercel",
 		"build:functions": "rollup -c",
+		"build:ls_deployment": "echo ls -al public && ls -al public && echo ls -al .vercel/output/static && ls -al .vercel/output/static",
 		"build:project": "solid-start build",
-		"build:solid": "pushd ../../vendor/solid/packages/solid && pnpm run build types link && popd",
-		"build:solid-router": "pushd ../../vendor/solid-router && pnpm run build && popd",
-		"build:static": "npm run build:project && npm run build:deployment",
+		"build:static": "npm run build:project && npm run build:ls_deployment",
 		"deploy": "vercel deploy --prebuilt --prod .",
 		"start": "solid-start start"
 	},
