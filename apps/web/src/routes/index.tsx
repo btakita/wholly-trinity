@@ -638,7 +638,7 @@ export default function Home() {
 								</div>
 								<input ref={$=>email__el = $}
 											 id="email"
-											 class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
+											 class="text-gray-600 focus:outline-none focus:border focus:border-yellow-500 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
 											 placeholder="Email Address"
 											 onKeyUp={$=>email__set($.currentTarget.value)}
 								/>
@@ -657,7 +657,7 @@ export default function Home() {
 									</svg>
 								</div>
 								<input id="phone"
-											 class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
+											 class="text-gray-600 focus:outline-none focus:border focus:border-yellow-500 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
 											 placeholder="Cell Phone Number"
 											 onKeyUp={$=>phone__set($.currentTarget.value)}
 								/>
@@ -668,7 +668,7 @@ export default function Home() {
 									class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-100 transition duration-150 ease-in-out bg-yellow-300 rounded text-black px-8 py-2 text-sm"
 									classList={{
 										'cursor-default': disabled_(),
-										'hover:bg-indigo-600': !disabled_()
+										'hover:bg-yellow-400': !disabled_()
 									}}
 									type="submit"
 									disabled={!validation_error_a_() || Modal__contact__set__POST__busy_()}
