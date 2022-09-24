@@ -18,9 +18,7 @@ export default defineConfig({
 		})],
 	resolve: {
 		extensions: ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
-		alias: {
-			'jwa': 'jwa-purejs'
-		}
+		alias: {}
 	},
 	server: {
 		hmr: {
