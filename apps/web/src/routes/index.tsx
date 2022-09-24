@@ -1,6 +1,7 @@
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { GlobalStyle, use_Context_ctx } from '@ctx-core/ui-solid'
 import { email_error_a_, Modal__contact__set__showing__, phone_error_a_ } from '@wholly-trinity/domain'
+import { notyf__init, notyf_success } from '@wholly-trinity/notyf'
 import type { payload_T } from '@wholly-trinity/types'
 import { ValidationErrors } from '@wholly-trinity/ui'
 import {
@@ -31,7 +32,8 @@ export default function Home() {
 	const [Navigation__o_, Navigation__o__set] = createSignal<Navigation__o>()
 	const [video_s_, video_s__set] = createSignal<Set<HTMLVideoElement>>(new Set<HTMLVideoElement>())
 	const Modal__contact__set__showing_ = useMemo(Modal__contact__set__showing__(ctx))
-	onMount(()=>{
+	onMount(async ()=>{
+		notyf__init(ctx)
 		window.addEventListener('scroll', Navigation__refresh)
 		onCleanup(()=>window.removeEventListener('scroll', Navigation__refresh))
 		window.addEventListener('resize', Navigation__refresh)
@@ -716,8 +718,11 @@ export default function Home() {
 				}).then($=>$.json())
 				const { contact__set } = payload
 				if (contact__set.status === 200) {
-					window.open(tickets_url, '_blank')
-					Modal__contact__set__showing__(ctx).$ = false
+					await notyf_success(ctx, 'Taking you to the tickets page...')
+					setTimeout(()=>{
+						window.open(tickets_url, '_blank')
+						Modal__contact__set__showing__(ctx).$ = false
+					}, 2000)
 				} else {
 					Modal__contact__set__POST__error__set(contact__set.message)
 				}
