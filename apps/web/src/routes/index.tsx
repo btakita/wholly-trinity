@@ -616,14 +616,13 @@ export default function Home() {
 		return (
 			<Show when={Modal__contact__set__showing_()}>
 				<div
-					class="z-30 py-12 bg-gray-700 transition duration-150 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0"
+					class="z-30 py-12 bg-amber-900 transition duration-150 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0"
 					id="modal"
-				>
-					<div role="alert" class="z-30 container mx-auto w-11/12 md:w-2/3 max-w-lg">
+				><div role="alert" class="z-30 container mx-auto w-11/12 md:w-2/3 max-w-lg">
 						<form class="z-30 relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400"
 									onSubmit={$=>{
 										$.preventDefault()
-										Modal__contact__set__POST()
+										Modal__contact__set__POST().then()
 									}}
 						>
 							<p>Enter your Email or Cell Phone Number so we can stay in touch.</p>
@@ -666,7 +665,7 @@ export default function Home() {
 							</div>
 							<div class="flex items-center justify-start w-full">
 								<button
-									class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out bg-indigo-700 rounded text-white px-8 py-2 text-sm"
+									class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-100 transition duration-150 ease-in-out bg-yellow-300 rounded text-black px-8 py-2 text-sm"
 									classList={{
 										'cursor-default': disabled_(),
 										'hover:bg-indigo-600': !disabled_()
