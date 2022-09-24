@@ -199,7 +199,7 @@ export default function Home() {
 						 $.preventDefault()
 						 window.scroll(0, section_top_aa_()[prev__idx_()]?.[1])
 					 }}
-					 class={`fixed z-30 bottom-12 md:bottom-24 right-6 md:right-12 stroke-white fill-white ${$p.class || ''}`}
+					 class={`fixed z-30 bottom-12 md:bottom-24 right-6 md:right-12 stroke-white fill-amber-100 ${$p.class || ''}`}
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 						<path fill-rule="evenodd"
@@ -214,7 +214,7 @@ export default function Home() {
 						 $.preventDefault()
 						 window.scroll(0, section_top_aa_()[next__idx_()]?.[1])
 					 }}
-					 class={`fixed z-30 bottom-6 md:bottom-12 right-6 md:right-12 stroke-white fill-white ${$p.class || ''}`}
+					 class={`fixed z-30 bottom-6 md:bottom-12 right-6 md:right-12 stroke-white fill-amber-100 ${$p.class || ''}`}
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 						<path fill-rule="evenodd"
