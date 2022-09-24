@@ -556,15 +556,16 @@ export default function Home() {
 	}
 	function Video($p:ParentProps<JSX.VideoHTMLAttributes<HTMLVideoElement>>) {
 		return (
-			<video ref={$=>video_s__set(video_s_().add($))}
-						 {...$p}
-						 onPlay={$=>{
-							 for (const video of video_s_()) {
-								 if (video !== $.currentTarget && !video.paused) {
-									 video.pause()
-								 }
-							 }
-						 }}
+			<video
+				ref={$=>video_s__set(video_s_().add($))}
+				{...$p}
+				onPlay={$=>{
+					for (const video of video_s_()) {
+						if (video !== $.currentTarget && !video.paused) {
+							video.pause()
+						}
+					}
+				}}
 			>
 				{$p.children}
 				Loading…
