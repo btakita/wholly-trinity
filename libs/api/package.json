@@ -5,15 +5,15 @@
 	"module": "src/index.ts",
 	"types": "src/index.ts",
 	"dependencies": {
-		"@ctx-core/array": "^26.7.8",
-		"@ctx-core/object": "^22.2.8",
-		"@ctx-core/uri": "^12.0.52",
-		"jose": "^4.9.3"
+		"@ctx-core/array": "^26.8.10",
+		"@ctx-core/object": "^23.1.0",
+		"@ctx-core/uri": "^12.0.62",
+		"jose": "^4.11.2"
 	},
 	"devDependencies": {
-		"@ctx-core/btoa": "^8.0.59",
+		"@ctx-core/btoa": "^8.0.79",
 		"@ctx-core/date": "^13.2.0",
 		"@ctx-core/time": "^9.0.37",
-		"@vercel/node": "^2.5.18"
+		"@vercel/node": "^2.8.5"
 	}
 }

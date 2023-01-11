@@ -17,104 +17,18 @@
 		"@wholly-trinity/ui": "workspace:*"
 	},
 	"devDependencies": {
-		"@ctx-core/monorepo": "^18.4.16",
-		"@ctx-core/object": "^22.2.8",
-		"@vercel/node": "^2.5.18",
+		"@ctx-core/monorepo": "^18.4.39",
+		"@ctx-core/object": "^23.1.0",
+		"@vercel/node": "^2.8.5",
 		"@wholly-trinity/root": "workspace:*",
 		"@wholly-trinity/types": "workspace:*",
 		"@wholly-trinity/web": "workspace:*",
-		"pnpm": "^7.12.2",
-		"tsx": "^3.9.0",
-		"vercel": "^28.4.2"
+		"js-yaml": "^4.1.0",
+		"pnpm": "^7.24.3",
+		"tsx": "^3.12.2",
+		"vercel": "^28.11.0"
 	},
 	"pnpm": {
-		"overrides": {
-			"@babel/helper-module-imports": "latest",
-			"@jridgewell/gen-mapping": "latest",
-			"@jridgewell/trace-mapping": "latest",
-			"@rollup/pluginutils": "latest",
-			"@nodelib/fs.walk": "latest",
-			"acorn": "latest",
-			"acorn-walk": "latest",
-			"ajv": "latest",
-			"arg": "latest",
-			"babel-preset-solid": "latest",
-			"chalk": "2.4.2",
-			"color-convert": "latest",
-			"color-name": "latest",
-			"diff": "latest",
-			"esbuild": "latest",
-			"estree-walker": "latest",
-			"gaxios": "latest",
-			"get-stream": "latest",
-			"globby": "latest",
-			"ini": "latest",
-			"is-what": "latest",
-			"jsesc": "latest",
-			"lowercase-keys": "latest",
-			"make-dir": "latest",
-			"ms": "latest",
-			"path-key": "latest",
-			"path-type": "latest",
-			"picocolors": "latest",
-			"pify": "latest",
-			"rollup": "latest",
-			"safe-buffer": "latest",
-			"semver": "latest",
-			"shebang-command": "latest",
-			"shebang-regex": "latest",
-			"slash": "latest",
-			"solid-js": "latest",
-			"solid-start": "next",
-			"solid-start-cloudflare-workers": "next",
-			"solid-start-node": "next",
-			"solid-start-vercel": "next",
-			"strip-ansi": "latest",
-			"terser": "latest",
-			"ts-node": "latest",
-			"ts-toolbelt": "latest",
-			"typescript": "next",
-			"vite": "latest",
-			"vite-plugin-solid": "latest"
-		},
-		"packageExtensions": {
-			"@ctx-core/ui-solid": {
-				"dependencies": {
-					"terser": "latest"
-				}
-			},
-			"solid-start": {
-				"dependencies": {
-					"solid-js": "latest"
-				},
-				"peerDependencies": {
-					"solid-js": "latest"
-				}
-			},
-			"vite": {
-				"dependencies": {
-					"terser": "latest"
-				},
-				"peerDependenciesMeta": {
-					"terser": {
-						"optional": false
-					}
-				}
-			},
-			"vite-plugin-solid": {
-				"dependencies": {
-					"terser": "latest",
-					"vite": "latest"
-				},
-				"dependenciesMeta": {
-					"terser": {
-						"injected": true
-					},
-					"vite": {
-						"injected": true
-					}
-				}
-			}
-		}
+		"overrides": {}
 	}
 }
