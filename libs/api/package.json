@@ -14,6 +14,6 @@
 		"@ctx-core/btoa": "^8.0.79",
 		"@ctx-core/date": "^13.2.0",
 		"@ctx-core/time": "^9.0.37",
-		"@vercel/node": "^2.8.5"
+		"@vercel/node": "^2.8.6"
 	}
 }
