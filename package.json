@@ -17,7 +17,7 @@
 		"@wholly-trinity/ui": "workspace:*"
 	},
 	"devDependencies": {
-		"@ctx-core/monorepo": "^18.4.39",
+		"@ctx-core/monorepo": "^18.4.40",
 		"@ctx-core/object": "^23.1.0",
 		"@vercel/node": "^2.8.6",
 		"@wholly-trinity/root": "workspace:*",

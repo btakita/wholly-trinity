@@ -7,8 +7,8 @@
 	"types": "./src/index.ts",
 	"devDependencies": {
 		"@ctx-core/array": "^26.8.10",
-		"@ctx-core/dom": "^11.2.19",
-		"solid-js": "^1.6.8",
+		"@ctx-core/dom": "^11.2.20",
+		"solid-js": "^1.6.9",
 		"vite-plugin-solid": "^2.5.0"
 	}
 }

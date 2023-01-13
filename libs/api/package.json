@@ -11,9 +11,9 @@
 		"jose": "^4.11.2"
 	},
 	"devDependencies": {
-		"@ctx-core/btoa": "^8.0.79",
-		"@ctx-core/date": "^13.2.0",
-		"@ctx-core/time": "^9.0.37",
+		"@ctx-core/btoa": "^8.0.80",
+		"@ctx-core/date": "^13.2.2",
+		"@ctx-core/time": "^9.0.39",
 		"@vercel/node": "^2.8.6"
 	}
 }
