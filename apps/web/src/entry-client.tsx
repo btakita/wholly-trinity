@@ -1,4 +1,4 @@
-import { Context_ctx } from '@ctx-core/ui-solid'
+import { Context_ctx } from '@ctx-core/solid-js'
 import { ctx_ } from '@ctx-core/object'
 import { hydrate } from 'solid-js/web'
 import { StartClient } from 'solid-start/entry-client'

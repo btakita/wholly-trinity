@@ -1,6 +1,6 @@
 // @refresh reload
+import { use_Context_ctx } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
-import { use_Context_ctx } from '@ctx-core/ui-solid'
 import { Modal__contact__set__showing__ } from '@wholly-trinity/domain'
 import { Suspense } from 'solid-js'
 import { Body, ErrorBoundary, FileRoutes, Head, Html, Link, Meta, Routes, Scripts } from 'solid-start'

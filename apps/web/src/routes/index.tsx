@@ -1,5 +1,6 @@
+import { use_Context_ctx } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
-import { GlobalStyle, use_Context_ctx } from '@ctx-core/ui-solid'
+import { GlobalStyle } from '@ctx-core/ui-solid'
 import { email_error_a_, Modal__contact__set__showing__, phone_error_a_ } from '@wholly-trinity/domain'
 import { notyf__init, notyf_success } from '@wholly-trinity/notyf'
 import type { payload_T } from '@wholly-trinity/types'
@@ -133,7 +134,9 @@ export default function Home() {
 			}
 		})}/></Assets>
 	}
-	function Div_tickets($p:ParentProps<{ class?:string }>) {
+	function Div_tickets($p:ParentProps<{
+		class?:string
+	}>) {
 		return (
 			<div class={`flex justify-center ${$p.class || ''}`}>
 				<Tickets/>
@@ -189,7 +192,9 @@ export default function Home() {
 		}
 		Navigation__o__set({ prev__idx, next__idx, prev__url, next__url })
 	}
-	function Navigation_arrows($p:{ class?:string }) {
+	function Navigation_arrows($p:{
+		class?:string
+	}) {
 		const prev__idx_ = createMemo(()=>Navigation__o_()?.prev__idx)
 		const prev__id_ = createMemo(()=>Navigation__o_()?.prev__url)
 		const next__idx_ = createMemo(()=>Navigation__o_()?.next__idx)
@@ -543,7 +548,10 @@ export default function Home() {
 			</Section>
 		)
 	}
-	function Section($p:ParentProps<{ id:string, class?:string }>) {
+	function Section($p:ParentProps<{
+		id:string,
+		class?:string
+	}>) {
 		return (
 			<section
 				ref={$=>queueMicrotask(()=>{
@@ -731,7 +739,9 @@ export default function Home() {
 			}
 		}
 	}
-	function EmailUs($p:VoidProps<{ class?:string }>) {
+	function EmailUs($p:VoidProps<{
+		class?:string
+	}>) {
 		return <a class={`underline ${$p.class || ''}`} href={mailto}>Email us for more information</a>
 	}
 	function IconscoutAttribution() {
@@ -759,4 +769,6 @@ interface Navigation__o {
 	next__idx:number
 }
 declare const top_sym:unique symbol
-export type top_T = number&{ [top_sym]:any }
+export type top_T = number&{
+	[top_sym]:any
+}

@@ -17,16 +17,16 @@
 		"@wholly-trinity/ui": "workspace:*"
 	},
 	"devDependencies": {
-		"@ctx-core/monorepo": "^18.4.40",
-		"@ctx-core/object": "^23.1.0",
-		"@vercel/node": "^2.8.6",
+		"@ctx-core/monorepo": "^20.4.70",
+		"@ctx-core/object": "^28.0.3",
+		"@vercel/node": "^2.15.6",
 		"@wholly-trinity/root": "workspace:*",
 		"@wholly-trinity/types": "workspace:*",
 		"@wholly-trinity/web": "workspace:*",
 		"js-yaml": "^4.1.0",
-		"pnpm": "^7.24.3",
-		"tsx": "^3.12.2",
-		"vercel": "^28.11.1"
+		"pnpm": "^8.6.10",
+		"tsx": "^3.12.7",
+		"vercel": "^31.1.0"
 	},
 	"pnpm": {
 		"overrides": {}

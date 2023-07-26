@@ -1,8 +1,10 @@
 import { type Be, be_ } from '@ctx-core/object'
+import type { signal_T } from '@ctx-core/solid-js'
+import { use_Context_ctx } from '@ctx-core/solid-js'
 import { type Component, createSignal, JSX, onCleanup, type ParentProps, Show } from 'solid-js'
-import type { signal_T } from '@ctx-core/ui-solid'
-import { use_Context_ctx } from '@ctx-core/ui-solid'
-export function Singleton_<Props = ParentProps<{ label?:string }>>(
+export function Singleton_<Props = ParentProps<{
+	label?:string
+}>>(
 	C:Component<Props>, proto_key_a__?:Be<signal_T<any>>, label?:string
 ) {
 	if (!proto_key_a__) proto_key_a__ = be_(()=>createSignal([]))

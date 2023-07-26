@@ -1,5 +1,5 @@
 import { type Ctx, ctx_ } from '@ctx-core/object'
-import { Context_ctx } from '@ctx-core/ui-solid'
+import { Context_ctx } from '@ctx-core/solid-js'
 import { payload_ } from '@wholly-trinity/api'
 import { Router } from 'itty-router'
 import { createHandler, renderAsync, StartServer, } from 'solid-start/entry-server'

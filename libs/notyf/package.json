@@ -6,10 +6,10 @@
 	"module": "./src/index.ts",
 	"types": "./src/index.ts",
 	"devDependencies": {
-		"@ctx-core/notyf": "^1.0.24",
-		"@ctx-core/object": "^23.1.0",
+		"@ctx-core/notyf": "^1.0.208",
+		"@ctx-core/object": "^28.0.3",
 		"notyf": "^3.10.0",
-		"solid-js": "^1.6.9",
-		"vite-plugin-solid": "^2.5.0"
+		"solid-js": "^1.7.8",
+		"vite-plugin-solid": "^2.7.0"
 	}
 }
