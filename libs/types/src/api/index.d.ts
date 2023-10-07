@@ -6,7 +6,7 @@ export interface contact__set__cmd_T {
 	email?:string
 	phone?:string
 }
-export interface payload_T {
+export interface api_POST__payload_T {
 	contact__set?:{
 		status:status_T
 		code:OK|APPEND_ERROR|INTERNAL_ERROR|MISSING_EMAIL_PHONE

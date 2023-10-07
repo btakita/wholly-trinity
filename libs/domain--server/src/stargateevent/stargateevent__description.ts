@@ -1,0 +1,1 @@
+export const stargateevent__description = 'We are being called to return to our ancestral and magical land of Egypt! Stargate Events presents Wholly Trinity, a gathering that will unite all our multidimensional selves into oneness, weaving together the past, present and future.'

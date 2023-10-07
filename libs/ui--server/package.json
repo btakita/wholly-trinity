@@ -1,0 +1,16 @@
+{
+  "name": "@wholly-trinity/ui--server",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "types": "./src/index.ts",
+  "devDependencies": {
+    "@ctx-core/ui-solid": "^17.0.1",
+    "@wholly-trinity/domain--cs": "workspace:*",
+    "@wholly-trinity/ui--cs": "workspace:*",
+    "solid-js": "^1.7.12",
+    "vite-plugin-solid": "^2.7.0"
+  }
+}

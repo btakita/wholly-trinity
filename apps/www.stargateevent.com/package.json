@@ -1,0 +1,25 @@
+{
+  "name": "@wholly-trinity/www.stargateevent.com",
+  "type": "module",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^3.2.3"
+  },
+  "devDependencies": {
+    "@astrojs/solid-js": "^3.0.2",
+    "@astrojs/tailwind": "^5.0.1",
+    "@ctx-core/dom": "^14.1.69",
+    "@wholly-trinity/domain--cs": "workspace:*",
+    "bun-types": "^1.0.5-canary.20231005T140125",
+    "solid-js": "^1.7.12",
+    "tailwindcss": "^3.3.3"
+  }
+}

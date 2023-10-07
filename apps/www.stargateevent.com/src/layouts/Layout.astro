@@ -1,0 +1,73 @@
+---
+import {
+	stargateevent__description,
+	ld_json__new,
+	stargateevent__image,
+	stargateevent__url
+} from '@wholly-trinity/domain--server'
+import '../styles/index.css'
+const {
+	title,
+	description = stargateevent__description,
+	image = stargateevent__image,
+	url = stargateevent__url,
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description" content={description}/>
+	<meta name="viewport" content="width=device-width"/>
+	<meta name="twitter:title" content={title}/>
+	<meta name="twitter:description" content={description}/>
+	<meta name="twitter:image" content={image}/>
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:url" content={url}/>
+	<meta property="og:title" content={title}/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:description" content={description}/>
+	<meta property="og:image" content={image}/>
+	<meta property="og:url" content={url}/>
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+	<meta name="generator" content={Astro.generator}/>
+	<title>{title}</title>
+	<script type="application/ld+json">{ld_json__new()}</script>
+</head>
+<body>
+<slot/>
+</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	body {
+		background: #13151a;
+		background-size: 224px;
+		font-family: "Orbitron", arial, sans-serif;
+	}
+	.btn {
+		@apply font-bold py-4 px-4 overflow-hidden rounded;
+		background-color: #fcdf0e;
+	}
+	code {
+		font-family: Menlo,
+		Monaco,
+		Lucida Console,
+		Liberation Mono,
+		DejaVu Sans Mono,
+		Bitstream Vera Sans Mono,
+		Courier New,
+		monospace;
+	}
+</style>

@@ -1,5 +1,5 @@
 {
-	"name": "@wholly-trinity/notyf",
+	"name": "@wholly-trinity/ui--cs",
 	"version": "1.0.0",
 	"type": "module",
 	"private": true,
@@ -7,9 +7,9 @@
 	"module": "./src/index.ts",
 	"types": "./src/index.ts",
 	"devDependencies": {
-		"@ctx-core/notyf": "^2.0.16",
-		"@ctx-core/object": "^28.2.0",
-		"notyf": "^3.10.0",
+		"@ctx-core/array": "^26.15.4",
+		"@ctx-core/dom": "^14.1.69",
+		"@wholly-trinity/domain--cs": "workspace:*",
 		"solid-js": "^1.7.12",
 		"vite-plugin-solid": "^2.7.0"
 	}

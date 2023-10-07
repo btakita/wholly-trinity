@@ -1,0 +1,28 @@
+---
+import { domain_ctx__new } from '@wholly-trinity/domain--cs'
+import { Astro__domain_ctx__new } from '@wholly-trinity/domain--server'
+import { Main_home, Modal_contact_set__container } from '@wholly-trinity/ui--server'
+import Layout from '../layouts/Layout.astro'
+const ctx = Astro__domain_ctx__new(Astro)
+---
+
+<Layout>
+	<Modal_contact_set__container ctx={ctx}/>
+	<Main_home ctx={ctx}/>
+</Layout>
+<home-hydrate/>
+<script>
+	import { dom__bind, dom__onbind__register, dom__onbind__validate } from '@ctx-core/dom'
+	import { domain_ctx__new } from '@wholly-trinity/domain--cs'
+	import { Modal_contact_set__container__onbind } from '@wholly-trinity/ui--cs'
+	class HTMLElement_home_hydrate extends HTMLElement {
+		constructor() {
+			super()
+			const ctx = domain_ctx__new()
+			dom__onbind__register(ctx, Modal_contact_set__container__onbind)
+			dom__bind(ctx)
+			dom__onbind__validate(ctx)
+		}
+	}
+	customElements.define('home-hydrate', HTMLElement_home_hydrate)
+</script>

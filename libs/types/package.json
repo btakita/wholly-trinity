@@ -1,8 +1,9 @@
 {
 	"name": "@wholly-trinity/types",
 	"type": "module",
+	"private": true,
 	"types": "src/index.d.ts",
 	"devDependencies": {
-		"googleapis": "^122.0.0"
+		"googleapis": "^126.0.1"
 	}
 }
