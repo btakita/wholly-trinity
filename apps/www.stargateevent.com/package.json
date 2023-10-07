@@ -16,6 +16,7 @@
   "devDependencies": {
     "@astrojs/solid-js": "^3.0.2",
     "@astrojs/tailwind": "^5.0.1",
+    "@astrojs/vercel": "^5.0.2",
     "@ctx-core/dom": "^14.1.69",
     "@wholly-trinity/domain--cs": "workspace:*",
     "bun-types": "^1.0.5-canary.20231005T140125",
