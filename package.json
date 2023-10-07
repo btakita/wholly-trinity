@@ -25,7 +25,6 @@
     "@ctx-core/solid-nanostores": "^18.1.0",
     "@wholly-trinity/types": "workspace:*",
     "js-yaml": "^4.1.0",
-    "pnpm": "^8.8.0",
     "tsx": "^3.13.0",
     "vercel": "^32.4.1"
   },

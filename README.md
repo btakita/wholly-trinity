@@ -3,9 +3,8 @@
 ## Installation
 
 ```
-npm i -g pnpm
-pnpm i
-cd apps/web
-pnpm run dev
+bun i
+cd apps/www.stargateevent.com
+bun dev
 # visit site in browser
 ``
